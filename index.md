@@ -2,35 +2,35 @@
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
+*Postdoctoral Researcher on the [ANR Project: NOCIME](https://sites.google.com/view/nocime) at [INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)*
 
-## About Me
+## 👤 About Me
 
-Since September 2024, I am a postdoctoral researcher at INRAE Occitanie-Montpellier, as a member of UMR MISTEA working with Alain Rapaport (Senior Researcher at INRAE Montpellier). I specialize in applied mathematics, with a focus on optimal control and optimization, particularly in hybrid systems. My research applies these techniques to areas such as modeling and epidemiology.
+Since September 2024, I am a postdoctoral researcher at INRAE Montpellier. I am working on the [ANR Project: NOCIME](https://sites.google.com/view/nocime) with [Alain Rapaport](https://sites.google.com/site/alainrapaport) and [Pierre-Alexandre Bliman](https://who.rocq.inria.fr/Pierre-Alexandre.Bliman/). The main objective is to tackle new optimal control problems with non-standard cost functions motivated by epidemiology.
 
+Before that, from September 2023 to August 2024, I was a Temporary Lecturer and Research Assistant (ATER) at Avignon Université.
 
-Before that, from September 1, 2023 to August 31, 2024, I was a ATER (Temporary Lecturer and Research Assistant) at Avignon Université.
-Prior to that, from October 1, 2020, to November 17, 2023, I was a PhD student at Avignon Université. My Phd supervisors were Térence Bayen (Prof. at Avignon Université) and Loïc Bourdin (MCF HDR at Limoges Université). My research involved the derivation of first-order necessary optimality conditions for optimal control problems involving spatially heterogenous dynamics and their applications to optimal control problems with loss control regions (Here is my manuscript for more details). 
+Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon Université. My research, supervised by Térence Bayen and [Loïc Bourdin](https://www.unilim.fr/pages_perso/loic.bourdin/), focused on the derivation of necessary optimality conditions for hybrid optimal control problems ([manuscript available here](https://theses.hal.science/tel-04335766v1)).
 
 ---
 
 ## 🧠 Research Interests
 
-- Optimal Control Theory  
-- Pontryagin's Maximum Principle  
-- Heterogeneous Dynamics  
-- Loss Control Regions & Non-Permanent Control  
-- Mathematical Modeling  
-- Epidemiology  
-- Dynamical Systems  
-- Numerical Optimization  
-- Numerical Precision  
+- Optimal Control Theory
+- Pontryagin's Maximum Principle
+- Heterogeneous Dynamics
+- Loss Control Regions & Non-Permanent Control
+- Mathematical Modeling
+- Epidemiology
+- Dynamical Systems
+- Numerical Optimization
 
 ---
 
-## 📬 Contact
+## 🌐 Online
 
-- 📧 **Email:** [anas.bouali@inrae.fr](mailto:anas.bouali@inrae.fr)  
-- 🏛️ **Affiliation:** [INRAE Montpellier – UMR MISTEA](https://mistea.montpellier.hub.inrae.fr/)  
-- 🐙 **GitHub:** [github.com/anasxbouali](https://github.com/anasxbouali)  
-- 💼 **LinkedIn:** [linkedin.com/in/anasxbouali](https://www.linkedin.com/in/anasxbouali)
-
+- **📧 Email:** [anas.bouali@inrae.fr](mailto:anas.bouali@inrae.fr)
+- **🎓 Google Scholar:** [Anas Bouali](https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr)
+- **🐙 GitHub:** [AnasXbouali](https://github.com/anasxbouali)
+- **💼 LinkedIn:** [Anas Bouali](https://www.linkedin.com/in/anasxbouali)
+- **🏢 Affiliation:** [UMR MISTEA, INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)

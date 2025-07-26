@@ -4,13 +4,13 @@ hascode = false
 rss = "A list of talks, presentations, and posters by Anas Bouali."
 +++
 
-# 🎤 Talks & Presentations
+# 💬 Talks & Presentations
 
 A collection of my presentations at seminars, conferences, and workshops.
 
 ---
 
-## 💬 Seminars & Conferences
+## Seminars & Conferences
 
 ### 2025
 1.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
@@ -39,7 +39,7 @@ A collection of my presentations at seminars, conferences, and workshops.
 
 ---
 
-## 🧑‍🏫 Workshops & Summer Schools
+## Workshops & Summer Schools
 
 ### 2022
 1.  **September:** Domain Decomposition for Optimal Control Problems, *CIRM, Luminy, Marseille (France)*
@@ -49,7 +49,7 @@ A collection of my presentations at seminars, conferences, and workshops.
 
 ---
 
-## 🖼️ Posters
+## Posters
 
 ### 2022
 1.  **September:** Domain Decomposition for Optimal Control Problems, *CIRM, Luminy, Marseille (France)*

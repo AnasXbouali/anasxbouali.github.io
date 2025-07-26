@@ -4,9 +4,9 @@ hascode = false
 rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamics, and mathematical modeling."
 +++
 
-# 📄 Publications
+# 📘 Publications
 
-## 🧪 Recent Preprints
+## Recent Preprints
 
 1.  **Regularization of optimal control problems on stratified domains using additional controls** 
     
@@ -22,7 +22,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ---
 
-## 📘 Journal Papers
+## Journal Papers
 
 1.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
     
@@ -51,7 +51,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ---
 
-## 📚 Book Chapter & Conference Paper
+## Book Chapter & Conference Paper
 
 1.  **On the Reduction of a Spatially Hybrid Optimal Control Problem into a Temporally Hybrid Optimal Control Problem** 
 
@@ -67,7 +67,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ---
 
-## 📝 Preprints
+## Preprints
 
 1.  **Hybrid Maximum Principle with Regionally Switching Parameter** 
 
