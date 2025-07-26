@@ -1,8 +1,3 @@
-<!--
-Global configuration for Franklin.jl
-Used for metadata, site-wide behavior, and deployment settings.
--->
-
 +++
 # 👤 AUTHOR INFO
 author = "Anas Bouali"
@@ -11,9 +6,8 @@ author = "Anas Bouali"
 mintoclevel = 2
 
 # 🌐 DEPLOYMENT
-# Uncomment the line below if deploying to GitHub Pages or another subdirectory
-# Example: https://anasxbouali.github.io/academic-site/ → prepath = "academic-site"
-# prepath = "yourproject"
+# This prepath is crucial for deploying to a GitHub project page
+prepath = "my-academic-site"
 
 # 🧼 IGNORE THESE FILES/FOLDERS WHEN BUILDING
 ignore = ["node_modules/", "drafts/", "private/"]
@@ -22,13 +16,9 @@ ignore = ["node_modules/", "drafts/", "private/"]
 generate_rss = true
 website_title = "Anas Bouali"
 website_descr = "Postdoc Researcher"
-website_url   = "https://anasxbouali.github.io/"  # or your custom domain
+website_url   = "https://anasxbouali.github.io/my-academic-site/"
 +++
 
-<!--
-LaTeX macros available throughout your site
-Define mathematical shorthand or formatting
--->
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
