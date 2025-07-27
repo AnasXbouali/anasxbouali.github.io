@@ -6,8 +6,8 @@ author = "Anas Bouali"
 mintoclevel = 2
 
 # 🌐 DEPLOYMENT
-# This prepath is crucial for deploying to a GitHub project page
-prepath = "my-academic-site"
+# The prepath is NOT needed for a user page like anasxbouali.github.io
+# prepath = "my-academic-site"  <-- DELETE OR COMMENT OUT THIS LINE
 
 # 🧼 IGNORE THESE FILES/FOLDERS WHEN BUILDING
 ignore = ["node_modules/", "drafts/", "private/"]
@@ -16,7 +16,7 @@ ignore = ["node_modules/", "drafts/", "private/"]
 generate_rss = true
 website_title = "Anas Bouali"
 website_descr = "Postdoc Researcher"
-website_url   = "https://anasxbouali.github.io/my-academic-site/"
+website_url   = "https://anasxbouali.github.io/"
 +++
 
 \newcommand{\R}{\mathbb{R}}
