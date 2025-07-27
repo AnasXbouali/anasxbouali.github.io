@@ -19,7 +19,7 @@ website_descr = "Postdoc Researcher"
 website_url   = "https://anasxbouali.github.io/"
 +++
 
-\newcommand{\R}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}} 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
