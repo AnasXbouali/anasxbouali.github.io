@@ -32,5 +32,5 @@ Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon
 - **📧 Email:** [anas.bouali@inrae.fr](mailto:anas.bouali@inrae.fr)
 - **🎓 Google Scholar:** [Anas Bouali](https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr)
 - **🐙 GitHub:** [AnasXbouali](https://github.com/anasxbouali)
-- **💼 LinkedIn:** [Anas Bouali](https://www.linkedin.com/in/anasxbouali)
+- **💼 LinkedIn:** [Anas Bouali](https://www.linkedin.com/in/anas-bouali-276539215/)
 - **🏢 Affiliation:** [UMR MISTEA, INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)
