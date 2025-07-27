@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Anas Bouali  ]]>
+    </title>
+    <link> https://anasxbouali.github.io/ </link>
+    <description>
+      <![CDATA[  Postdoc Researcher  ]]>
+    </description>
+    <atom:link
+      href="https://anasxbouali.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  Projects  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Projects/index.html </link>
+  <guid> https://anasxbouali.github.io/Projects/index.html </guid>
+  <description>
+    <![CDATA[  A summary of research projects and collaborations involving Anas Bouali.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Teaching  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Teaching/index.html </link>
+  <guid> https://anasxbouali.github.io/Teaching/index.html </guid>
+  <description>
+    <![CDATA[  Details of teaching experience and courses taught by Anas Bouali.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Talks &amp; Presentations  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Talks/index.html </link>
+  <guid> https://anasxbouali.github.io/Talks/index.html </guid>
+  <description>
+    <![CDATA[  A list of talks, presentations, and posters by Anas Bouali.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Publications  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Publications/index.html </link>
+  <guid> https://anasxbouali.github.io/Publications/index.html </guid>
+  <description>
+    <![CDATA[  Scientific publications by Anas Bouali on optimal control, hybrid dynamics, and mathematical modeling.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>

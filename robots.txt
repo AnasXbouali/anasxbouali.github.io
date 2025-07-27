@@ -1,0 +1,4 @@
+Sitemap: https://anasxbouali.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
