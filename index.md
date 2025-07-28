@@ -2,7 +2,7 @@
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
-*Postdoctoral Researcher on the [ANR Project: NOCIME](https://sites.google.com/view/nocime) at [INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)*
+**Postdoctoral Researcher in Applied Mathematics at [INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)**
 
 ## 👤 About Me
 
