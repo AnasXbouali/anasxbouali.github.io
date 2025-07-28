@@ -31,7 +31,7 @@
     <![CDATA[  A summary of research projects and collaborations involving Anas Bouali.  ]]>
   </description>  
     
-  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -42,15 +42,15 @@
 
 <item>
   <title>
-    <![CDATA[  Teaching  ]]>
+    <![CDATA[  Code  ]]>
   </title>
-  <link> https://anasxbouali.github.io/Teaching/index.html </link>
-  <guid> https://anasxbouali.github.io/Teaching/index.html </guid>
+  <link> https://anasxbouali.github.io/Code/index.html </link>
+  <guid> https://anasxbouali.github.io/Code/index.html </guid>
   <description>
-    <![CDATA[  Details of teaching experience and courses taught by Anas Bouali.  ]]>
+    <![CDATA[  Overview of software packages and research code in Julia and Python.  ]]>
   </description>  
     
-  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -69,7 +69,26 @@
     <![CDATA[  A list of talks, presentations, and posters by Anas Bouali.  ]]>
   </description>  
     
-  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Teaching  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Teaching/index.html </link>
+  <guid> https://anasxbouali.github.io/Teaching/index.html </guid>
+  <description>
+    <![CDATA[  Details of teaching experience and courses taught by Anas Bouali.  ]]>
+  </description>  
+    
+  <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -88,7 +107,7 @@
     <![CDATA[  Scientific publications by Anas Bouali on optimal control, hybrid dynamics, and mathematical modeling.  ]]>
   </description>  
     
-  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
