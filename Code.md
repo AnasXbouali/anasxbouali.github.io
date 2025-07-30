@@ -19,7 +19,7 @@ A Julia package for solving optimal control problems with SIR epidemiological mo
 
 #### Constant Transmission Rate
 
-![Figure description](/assets/fig1c.jpg)
+![Figure description](/assets/figSIR_git.png)
 
 #### Piecewise Constant Transmission Rate
 
