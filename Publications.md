@@ -8,17 +8,24 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ## Recent Preprints
 
-1.  **Regularization of optimal control problems on stratified domains using additional controls** 
+1. **On the problem of minimizing the epidemic final size for SIR model by social distancing**
+
+    Co-authors: Pierre-Alexandre Bliman, Patrice Loisel, Alain Rapaport, Arnaud Virelizier
+    
+    *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-5194927)
+
+
+2.  **Regularization of optimal control problems on stratified domains using additional controls** 
     
     Co-authors: Alain Rapaport, Terence Bayen  
     
-    *Submitted, 2025*
+    *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
 
-2.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
+3.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
     
     Co-authors: Terence Bayen, Loïc Bourdin  
     
-    *Submitted, 2025*
+    *Submitted, 2025* • [**Link**](https://hal.science/hal-03928967v2)
 
 ---
 
