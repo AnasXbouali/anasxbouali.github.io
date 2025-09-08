@@ -12,7 +12,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
     Co-authors: Pierre-Alexandre Bliman, Patrice Loisel, Alain Rapaport, Arnaud Virelizier
     
-    *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-5194927)
+    *Submitted, 2025* • [**Link**](https://hal.science/hal-05194927v1)
 
 
 2.  **Regularization of optimal control problems on stratified domains using additional controls** 
