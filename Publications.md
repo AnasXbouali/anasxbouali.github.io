@@ -21,36 +21,37 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
 
-3.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
-    
-    Co-authors: Terence Bayen, Loïc Bourdin  
-    
-    *Submitted, 2025* • [**Link**](https://hal.science/hal-03928967v2)
-
 ---
 
 ## Journal Papers
 
-1.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
+1.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
+    
+    Co-authors: Terence Bayen, Loïc Bourdin  
+    
+    *Accepted in Nonlinear Analysis Hybrid Systems, 2025* • [**Link**](https://hal.science/hal-03928967v2)
+
+
+2.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
     
     Co-authors: Terence Bayen, Florent Nacry  
     
     *Journal of Convex Analysis*, Vol. 32, 2025 • [**Link**](https://www.heldermann.de/JCA/JCA32/JCA321/jca32010.htm)
 
-2.  **On the Use of Needle-Like Perturbations in Spatially Heterogeneous Control Systems** 
+3.  **On the Use of Needle-Like Perturbations in Spatially Heterogeneous Control Systems** 
 
     Co-authors: Terence Bayen, Loïc Bourdin  
     
     *Journal of Optimization Theory and Applications*, Vol. 204, No. 46, 2025
     • [**DOI**](https://link.springer.com/article/10.1007/s10957-025-02607-6)
 
-3.  **Loss Control Regions in Optimal Control Problems** 
+4.  **Loss Control Regions in Optimal Control Problems** 
 
     Co-authors: Terence Bayen, Loïc Bourdin, Olivier Cots  
     
     *Journal of Differential Equations*, Vol. 405, pp. 359–397, 2024 • [**DOI**](https://www.sciencedirect.com/science/article/pii/S0022039624003887)
 
-4.  **The Hybrid Maximum Principle for Optimal Control Problems with Spatially Heterogeneous Dynamics as a Consequence of a Pontryagin Maximum Principle for $L^1_{\square}$ Local Solutions** 
+5.  **The Hybrid Maximum Principle for Optimal Control Problems with Spatially Heterogeneous Dynamics as a Consequence of a Pontryagin Maximum Principle for $L^1_{\square}$ Local Solutions** 
 
     Co-authors: Terence Bayen, Loïc Bourdin
 
