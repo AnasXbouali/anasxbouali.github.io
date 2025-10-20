@@ -75,6 +75,13 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ---
 
+## Thesis
+
+1.  **Hybrid optimal control: optimality conditions and applications** 
+    
+    *Thesis*, 2023 • [**HAL**](https://theses.hal.science/tel-04335766v1)
+--- 
+
 ## Preprints
 
 1.  **Hybrid Maximum Principle with Regionally Switching Parameter** 
