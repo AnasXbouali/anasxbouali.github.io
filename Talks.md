@@ -13,8 +13,9 @@ A collection of my presentations at seminars, conferences, and workshops.
 ## Seminars & Conferences
 
 ### 2025
-1.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
-2.  **February:** Séminaire Analyse, Phénomènes Stochastiques et Applications, *LMBA, Université Bretagne Occidentale, Brest (France)*
+1.  **November:** PGMO Days, *EDF Lab Paris-Saclay (France)*
+2.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
+3.  **February:** Séminaire Analyse, Phénomènes Stochastiques et Applications, *LMBA, Université Bretagne Occidentale, Brest (France)*
 
 ### 2024
 1.  **December:** Séminaire Axe Systèmes Dynamiques, *UMR MISTEA, Montpellier (France)*
