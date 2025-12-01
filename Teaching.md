@@ -4,7 +4,7 @@ hascode = false
 rss = "Details of teaching experience and courses taught by Anas Bouali."
 +++
 
-# 🧑‍🏫 Teaching Experience
+# 🧑‍🏫 Teaching & Supervision
 
 Below is a summary of my teaching activities and responsibilities at Avignon University.
 
@@ -61,5 +61,7 @@ Below is a summary of my teaching activities and responsibilities at Avignon Uni
 # 👥 Supervision
 
 - **Co-supervision of Arnaud Virelizier (Master 2 internship, 2025)**  
-  Topic: *Optimal control in epidemiology*, co-supervised with Alain Rapaport and Patrice Loisel  
+
+  Topic: *Optimal control in epidemiology*, co-supervised with Alain Rapaport and Patrice Loisel
+  
   Arnaud Virelizier is currently a **PhD candidate at UMR MIA Paris-Saclay**.
