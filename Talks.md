@@ -13,7 +13,7 @@ A collection of my presentations at seminars, conferences, and workshops.
 ## Seminars & Conferences
 
 ### 2025
-1.  **September:** Séminaire CRAN Nancy, *Lorraine University, Nancy (France)*
+1.  **December:** Séminaire CRAN Nancy, *Lorraine University, Nancy (France)*
 2.  **November:** PGMO Days, *EDF Lab Paris-Saclay (France)*
 3.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
 4.  **February:** Séminaire Analyse, Phénomènes Stochastiques et Applications, *LMBA, Université Bretagne Occidentale, Brest (France)*
