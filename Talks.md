@@ -13,10 +13,12 @@ A collection of my presentations at seminars, conferences, and workshops.
 ## Seminars & Conferences
 
 ### 2025
-1.  **December:** Séminaire CRAN Nancy, *Lorraine University, Nancy (France)*
-2.  **November:** PGMO Days, *EDF Lab Paris-Saclay (France)*
-3.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
-4.  **February:** Séminaire Analyse, Phénomènes Stochastiques et Applications, *LMBA, Université Bretagne Occidentale, Brest (France)*
+1.  **December:** Séminaire McTAO, *Centre Inria d'Université Côte d'Azur, Antibes (France)*
+2.  **December:** Séminaire CRAN Nancy, *Lorraine University, Nancy (France)*
+3.  **November:** Présentation del'Axe Systèmes Dynamiques (UMR MISTEA - INRAE), Évaluation Hcéres 2025, *Montpellier (France)*
+4.  **November:** PGMO Days, *EDF Lab Paris-Saclay (France)*
+5.  **May:** 12ème Congrès SMAI 2025, *Carcans-Maubuissons (France)*
+6.  **February:** Séminaire Analyse, Phénomènes Stochastiques et Applications, *LMBA, Université Bretagne Occidentale, Brest (France)*
 
 ### 2024
 1.  **December:** Séminaire Axe Systèmes Dynamiques, *UMR MISTEA, Montpellier (France)*
