@@ -8,7 +8,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ## Recent Preprints
 
-2.  **Regularization of optimal control problems on stratified domains using additional controls** 
+1.  **Regularization of optimal control problems on stratified domains using additional controls** 
     
     Co-authors: Alain Rapaport, Terence Bayen  
     
