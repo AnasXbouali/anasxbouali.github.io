@@ -11,6 +11,8 @@ A collection of my presentations at seminars, conferences, and workshops.
 ---
 
 ## Seminars & Conferences
+### 2026
+1.  **January:** Séminaire du Centre Automatique et Systèmes, *Mines Paris-PSL, Paris (France)*
 
 ### 2025
 1.  **December:** Séminaire McTAO, *Centre Inria d'Université Côte d'Azur, Antibes (France)*
