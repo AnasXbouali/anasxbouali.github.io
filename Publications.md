@@ -22,7 +22,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
     Co-authors: Pierre-Alexandre Bliman, Patrice Loisel, Alain Rapaport, Arnaud Virelizier
     
-    *To appear in Mathematical Biosciences and Engineering, 2025* • [**Link**](https://hal.science/hal-05194927v1)
+    *Mathematical Biosciences and Engineering, 2026* • [**DOI**](https://www.aimspress.com/article/doi/10.3934/mbe.2026022)
 
 
 2.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
