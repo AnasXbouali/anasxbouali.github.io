@@ -29,7 +29,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     Co-authors: Terence Bayen, Loïc Bourdin  
     
-    *Accepted in Nonlinear Analysis Hybrid Systems, 2025* • [**Link**](https://hal.science/hal-03928967v2)
+    *Nonlinear Analysis Hybrid Systems, 2026* • [**DOI**](https://www.sciencedirect.com/science/article/abs/pii/S1751570X26000075)
 
 
 3.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
