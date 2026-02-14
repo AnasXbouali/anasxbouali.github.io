@@ -16,12 +16,7 @@ Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon
 
 ## 🧠 Research Interests
 
-- Hybrid Optimal Control Theory
-- Nonsmooth Analysis and Loss Control Regions
-- Epidemiology
-- Nonlinear Observer Design and State Estimation
-- Numerical Analysis and Scientific Computing
-- Numerical Optimization
+![Research Map](/_assets/map.svg)
 
 ## 📢 News
 
