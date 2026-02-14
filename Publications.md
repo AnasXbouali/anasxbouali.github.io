@@ -8,12 +8,17 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ## Recent Preprints
 
-1.  **Regularization of optimal control problems on stratified domains using additional controls** 
+1.  **The positive effect of stochastic rounding in solving ODEs: a case study in epidemiological models** 
+    
+    Co-authors: El-Mehdi El Arar, Rémi Garcia
+    
+    *Submitted, 2026* 
+
+2.  **Regularization of optimal control problems on stratified domains using additional controls** 
     
     Co-authors: Alain Rapaport, Terence Bayen  
     
     *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
-
 ---
 
 ## Journal Papers
