@@ -17,7 +17,7 @@ Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon
 ## 🧠 Research Interests
 
 ~~~
-<img src="/assets/map.svg" style="width:100%;" alt="Research Interests">
+<img src="/assets/map.svg" style="width:80%;" alt="Research Interests">
 ~~~
 
 ## 📢 News
