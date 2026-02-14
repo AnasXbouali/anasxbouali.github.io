@@ -2,7 +2,7 @@
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
-**Postdoctoral Researcher in Applied Mathematics at [INRAE Montpellier](https://mistea.montpellier.hub.inrae.fr/)**
+**Postdoctoral Researcher in Applied Mathematics at [Centre INRAE Occitanie-Montpellier](https://mistea.montpellier.hub.inrae.fr/)**
 
 ## 👤 About Me
 
@@ -10,19 +10,17 @@ Since September 2024, I am a postdoctoral researcher at INRAE Montpellier. I am 
 
 Before that, from September 2023 to August 2024, I was a Temporary Lecturer and Research Assistant (ATER) at Avignon Université.
 
-Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon Université. My research, supervised by Térence Bayen and [Loïc Bourdin](https://www.unilim.fr/pages_perso/loic.bourdin/), focused on the derivation of necessary optimality conditions for hybrid optimal control problems ([manuscript available here](https://theses.hal.science/tel-04335766v1)).
+Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon Université. My research, supervised by Térence Bayen and [Loïc Bourdin](https://www.unilim.fr/pages_perso/loic.bourdin/), focused on the derivation of necessary optimality conditions for hybrid optimal control problems and the development of adapted numerical schemes ([manuscript available here](https://theses.hal.science/tel-04335766v1)).
 
 ---
 
 ## 🧠 Research Interests
 
-- Optimal Control Theory
-- Pontryagin's Maximum Principle
-- Heterogeneous Dynamics
-- Loss Control Regions & Non-Permanent Control
-- Mathematical Modeling
+- Hybrid Optimal Control Theory
+- Nonsmooth Analysis and Loss Control Regions
 - Epidemiology
-- Dynamical Systems
+- Nonlinear Observer Design and State Estimation
+- Numerical Analysis and Scientific Computing
 - Numerical Optimization
 
 ## 📢 News
