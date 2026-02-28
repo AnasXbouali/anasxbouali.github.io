@@ -14,37 +14,39 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     *Submitted, 2026* 
 
-2.  **Regularization of optimal control problems on stratified domains using additional controls** 
-    
-    Co-authors: Alain Rapaport, Terence Bayen  
-    
-    *Submitted, 2025* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
 ---
 
 ## Journal Papers
 
-1. **On the problem of minimizing the epidemic final size for SIR model by social distancing**
+1.  **Regularization of optimal control problems on stratified domains using additional controls** 
+    
+    Co-authors: Alain Rapaport, Terence Bayen  
+    
+    *To appear in SIAM Journal on Control and Optimization, 2026* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
+    
+
+2. **On the problem of minimizing the epidemic final size for SIR model by social distancing**
 
     Co-authors: Pierre-Alexandre Bliman, Patrice Loisel, Alain Rapaport, Arnaud Virelizier
     
     *Mathematical Biosciences and Engineering, 2026* • [**DOI**](https://www.aimspress.com/article/doi/10.3934/mbe.2026022)
 
 
-2.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
+3.  **Minimum Time Problem for the Double Integrator with a Loss Control Region** 
     
     Co-authors: Terence Bayen, Loïc Bourdin  
     
     *Nonlinear Analysis Hybrid Systems, 2026* • [**DOI**](https://www.sciencedirect.com/science/article/abs/pii/S1751570X26000075)
 
 
-3.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
+4.  **Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces** 
     
     Co-authors: Terence Bayen, Florent Nacry  
     
     *Journal of Convex Analysis*, Vol. 32, 2025 • [**Link**](https://www.heldermann.de/JCA/JCA32/JCA321/jca32010.htm)
 
 
-4.  **On the Use of Needle-Like Perturbations in Spatially Heterogeneous Control Systems** 
+5.  **On the Use of Needle-Like Perturbations in Spatially Heterogeneous Control Systems** 
 
     Co-authors: Terence Bayen, Loïc Bourdin  
     
@@ -52,14 +54,14 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     • [**DOI**](https://link.springer.com/article/10.1007/s10957-025-02607-6)
 
 
-5.  **Loss Control Regions in Optimal Control Problems** 
+6.  **Loss Control Regions in Optimal Control Problems** 
 
     Co-authors: Terence Bayen, Loïc Bourdin, Olivier Cots  
     
     *Journal of Differential Equations*, Vol. 405, pp. 359–397, 2024 • [**DOI**](https://www.sciencedirect.com/science/article/pii/S0022039624003887)
 
 
-6.  **The Hybrid Maximum Principle for Optimal Control Problems with Spatially Heterogeneous Dynamics as a Consequence of a Pontryagin Maximum Principle for $L^1_{\square}$ Local Solutions** 
+7.  **The Hybrid Maximum Principle for Optimal Control Problems with Spatially Heterogeneous Dynamics as a Consequence of a Pontryagin Maximum Principle for $L^1_{\square}$ Local Solutions** 
 
     Co-authors: Terence Bayen, Loïc Bourdin
 
