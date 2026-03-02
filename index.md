@@ -22,8 +22,8 @@ Prior to that, from October 2020 to November 2023, I completed my PhD at Avignon
 
 ## 📢 News
 
-- We propose a **Master 2 internship**, with [Alain Rapaport](https://sites.google.com/site/alainrapaport) and [Patrice Loisel](https://www.researchgate.net/profile/Patrice-Loisel) at **UMR MISTEA - Centre INRAE Occitanie-Montpellier** in the setting of the [ANR Project NOCIME](https://sites.google.com/view/nocime).  
-  Please find below the detailed offer ([📄 Internship Offer PDF](assets/Stage_NOCIME_25_26-5.pdf)), and if you are interested in **optimal control theory** and its **application to epidemiology**, do not hesitate to contact us!
+- 📝 Our paper **“Regularization of optimal control problems on stratified domains using additional controls”**, co-authored with Alain Rapaport and Terence Bayen, has been accepted for publication in *SIAM Journal on Control and Optimization (SICON)* (2026).  
+  [**HAL link**](https://hal.inrae.fr/hal-04928858v3)
 
 
 ## 🌐 Online
