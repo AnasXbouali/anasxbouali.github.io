@@ -22,7 +22,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     Co-authors: Alain Rapaport, Terence Bayen  
     
-    *To appear in SIAM Journal on Control and Optimization, 2026* • [**Link**](https://hal.inrae.fr/hal-04928858v2)
+    *To appear in SIAM Journal on Control and Optimization, 2026* • [**HAL link**](https://hal.inrae.fr/hal-04928858v3)
     
 
 2. **On the problem of minimizing the epidemic final size for SIR model by social distancing**
