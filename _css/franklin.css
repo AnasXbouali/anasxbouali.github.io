@@ -96,7 +96,7 @@ html {
 }
 
 /* On narrow device, reduce margins. */
-@media (max-width: 480px) {
+@media (max-width: 750px) {
   .franklin-content {
     padding-left: 6%;
     padding-right: 6%;
