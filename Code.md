@@ -19,11 +19,11 @@ A Julia package for solving optimal control problems with SIR epidemiological mo
 
 #### Constant Transmission Rate
 
-![Figure description](/assets/figSIR_git.png)
+![Figure description](/assets/figSIR_git.jpg)
 
 #### Piecewise Constant Transmission Rate
 
-![Figure description](/assets/fig2cSIR.png)
+![Figure description](/assets/fig2cSIR.jpg)
 
 
 **Documentation:** [SIRcontrol.jl](https://anasxbouali.github.io/SIRcontrol.jl/dev/)
@@ -78,6 +78,12 @@ Investigation of reduced-precision optimization algorithms using stochastic roun
 ![state](/assets/optim1.jpg)
 
 ![Figure description](/assets/optim2.jpg)
+
+### SRode.py
+
+Investigation of reduced-precision methods for solving ordinary differential equations using the midpoint method with stochastic rounding techniques for improved computational efficiency.
+
+![state](/assets/srSIR.jpg)
 
 
 ---
