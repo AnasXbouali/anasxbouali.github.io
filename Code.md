@@ -84,6 +84,9 @@ Investigation of reduced-precision optimization algorithms using stochastic roun
 Investigation of reduced-precision methods for solving ordinary differential equations using the midpoint method with stochastic rounding techniques for improved computational efficiency.
 
 ![state](/assets/srSIR.jpg)
+https://github.com/AnasXbouali/SR-ODEs-epidemiology
+
+**Documentation:** [SRode.py](https://github.com/AnasXbouali/SR-ODEs-epidemiology)
 
 
 ---
