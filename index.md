@@ -12,7 +12,7 @@ Before that, from September 2023 to August 2024, I was a Temporary Lecturer and 
 
 From October 2020 to November 2023, I completed my PhD at Avignon Université under the supervision of Térence Bayen and [Loïc Bourdin](https://www.unilim.fr/pages_perso/loic.bourdin/). My research focused on the derivation of necessary optimality conditions for hybrid optimal control problems and the development of adapted numerical schemes ([manuscript available here](https://theses.hal.science/tel-04335766v1)).
 
-Prior to that, I completed a Master’s internship at the Laboratoire de Mathématiques Blaise Pascal under the supervision of [Arnaud Münch](https://lmbp.uca.fr/~munch/). This work resulted in a mémoire, available [here](https://github.com/AnasXbouali/anasxbouali.github.io/blob/main/_assets/M%C3%A9moire.pdf).
+Prior to that, I completed a Master’s internship at the Laboratoire de Mathématiques Blaise Pascal under the supervision of [Arnaud Münch](https://lmbp.uca.fr/~munch/). This work resulted in a mémoire, available [here](https://github.com/AnasXbouali/anasxbouali.github.io/blob/main/_assets/Mémoire.pdf).
 
 ---
 
