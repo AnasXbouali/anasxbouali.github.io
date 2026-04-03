@@ -8,7 +8,13 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ## Recent Preprints
 
-1.  **The positive effect of stochastic rounding in solving ODEs: a case study in epidemiological models** 
+1.  **Observer synthesis and peak reduction for the SIR model with output feedback under budget-constrained interventions** 
+    
+    Co-authors: Radosław Patelski, Alain Rapaport, Denis Efimov and Rosane Ushirobira
+    
+    *Submitted, 2026* 
+
+2.  **The positive effect of stochastic rounding in solving ODEs: a case study in epidemiological models** 
     
     Co-authors: El-Mehdi El Arar, Rémi Garcia
     
