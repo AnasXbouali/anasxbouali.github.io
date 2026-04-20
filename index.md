@@ -24,6 +24,11 @@ Prior to that, I completed a Master's internship at the Laboratoire de Mathémat
 
 ## 📢 News
 
+
+- 🎓 **M1 Internship Proposal (2025–2026)**: I am co-supervising a Master’s internship on *hybrid optimal control and adaptive mesh refinement* at Centre INRAE Occitanie-Montpellier, in collaboration with Olivier Cots (ENSEEIHT, Toulouse).  
+  [📄 Internship description](/assets/stageM1_26.pdf)
+
+
 - 📝 Our paper **“Regularization of optimal control problems on stratified domains using additional controls”**, co-authored with Alain Rapaport and Terence Bayen, has been accepted for publication in *SIAM Journal on Control and Optimization (SICON)* (2026).  
   [**HAL link**](https://hal.inrae.fr/hal-04928858v3)
 
