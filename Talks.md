@@ -12,8 +12,9 @@ A collection of my presentations at seminars, conferences, and workshops.
 
 ## Seminars & Conferences
 ### 2026
-1.  **March:** Journée SMAI MODE, *Nice (France)*
-2.  **January:** Séminaire du Centre Automatique et Systèmes, *Mines Paris-PSL, Paris (France)*
+1.  **March:** Séminaire MIPA, *Nîmes Université (France)*
+2.  **March:** Journée SMAI MODE, *Nice (France)*
+3.  **January:** Séminaire du Centre Automatique et Systèmes, *Mines Paris-PSL, Paris (France)*
 
 ### 2025
 1.  **December:** Séminaire McTAO, *Centre Inria d'Université Côte d'Azur, Antibes (France)*
