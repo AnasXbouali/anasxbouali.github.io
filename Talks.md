@@ -12,7 +12,7 @@ A collection of my presentations at seminars, conferences, and workshops.
 
 ## Seminars & Conferences
 ### 2026
-1.  **May:** Séminaire SPOT, *ENSEEIHT - Toulouse Université (France)*
+1.  **May:** Séminaire SPOT, *INP-ENSEEIHT, Toulouse (France)*
 2.  **March:** Séminaire MIPA, *Nîmes Université (France)*
 3.  **March:** Journée SMAI MODE, *Nice (France)*
 4.  **January:** Séminaire du Centre Automatique et Systèmes, *Mines Paris-PSL, Paris (France)*
