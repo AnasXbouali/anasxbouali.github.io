@@ -14,11 +14,11 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     *Submitted, 2026* 
 
-2.  **The positive effect of stochastic rounding in solving ODEs: a case study in epidemiological models** 
+2.  **Low-Precision Arithmetic for Solving ODEs: A Case Study in Epidemiological Modeling** 
     
     Co-authors: El-Mehdi El Arar, Rémi Garcia
     
-    *Submitted, 2026* 
+    *Submitted, 2026* • [**HAL**](https://hal.science/hal-05653284) 
 
 ---
 
