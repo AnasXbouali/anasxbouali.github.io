@@ -22,10 +22,6 @@ Prior to that, I completed a Master's internship at the Laboratoire de Mathémat
 <img src="/assets/map.svg" style="width:80%;" alt="Research Interests">
 ~~~
 
-## 📢 News
-
-- 📝 Our paper **“Regularization of optimal control problems on stratified domains using additional controls”**, co-authored with Alain Rapaport and Terence Bayen, has been accepted for publication in *SIAM Journal on Control and Optimization (SICON)* (2026).  
-  [**HAL link**](https://hal.inrae.fr/hal-04928858v3)
 
 
 ## 🌐 Online
