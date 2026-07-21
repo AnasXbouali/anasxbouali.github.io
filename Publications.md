@@ -12,7 +12,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     
     Co-authors: Radosław Patelski, Alain Rapaport, Denis Efimov and Rosane Ushirobira
     
-    *Submitted, 2026* 
+    *to appear in 65th IEEE Conference on Decision and Control, 2026* • [**HAL**](https://hal.science/hal-05699171) 
 
 2.  **Low-Precision Arithmetic for Solving ODEs: A Case Study in Epidemiological Modeling** 
     
