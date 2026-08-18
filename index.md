@@ -2,7 +2,6 @@
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
-# Anas Bouali
 
 **Applied Mathematician**  
 Optimal control · Hybrid systems · Numerical optimisation
@@ -35,7 +34,7 @@ Previously, I completed a Master's internship at the Laboratoire de Mathématiqu
 
 ## Links
 
-- [Email](mailto:anas.bouali@inrae.fr)
+- [Email](mailto:anas.bouali@outlook.com)
 - [Google Scholar](https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr)
 - [GitHub](https://github.com/AnasXbouali)
 - [LinkedIn](https://www.linkedin.com/in/anas-bouali-276539215/)
