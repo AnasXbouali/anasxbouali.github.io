@@ -153,15 +153,17 @@ rss = "Overview of research software packages and implementations in Julia and P
 .franklin-content .software-visual {
   margin: 1rem 0 1.2rem;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Ensures the GIF respects the rounded corners */
   border: 1px solid #d9e2ec;
   background: #f8fafc;
+  line-height: 0;   /* Removes tiny gaps below images */
 }
 
 .franklin-content .software-visual img {
   width: 100%;
-  height: auto;
+  height: auto;     /* Maintains perfect aspect ratio */
   display: block;
+  max-width: 100%;  /* Strictly prevents overflow */
 }
 
 /* 6) Buttons */
@@ -211,7 +213,7 @@ rss = "Overview of research software packages and implementations in Julia and P
 /* 7) Example Grid (for packages with multiple demos) */
 .franklin-content .example-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: 1rem 0;
 }
@@ -222,6 +224,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   border-radius: 8px;
   padding: 0.8rem;
   text-align: center;
+  overflow: hidden; /* Keeps grid images strictly inside the box */
 }
 
 .franklin-content .example-item h4 {
@@ -235,8 +238,10 @@ rss = "Overview of research software packages and implementations in Julia and P
 .franklin-content .example-item img {
   width: 100%;
   height: auto;
+  max-width: 100%;  /* Prevents any grid image from escaping its container */
   border-radius: 6px;
   border: 1px solid #e2e8f0;
+  display: block;   /* Removes bottom whitespace */
 }
 
 /* 8) Small screens */
@@ -244,6 +249,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   .franklin-content .software-card { padding: 1.2rem; }
   .franklin-content .software-links { flex-direction: column; }
   .franklin-content .btn-primary, .franklin-content .btn-secondary { width: 100%; justify-content: center; }
+  .franklin-content .example-grid { grid-template-columns: 1fr; }
 }
 </style>
 ~~~
@@ -270,9 +276,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   </p>
   
   <div class="software-visual">
-    <!-- REPLACE THIS WITH YOUR BEST HIGH-QUALITY FIGURE OR GIF -->
-    <!-- Example: <img src="/assets/ft_observer_demo.gif" alt="FT Observer simulation results"> -->
-    <img src="/assets/ft_observer_placeholder.jpg" alt="FT Observer simulation results" style="width:100%; height: 250px; object-fit: cover; opacity: 0.7;">
+    <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
   </div>
   
   <div class="software-links">
