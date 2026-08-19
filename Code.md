@@ -142,7 +142,7 @@ rss = "Overview of research software packages and implementations in Julia and P
 
 .franklin-content .software-visual {
   margin: 1rem auto 0.4rem;
-  max-width: 1000px;
+  max-width: 850px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d9e2ec;
