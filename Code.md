@@ -141,8 +141,8 @@ rss = "Overview of research software packages and implementations in Julia and P
 }
 
 .franklin-content .software-visual {
-  margin: 1rem auto 0.4rem;
-  max-width: 850px;
+  margin: 1rem auto 0.8rem;
+  max-width: 950px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d9e2ec;
@@ -156,74 +156,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   height: auto;
   display: block;
   max-width: 100%;
-}
-
-/* Animation legend */
-.franklin-content .anim-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.65rem 1.4rem;
-
-  margin: 0.9rem auto 0.5rem;
-  padding: 0.7rem 1rem;
-
-  max-width: 850px;
-
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #526d82;
-  line-height: 1.4;
-
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-}
-
-.franklin-content .anim-legend .chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  white-space: nowrap;
-}
-
-.franklin-content .anim-legend .swatch {
-  display: inline-block;
-  width: 28px;
-  height: 0;
-  flex-shrink: 0;
-
-  border-top-width: 3px;
-  border-top-style: solid;
-  border-radius: 2px;
-}
-
-.franklin-content .swatch.ref {
-  border-top-color: #102a43;
-}
-
-.franklin-content .swatch.ekf {
-  border-top-color: #2470a3;
-}
-
-.franklin-content .swatch.ekfe {
-  border-top-color: #2470a3;
-  border-top-style: dotted;
-}
-
-.franklin-content .swatch.ft {
-  border-top-color: #bf382b;
-}
-
-.franklin-content .swatch.fte {
-  border-top-color: #bf382b;
-  border-top-style: dotted;
-}
-
-.franklin-content .swatch.thr {
-  border-top-color: #26ad61;
-  border-top-style: dashed;
 }
 
 .franklin-content .software-links {
@@ -303,27 +235,10 @@ rss = "Overview of research software packages and implementations in Julia and P
 }
 
 @media (max-width: 560px) {
-  .franklin-content .software-card {
-    padding: 1.2rem;
-  }
-
-  .franklin-content .software-links {
-    flex-direction: column;
-  }
-
-  .franklin-content .btn-primary,
-  .franklin-content .btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .franklin-content .example-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .franklin-content .anim-legend {
-    justify-content: flex-start;
-  }
+  .franklin-content .software-card { padding: 1.2rem; }
+  .franklin-content .software-links { flex-direction: column; }
+  .franklin-content .btn-primary, .franklin-content .btn-secondary { width: 100%; justify-content: center; }
+  .franklin-content .example-grid { grid-template-columns: 1fr; }
 }
 </style>
 ~~~
@@ -340,81 +255,23 @@ rss = "Overview of research software packages and implementations in Julia and P
 
 ~~~
 <div class="software-card featured">
-
   <div class="software-header">
     <span class="lang-badge julia">Julia</span>
     <span class="status-badge">New (2026)</span>
   </div>
-
   <h3 class="software-title">FT_Observer.jl</h3>
-
   <p class="software-desc">
     Observer synthesis and peak reduction for the SIR model with output feedback under budget-constrained interventions. This package provides robust numerical tools for epidemiological optimal control, accompanying recent research on constrained interventions.
   </p>
 
   <div class="software-visual">
-    <img
-      src="/assets/ft_vs_ekf_u3tilde.gif"
-      alt="FT-DREM vs EKF finite-time convergence animation"
-    >
-  </div>
-
-  <div class="anim-legend">
-
-    <span class="chip">
-      <span class="swatch ref"></span>
-      Reference
-    </span>
-
-    <span class="chip">
-      <span class="swatch ekf"></span>
-      EKF — true state
-    </span>
-
-    <span class="chip">
-      <span class="swatch ekfe"></span>
-      EKF — estimated state
-    </span>
-
-    <span class="chip">
-      <span class="swatch ft"></span>
-      FT observer — true state
-    </span>
-
-    <span class="chip">
-      <span class="swatch fte"></span>
-      FT observer — estimated state
-    </span>
-
-    <span class="chip">
-      <span class="swatch thr"></span>
-      Infection threshold
-    </span>
-
+    <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
   </div>
 
   <div class="software-links">
-
-    <a
-      href="https://anasxbouali.github.io/FT_Observer/stable/"
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      View Documentation ↗
-    </a>
-
-    <a
-      href="https://github.com/AnasXbouali/FT_Observer"
-      class="btn-secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      GitHub Repository
-    </a>
-
+    <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
+    <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
   </div>
-
 </div>
 ~~~
 
@@ -422,129 +279,80 @@ rss = "Overview of research software packages and implementations in Julia and P
 
 ~~~
 <div class="software-card">
-
   <div class="software-header">
     <span class="lang-badge julia">Julia</span>
   </div>
-
   <h3 class="software-title">SIRcontrol.jl</h3>
-
   <p class="software-desc">
     A Julia package for solving optimal control problems with SIR epidemiological models, supporting both constant and time-varying transmission rates.
   </p>
-
   <div class="example-grid">
-
     <div class="example-item">
       <img src="/assets/figSIR_git.jpg" alt="Constant Transmission Rate">
       <h4>Constant Transmission Rate</h4>
     </div>
-
     <div class="example-item">
       <img src="/assets/fig2cSIR.jpg" alt="Piecewise Constant Transmission Rate">
       <h4>Piecewise Constant Rate</h4>
     </div>
-
   </div>
-
   <div class="software-links">
-    <a
-      href="https://anasxbouali.github.io/SIRcontrol.jl/dev/"
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      View Documentation ↗
-    </a>
+    <a href="https://anasxbouali.github.io/SIRcontrol.jl/dev/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
   </div>
-
 </div>
 ~~~
 
 ~~~
 <div class="software-card">
-
   <div class="software-header">
     <span class="lang-badge julia">Julia</span>
   </div>
-
   <h3 class="software-title">LossControl.jl</h3>
-
   <p class="software-desc">
     A comprehensive package for solving optimal control problems with loss control regions, featuring multiple classical control examples.
   </p>
-
   <div class="example-grid">
-
     <div class="example-item">
       <img src="/assets/zer0.gif" alt="Zermelo Navigation">
       <h4>Zermelo Navigation</h4>
     </div>
-
     <div class="example-item">
       <img src="/assets/ho0.gif" alt="Harmonic Oscillator">
       <h4>Harmonic Oscillator</h4>
     </div>
-
     <div class="example-item">
       <img src="/assets/DI.jpg" alt="Double Integrator">
       <h4>Double Integrator</h4>
     </div>
-
   </div>
-
   <div class="software-links">
-    <a
-      href="https://control-toolbox.org/LossControl.jl/stable/"
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      View Documentation ↗
-    </a>
+    <a href="https://control-toolbox.org/LossControl.jl/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
   </div>
-
 </div>
 ~~~
 
 ~~~
 <div class="software-card">
-
   <div class="software-header">
     <span class="lang-badge julia">Julia</span>
   </div>
-
   <h3 class="software-title">RegHybridOCP.jl</h3>
-
   <p class="software-desc">
     Novel regularization scheme for optimal control problems with hybrid dynamics featuring state-dependent discontinuities.
   </p>
-
   <div class="example-grid">
-
     <div class="example-item">
       <img src="/assets/reg1.jpg" alt="Regularization Scheme State">
       <h4>State Trajectories</h4>
     </div>
-
     <div class="example-item">
       <img src="/assets/reg2.jpg" alt="Regularization Scheme Control">
       <h4>Control Inputs</h4>
     </div>
-
   </div>
-
   <div class="software-links">
-    <a
-      href="https://github.com/AnasXbouali/Academic-example"
-      class="btn-secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      GitHub Repository
-    </a>
+    <a href="https://github.com/AnasXbouali/Academic-example" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
   </div>
-
 </div>
 ~~~
 
@@ -552,67 +360,44 @@ rss = "Overview of research software packages and implementations in Julia and P
 
 ~~~
 <div class="software-card">
-
   <div class="software-header">
     <span class="lang-badge python">Python</span>
   </div>
-
   <h3 class="software-title">SRoptimization.py</h3>
-
   <p class="software-desc">
     Investigation of reduced-precision optimization algorithms using stochastic rounding techniques for improved computational efficiency.
   </p>
-
   <div class="example-grid">
-
     <div class="example-item">
       <img src="/assets/optim1.jpg" alt="Optimization Results 1">
       <h4>Convergence Analysis</h4>
     </div>
-
     <div class="example-item">
       <img src="/assets/optim2.jpg" alt="Optimization Results 2">
       <h4>Precision Comparison</h4>
     </div>
-
   </div>
-
 </div>
 ~~~
 
 ~~~
 <div class="software-card">
-
   <div class="software-header">
     <span class="lang-badge python">Python</span>
   </div>
-
   <h3 class="software-title">SRode.py</h3>
-
   <p class="software-desc">
     Investigation of reduced-precision methods for solving ordinary differential equations using the midpoint method with stochastic rounding techniques for improved computational efficiency.
   </p>
-
   <div class="example-grid">
-
     <div class="example-item">
       <img src="/assets/srSIR.jpg" alt="SIR ODE Stochastic Rounding">
       <h4>SIR Model Integration</h4>
     </div>
-
   </div>
-
   <div class="software-links">
-    <a
-      href="https://github.com/AnasXbouali/SR-ODEs-epidemiology"
-      class="btn-secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      GitHub Repository
-    </a>
+    <a href="https://github.com/AnasXbouali/SR-ODEs-epidemiology" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
   </div>
-
 </div>
 ~~~
 
