@@ -300,15 +300,6 @@ rss = "Overview of research software packages and implementations in Julia and P
     <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
   </div>
 
-  <div class="anim-legend">
-    <span class="chip"><span class="swatch ref"></span>Reference</span>
-    <span class="chip"><span class="swatch ekf"></span>EKF (true)</span>
-    <span class="chip"><span class="swatch ekfe"></span>EKF (estimate)</span>
-    <span class="chip"><span class="swatch ft"></span>FT-DREM (true)</span>
-    <span class="chip"><span class="swatch fte"></span>FT-DREM (estimate)</span>
-    <span class="chip"><span class="swatch thr"></span>Threshold</span>
-  </div>
-
   <div class="software-links">
     <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
     <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
