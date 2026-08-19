@@ -1,95 +1,413 @@
 +++
-title = "Code"
+title = "Research Software | Anas Bouali"
 hascode = false
-rss = "Overview of software packages and research code in Julia and Python."
+rss = "Overview of research software packages and implementations in Julia and Python."
 +++
 
-# Code
+~~~
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
-Here is an overview of my research implementations.
+/* ============================================================
+   Software page theme — self-contained, this page only.
+   Palette synced with basic.css (ink #102a43, teal #0b7285).
+   ============================================================ */
 
----
+.franklin-content {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #102a43;
+  line-height: 1.7;
+}
 
-## Julia code (.jl)
+/* 1) Kill the grey separating lines from franklin.css */
+.franklin-content h1,
+.franklin-content h2,
+.franklin-content h3 {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: #102a43;
+}
 
-### SIRcontrol.jl
+.franklin-content h1 {
+  font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+}
 
-A Julia package for solving optimal control problems with SIR epidemiological models, supporting both constant and time-varying transmission rates.
+.franklin-content h1::after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 5px;
+  margin-top: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0b7285, #1971c2);
+}
 
+.franklin-content h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.6rem;
+  margin-bottom: 1.4rem;
+  padding-left: 0.8rem;
+  border-left: 5px solid #0b7285;
+}
 
-#### Constant Transmission Rate
+/* 2) Intro banner */
+.franklin-content .software-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #23425f;
+  background: linear-gradient(120deg, #e6fcf5 0%, #e7f5ff 100%);
+  border: 1px solid #c5e8f0;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  margin: 0.4rem 0 2.4rem;
+}
 
-![Figure description](/assets/figSIR_git.jpg)
+/* 3) Software cards */
+.franklin-content .software-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-left: 5px solid #0b7285;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
 
-#### Piecewise Constant Transmission Rate
+.franklin-content .software-card.featured {
+  border-left-color: #b45309; /* Amber/Gold accent for featured */
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
 
-![Figure description](/assets/fig2cSIR.jpg)
+.franklin-content .software-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
+}
 
+/* 4) Badges */
+.franklin-content .software-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
 
-**Documentation:** [SIRcontrol.jl](https://anasxbouali.github.io/SIRcontrol.jl/dev/)
+.franklin-content .lang-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
----
+.franklin-content .lang-badge.julia {
+  background: #f3f0ff;
+  color: #5f3dc4;
+  border: 1px solid #d4c8f9;
+}
 
-### LossControl.jl
+.franklin-content .lang-badge.python {
+  background: #e7f5ff;
+  color: #1971c2;
+  border: 1px solid #a5d8ff;
+}
 
-A comprehensive package for solving optimal control problems with loss control regions, featuring multiple classical control examples.
+.franklin-content .status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #b45309;
+  background: #fff4e6;
+  border: 1px solid #ffe8cc;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
-#### Zermelo Navigation Problem
+/* 5) Typography & Visuals */
+.franklin-content .software-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #102a43;
+  margin: 0 0 0.6rem 0;
+}
 
-![state](/assets/zer0.gif)
+.franklin-content .software-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #23425f;
+  margin-bottom: 1.2rem;
+}
 
-![Figure description](/assets/zer1.gif)
+.franklin-content .software-visual {
+  margin: 1rem 0 1.2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d9e2ec;
+  background: #f8fafc;
+}
 
+.franklin-content .software-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-#### Harmonic Oscillator
+/* 6) Buttons */
+.franklin-content .software-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 
-![state](/assets/ho0.gif)
+.franklin-content .btn-primary,
+.franklin-content .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease;
+}
 
-![Figure description](/assets/ho1.gif)
+.franklin-content .btn-primary {
+  background: #0b7285;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(11, 114, 133, 0.25);
+}
 
+.franklin-content .btn-primary:hover {
+  background: #075866;
+  transform: translateY(-1px);
+}
 
-#### Double Integrator
+.franklin-content .btn-secondary {
+  background: #ffffff;
+  color: #102a43;
+  border: 1px solid #d9e2ec;
+}
 
-![Figure description](/assets/DI.jpg)
+.franklin-content .btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #0b7285;
+  color: #0b7285;
+}
 
-**Documentation:** [LossControl.jl](https://control-toolbox.org/LossControl.jl/stable/)
+/* 7) Example Grid (for packages with multiple demos) */
+.franklin-content .example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
 
----
+.franklin-content .example-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+}
 
-### RegHybridOCP.jl
+.franklin-content .example-item h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #526d82;
+  margin: 0.6rem 0 0 0;
+}
 
-Novel regularization scheme for optimal control problems with hybrid dynamics featuring state-dependent discontinuities.
+.franklin-content .example-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
 
+/* 8) Small screens */
+@media (max-width: 560px) {
+  .franklin-content .software-card { padding: 1.2rem; }
+  .franklin-content .software-links { flex-direction: column; }
+  .franklin-content .btn-primary, .franklin-content .btn-secondary { width: 100%; justify-content: center; }
+}
+</style>
+~~~
 
-![state](/assets/reg1.jpg)
+# Research Software
 
-![Figure description](/assets/reg2.jpg)
+~~~
+<div class="software-intro">
+  Open-source research implementations, numerical solvers, and simulation tools developed during my research. All packages are documented and designed for reproducibility.
+</div>
+~~~
 
-**Documentation:** [RegHybridOCP.jl](https://github.com/AnasXbouali/Academic-example)
+## Featured Package
 
----
+~~~
+<div class="software-card featured">
+  <div class="software-header">
+    <span class="lang-badge julia">Julia</span>
+    <span class="status-badge">New (2026)</span>
+  </div>
+  <h3 class="software-title">FT_Observer.jl</h3>
+  <p class="software-desc">
+    Observer synthesis and peak reduction for the SIR model with output feedback under budget-constrained interventions. This package provides robust numerical tools for epidemiological optimal control, accompanying recent research on constrained interventions.
+  </p>
+  
+  <div class="software-visual">
+    <!-- REPLACE THIS WITH YOUR BEST HIGH-QUALITY FIGURE OR GIF -->
+    <!-- Example: <img src="/assets/ft_observer_demo.gif" alt="FT Observer simulation results"> -->
+    <img src="/assets/ft_observer_placeholder.jpg" alt="FT Observer simulation results" style="width:100%; height: 250px; object-fit: cover; opacity: 0.7;">
+  </div>
+  
+  <div class="software-links">
+    <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
+    <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
+  </div>
+</div>
+~~~
 
-## Python Code (.py)
+## Julia Packages
 
-### SRoptimization.py
+~~~
+<div class="software-card">
+  <div class="software-header">
+    <span class="lang-badge julia">Julia</span>
+  </div>
+  <h3 class="software-title">SIRcontrol.jl</h3>
+  <p class="software-desc">
+    A Julia package for solving optimal control problems with SIR epidemiological models, supporting both constant and time-varying transmission rates.
+  </p>
+  <div class="example-grid">
+    <div class="example-item">
+      <img src="/assets/figSIR_git.jpg" alt="Constant Transmission Rate">
+      <h4>Constant Transmission Rate</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/fig2cSIR.jpg" alt="Piecewise Constant Transmission Rate">
+      <h4>Piecewise Constant Rate</h4>
+    </div>
+  </div>
+  <div class="software-links">
+    <a href="https://anasxbouali.github.io/SIRcontrol.jl/dev/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
+  </div>
+</div>
+~~~
 
-Investigation of reduced-precision optimization algorithms using stochastic rounding techniques for improved computational efficiency.
+~~~
+<div class="software-card">
+  <div class="software-header">
+    <span class="lang-badge julia">Julia</span>
+  </div>
+  <h3 class="software-title">LossControl.jl</h3>
+  <p class="software-desc">
+    A comprehensive package for solving optimal control problems with loss control regions, featuring multiple classical control examples.
+  </p>
+  <div class="example-grid">
+    <div class="example-item">
+      <img src="/assets/zer0.gif" alt="Zermelo Navigation">
+      <h4>Zermelo Navigation</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/ho0.gif" alt="Harmonic Oscillator">
+      <h4>Harmonic Oscillator</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/DI.jpg" alt="Double Integrator">
+      <h4>Double Integrator</h4>
+    </div>
+  </div>
+  <div class="software-links">
+    <a href="https://control-toolbox.org/LossControl.jl/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
+  </div>
+</div>
+~~~
 
-![state](/assets/optim1.jpg)
+~~~
+<div class="software-card">
+  <div class="software-header">
+    <span class="lang-badge julia">Julia</span>
+  </div>
+  <h3 class="software-title">RegHybridOCP.jl</h3>
+  <p class="software-desc">
+    Novel regularization scheme for optimal control problems with hybrid dynamics featuring state-dependent discontinuities.
+  </p>
+  <div class="example-grid">
+    <div class="example-item">
+      <img src="/assets/reg1.jpg" alt="Regularization Scheme State">
+      <h4>State Trajectories</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/reg2.jpg" alt="Regularization Scheme Control">
+      <h4>Control Inputs</h4>
+    </div>
+  </div>
+  <div class="software-links">
+    <a href="https://github.com/AnasXbouali/Academic-example" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
+  </div>
+</div>
+~~~
 
-![Figure description](/assets/optim2.jpg)
+## Python Implementations
 
-### SRode.py
+~~~
+<div class="software-card">
+  <div class="software-header">
+    <span class="lang-badge python">Python</span>
+  </div>
+  <h3 class="software-title">SRoptimization.py</h3>
+  <p class="software-desc">
+    Investigation of reduced-precision optimization algorithms using stochastic rounding techniques for improved computational efficiency.
+  </p>
+  <div class="example-grid">
+    <div class="example-item">
+      <img src="/assets/optim1.jpg" alt="Optimization Results 1">
+      <h4>Convergence Analysis</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/optim2.jpg" alt="Optimization Results 2">
+      <h4>Precision Comparison</h4>
+    </div>
+  </div>
+</div>
+~~~
 
-Investigation of reduced-precision methods for solving ordinary differential equations using the midpoint method with stochastic rounding techniques for improved computational efficiency.
+~~~
+<div class="software-card">
+  <div class="software-header">
+    <span class="lang-badge python">Python</span>
+  </div>
+  <h3 class="software-title">SRode.py</h3>
+  <p class="software-desc">
+    Investigation of reduced-precision methods for solving ordinary differential equations using the midpoint method with stochastic rounding techniques for improved computational efficiency.
+  </p>
+  <div class="example-grid">
+    <div class="example-item">
+      <img src="/assets/srSIR.jpg" alt="SIR ODE Stochastic Rounding">
+      <h4>SIR Model Integration</h4>
+    </div>
+  </div>
+  <div class="software-links">
+    <a href="https://github.com/AnasXbouali/SR-ODEs-epidemiology" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
+  </div>
+</div>
+~~~
 
-![state](/assets/srSIR.jpg)
+## Get in Touch
 
-**Documentation:** [SRode.py](https://github.com/AnasXbouali/SR-ODEs-epidemiology)
-
-
----
-
-## Repository Access
-
-All code is available on my [GitHub profile](https://github.com/anasxbouali). For questions about implementation details or collaboration opportunities, feel free to [contact me](mailto:anas.bouali@inrae.fr).
+All code is available on my [GitHub profile](https://github.com/AnasXbouali). For questions about implementation details, reproducibility, or collaboration opportunities, feel free to [contact me](mailto:anas.bouali@inrae.fr).
