@@ -4,6 +4,173 @@ hascode = false
 rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamics, and mathematical modeling."
 +++
 
+~~~
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+
+/* ============================================================
+   Publications page theme — self-contained, this page only.
+   Palette synced with basic.css (ink #102a43, teal #0b7285).
+   ============================================================ */
+
+.franklin-content {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #102a43;
+}
+
+/* 1) Kill the grey separating lines from franklin.css */
+.franklin-content h1,
+.franklin-content h2 {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: #102a43;
+}
+
+.franklin-content h1 {
+  font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+}
+
+/* short gradient accent under the page title (delete this block if you want nothing) */
+.franklin-content h1::after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 5px;
+  margin-top: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0b7285, #1971c2);
+}
+
+/* 2) Section headings: vertical accent bar, no horizontal line */
+.franklin-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  padding-left: 0.8rem;
+  border-left: 5px solid #0b7285;
+}
+
+/* 3) Intro banner */
+.franklin-content .publications-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #23425f;
+  background: linear-gradient(120deg, #e6fcf5 0%, #e7f5ff 100%);
+  border: 1px solid #c5e8f0;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  margin: 0.4rem 0 2.4rem;
+}
+
+/* 4) Cards — one accent colour per publication type */
+.franklin-content .publication           { --pub: #0b7285; --pub-soft: #e6fcf5; } /* journal      */
+.franklin-content .publication.t-conf    { --pub: #5f3dc4; --pub-soft: #f3f0ff; } /* conference   */
+.franklin-content .publication.t-preprint{ --pub: #b45309; --pub-soft: #fff4e6; } /* preprint     */
+.franklin-content .publication.t-chapter { --pub: #1971c2; --pub-soft: #e7f5ff; } /* book chapter */
+.franklin-content .publication.t-thesis  { --pub: #a61e4d; --pub-soft: #fff0f6; } /* thesis       */
+
+.franklin-content .publication {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-left: 5px solid var(--pub);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem 1.3rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.franklin-content .publication:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
+}
+
+.franklin-content .publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.55rem;
+}
+
+.franklin-content .publication-year {
+  font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #526d82;
+  background: #f8fafc;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  padding: 0.14rem 0.5rem;
+}
+
+.franklin-content .publication-type {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pub);
+  background: var(--pub-soft);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.franklin-content .publication h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.27rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: #102a43;
+  margin: 0.15rem 0 0.5rem;
+}
+
+.franklin-content .publication-authors {
+  font-size: 0.93rem;
+  color: #526d82;
+  margin: 0.15rem 0;
+}
+
+.franklin-content .publication-venue {
+  font-size: 0.93rem;
+  font-style: italic;
+  color: #33556e;
+  margin: 0.15rem 0 0.85rem;
+}
+
+/* 5) Link buttons */
+.franklin-content a.publication-link,
+.franklin-content a.publication-link:hover {
+  display: inline-block;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  background: var(--pub);
+  border-radius: 999px;
+  padding: 0.42rem 0.95rem;
+  box-shadow: 0 2px 8px rgba(16, 42, 67, 0.18);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.franklin-content a.publication-link:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+/* 6) Small screens */
+@media (max-width: 560px) {
+  .franklin-content .publication { padding: 1rem 1.1rem 1.1rem; }
+}
+</style>
+~~~
+
 # Publications
 
 ~~~
@@ -16,7 +183,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ## Recent preprints
 
 ~~~
-<div class="publication">
+<div class="publication t-conf">
   <div class="publication-meta">
     <span class="publication-year">2026</span>
     <span class="publication-type">Conference paper</span>
@@ -29,7 +196,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ~~~
 
 ~~~
-<div class="publication">
+<div class="publication t-preprint">
   <div class="publication-meta">
     <span class="publication-year">2026</span>
     <span class="publication-type">Submitted manuscript</span>
@@ -137,7 +304,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ## Book chapter and conference paper
 
 ~~~
-<div class="publication">
+<div class="publication t-chapter">
   <div class="publication-meta">
     <span class="publication-year">2024</span>
     <span class="publication-type">Book chapter</span>
@@ -150,7 +317,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ~~~
 
 ~~~
-<div class="publication">
+<div class="publication t-conf">
   <div class="publication-meta">
     <span class="publication-year">2022</span>
     <span class="publication-type">Conference paper</span>
@@ -165,7 +332,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ## Thesis and earlier preprint
 
 ~~~
-<div class="publication">
+<div class="publication t-thesis">
   <div class="publication-meta">
     <span class="publication-year">2023</span>
     <span class="publication-type">Doctoral thesis</span>
@@ -177,7 +344,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 ~~~
 
 ~~~
-<div class="publication">
+<div class="publication t-preprint">
   <div class="publication-meta">
     <span class="publication-year">2022</span>
     <span class="publication-type">Preprint</span>
