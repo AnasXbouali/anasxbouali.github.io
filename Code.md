@@ -140,7 +140,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin-bottom: 1.2rem;
 }
 
-/* Visual box: white background kills the grey band */
 .franklin-content .software-visual {
   margin: 1rem auto 0.4rem;
   max-width: 1000px;
@@ -159,7 +158,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   max-width: 100%;
 }
 
-/* HTML legend: can never clip, always crisp */
 .franklin-content .anim-legend {
   display: flex;
   flex-wrap: wrap;
@@ -299,8 +297,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   </p>
 
   <div class="software-visual">
-    <video src="/assets/ft_vs_ekf_u3tilde.mp4" autoplay muted loop playsinline
-           aria-label="FT-DREM vs EKF closed-loop comparison"></video>
+    <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
   </div>
 
   <div class="anim-legend">
