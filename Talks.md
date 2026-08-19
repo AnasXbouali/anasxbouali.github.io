@@ -178,7 +178,7 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
 </style>
 ~~~
 
-# 💬 Talks & Presentations
+# Talks & Presentations
 
 ~~~
 <div class="talks-intro">
