@@ -227,7 +227,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   <p class="position-meta"><strong>Avignon Université</strong> · 2023–2024</p>
   
   <div class="course">
-    <h4 class="course-title">Analyse 1</h4>
+    <h4 class="course-title">Analysis 1</h4>
     <p class="course-meta">First-year BSc Mathematics and Computer Science · 33 hours</p>
     <div class="course-content">
       <ul>
@@ -239,7 +239,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   </div>
   
   <div class="course">
-    <h4 class="course-title">Analyse 2</h4>
+    <h4 class="course-title">Analysis 2</h4>
     <p class="course-meta">First-year BSc Mathematics and Computer Science · 21 hours</p>
     <div class="course-content">
       <ul>
@@ -251,7 +251,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   </div>
   
   <div class="course">
-    <h4 class="course-title">Algèbre 1</h4>
+    <h4 class="course-title">Algebra 1</h4>
     <p class="course-meta">First-year BSc Mathematics and Computer Science · 27 hours</p>
     <div class="course-content">
       <ul>
@@ -263,7 +263,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   </div>
   
   <div class="course">
-    <h4 class="course-title">Algèbre 2</h4>
+    <h4 class="course-title">Algebra 2</h4>
     <p class="course-meta">First-year BSc Mathematics and Computer Science · 21 hours</p>
     <div class="course-content">
       <ul>
@@ -293,7 +293,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   <p class="position-meta"><strong>Avignon Université</strong> · 2020–2023</p>
   
   <div class="course">
-    <h4 class="course-title">Algèbre 1</h4>
+    <h4 class="course-title">Algebra 1</h4>
     <p class="course-meta">First-year BSc Mathematics · 27 hours</p>
     <div class="course-content">
       <ul>
@@ -305,7 +305,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
   </div>
   
   <div class="course">
-    <h4 class="course-title">Algèbre 2</h4>
+    <h4 class="course-title">Algebra 2</h4>
     <p class="course-meta">First-year BSc Mathematics · 21 hours</p>
     <div class="course-content">
       <ul>
@@ -333,7 +333,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
 
 ~~~
 <div class="supervision-item">
-  <span class="supervision-type">Master 1 internship</span>
+  <span class="supervision-type">First-year Master's Internship</span>
   <span class="supervision-year">2026</span>
   <h4 class="supervision-topic">Topic: <em>Numerical methods for non-smooth optimal control problems</em></h4>
   <p class="supervision-details">Co-supervised with Olivier Cots, Université de Toulouse.</p>
@@ -342,7 +342,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
 
 ~~~
 <div class="supervision-item">
-  <span class="supervision-type">Master 2 internship</span>
+  <span class="supervision-type">Second-year Master's Internship</span>
   <span class="supervision-year">2026</span>
   <h4 class="supervision-topic">Topic: <em>Optimal control in the epidemiology of vector-borne diseases</em></h4>
   <p class="supervision-details">Co-supervised with Alain Rapaport and Patrice Loisel, UMR MISTEA, Centre INRAE Occitanie-Montpellier.</p>
@@ -351,7 +351,7 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
 
 ~~~
 <div class="supervision-item">
-  <span class="supervision-type">Master 2 internship</span>
+  <span class="supervision-type">Second-year Master's Internship</span>
   <span class="supervision-year">2025</span>
   <h4 class="supervision-topic">Topic: <em>Optimal control in epidemiology with variant emergence</em></h4>
   <p class="supervision-details">Co-supervised with Alain Rapaport and Patrice Loisel, UMR MISTEA, Centre INRAE Occitanie-Montpellier.</p>
