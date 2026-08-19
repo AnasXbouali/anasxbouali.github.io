@@ -8,18 +8,12 @@ rss = "Overview of research software packages and implementations in Julia and P
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
-/* ============================================================
-   Software page theme — self-contained, this page only.
-   Palette synced with basic.css (ink #102a43, teal #0b7285).
-   ============================================================ */
-
 .franklin-content {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: #102a43;
   line-height: 1.7;
 }
 
-/* 1) Kill the grey separating lines from franklin.css */
 .franklin-content h1,
 .franklin-content h2,
 .franklin-content h3 {
@@ -57,7 +51,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   border-left: 5px solid #0b7285;
 }
 
-/* 2) Intro banner */
 .franklin-content .software-intro {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -69,7 +62,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin: 0.4rem 0 2.4rem;
 }
 
-/* 3) Software cards */
 .franklin-content .software-card {
   background: #ffffff;
   border: 1px solid #d9e2ec;
@@ -82,7 +74,7 @@ rss = "Overview of research software packages and implementations in Julia and P
 }
 
 .franklin-content .software-card.featured {
-  border-left-color: #b45309; /* Amber/Gold accent for featured */
+  border-left-color: #b45309;
   background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
 }
 
@@ -91,7 +83,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
 }
 
-/* 4) Badges */
 .franklin-content .software-header {
   display: flex;
   align-items: center;
@@ -134,7 +125,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   letter-spacing: 0.05em;
 }
 
-/* 5) Typography & Visuals */
 .franklin-content .software-title {
   font-family: "Fraunces", Georgia, serif;
   font-size: 1.4rem;
@@ -150,23 +140,58 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin-bottom: 1.2rem;
 }
 
+/* Visual box: white background kills the grey band */
 .franklin-content .software-visual {
-  margin: 1rem 0 1.2rem;
+  margin: 1rem auto 0.4rem;
+  max-width: 1000px;
   border-radius: 8px;
-  overflow: hidden; /* Ensures the GIF respects the rounded corners */
+  overflow: hidden;
   border: 1px solid #d9e2ec;
-  background: #f8fafc;
-  line-height: 0;   /* Removes tiny gaps below images */
+  background: #ffffff;
+  line-height: 0;
 }
 
-.franklin-content .software-visual img {
+.franklin-content .software-visual img,
+.franklin-content .software-visual video {
   width: 100%;
-  height: auto;     /* Maintains perfect aspect ratio */
+  height: auto;
   display: block;
-  max-width: 100%;  /* Strictly prevents overflow */
+  max-width: 100%;
 }
 
-/* 6) Buttons */
+/* HTML legend: can never clip, always crisp */
+.franklin-content .anim-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.3rem;
+  justify-content: center;
+  margin: 0.8rem 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #526d82;
+  line-height: 1.4;
+}
+
+.franklin-content .anim-legend .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.franklin-content .anim-legend .swatch {
+  width: 26px;
+  height: 0;
+  border-top: 3px solid;
+  border-radius: 2px;
+}
+
+.franklin-content .swatch.ref  { border-top-color: #102a43; }
+.franklin-content .swatch.ekf  { border-top-color: #2470a3; }
+.franklin-content .swatch.ekfe { border-top-color: #2470a3; border-top-style: dotted; }
+.franklin-content .swatch.ft   { border-top-color: #bf382b; }
+.franklin-content .swatch.fte  { border-top-color: #bf382b; border-top-style: dotted; }
+.franklin-content .swatch.thr  { border-top-color: #26ad61; border-top-style: dashed; }
+
 .franklin-content .software-links {
   display: flex;
   gap: 0.8rem;
@@ -210,7 +235,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   color: #0b7285;
 }
 
-/* 7) Example Grid (for packages with multiple demos) */
 .franklin-content .example-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -224,7 +248,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   border-radius: 8px;
   padding: 0.8rem;
   text-align: center;
-  overflow: hidden; /* Keeps grid images strictly inside the box */
+  overflow: hidden;
 }
 
 .franklin-content .example-item h4 {
@@ -238,13 +262,12 @@ rss = "Overview of research software packages and implementations in Julia and P
 .franklin-content .example-item img {
   width: 100%;
   height: auto;
-  max-width: 100%;  /* Prevents any grid image from escaping its container */
+  max-width: 100%;
   border-radius: 6px;
   border: 1px solid #e2e8f0;
-  display: block;   /* Removes bottom whitespace */
+  display: block;
 }
 
-/* 8) Small screens */
 @media (max-width: 560px) {
   .franklin-content .software-card { padding: 1.2rem; }
   .franklin-content .software-links { flex-direction: column; }
@@ -274,11 +297,21 @@ rss = "Overview of research software packages and implementations in Julia and P
   <p class="software-desc">
     Observer synthesis and peak reduction for the SIR model with output feedback under budget-constrained interventions. This package provides robust numerical tools for epidemiological optimal control, accompanying recent research on constrained interventions.
   </p>
-  
+
   <div class="software-visual">
-    <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
+    <video src="/assets/ft_vs_ekf_u3tilde.mp4" autoplay muted loop playsinline
+           aria-label="FT-DREM vs EKF closed-loop comparison"></video>
   </div>
-  
+
+  <div class="anim-legend">
+    <span class="chip"><span class="swatch ref"></span>Reference</span>
+    <span class="chip"><span class="swatch ekf"></span>EKF (true)</span>
+    <span class="chip"><span class="swatch ekfe"></span>EKF (estimate)</span>
+    <span class="chip"><span class="swatch ft"></span>FT-DREM (true)</span>
+    <span class="chip"><span class="swatch fte"></span>FT-DREM (estimate)</span>
+    <span class="chip"><span class="swatch thr"></span>Threshold</span>
+  </div>
+
   <div class="software-links">
     <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
     <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
