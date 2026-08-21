@@ -358,10 +358,6 @@ rss = "Overview of research software packages and implementations in Julia and P
       <img src="/assets/ho0.gif" alt="Harmonic Oscillator">
       <h4>Harmonic Oscillator</h4>
     </div>
-    <div class="example-item">
-      <img src="/assets/DI.jpg" alt="Double Integrator">
-      <h4>Double Integrator</h4>
-    </div>
   </div>
   <div class="software-links">
     <a href="https://control-toolbox.org/LossControl.jl/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
