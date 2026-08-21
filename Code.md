@@ -309,7 +309,6 @@ rss = "Overview of research software packages and implementations in Julia and P
   </div>
   <div class="software-links">
     <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
-    <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
   </div>
 </div>
 ~~~
