@@ -144,7 +144,12 @@
   width: 100%;
   max-width: 900px;
   height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
   border-radius: 8px;
+  box-sizing: border-box;
+  object-fit: contain;
 }
 
 /* 5) Links Grid */
