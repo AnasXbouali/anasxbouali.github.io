@@ -8,6 +8,7 @@ rss = "Overview of research software packages and implementations in Julia and P
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
+/* ================= Base typography ================= */
 .franklin-content {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: #102a43;
@@ -51,6 +52,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   border-left: 5px solid #0b7285;
 }
 
+/* ================= Intro banner ================= */
 .franklin-content .software-intro {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -62,6 +64,7 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin: 0.4rem 0 2.4rem;
 }
 
+/* ================= Cards ================= */
 .franklin-content .software-card {
   background: #ffffff;
   border: 1px solid #d9e2ec;
@@ -71,6 +74,9 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .franklin-content .software-card.featured {
@@ -140,24 +146,90 @@ rss = "Overview of research software packages and implementations in Julia and P
   margin-bottom: 1.2rem;
 }
 
+/* ================= Figures =================
+   IMPORTANT: Franklin's global stylesheet applies
+   `.franklin-content img { width:70%; padding-left:10%; }`
+   which shifts/clips every figure. The rules below reset
+   width/padding so images fit their containers, fully
+   visible and centered.                              */
+.franklin-content .software-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
 .franklin-content .software-visual {
   margin: 1rem auto 0.8rem;
   max-width: 950px;
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d9e2ec;
   background: #ffffff;
   line-height: 0;
+  box-sizing: border-box;
 }
 
 .franklin-content .software-visual img,
 .franklin-content .software-visual video {
   width: 100%;
+  max-width: 100%;
   height: auto;
+  padding: 0;
+  margin: 0 auto;
   display: block;
+  object-fit: contain;
+}
+
+/* ================= Example grids =================
+   minmax(min(220px,100%),1fr) + min-width:0 prevent wide
+   images from blowing out the grid tracks.            */
+.franklin-content .example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
   max-width: 100%;
 }
 
+.franklin-content .example-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  overflow: hidden;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.franklin-content .example-item h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #526d82;
+  margin: 0.6rem 0 0 0;
+}
+
+.franklin-content .example-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ================= Buttons ================= */
 .franklin-content .software-links {
   display: flex;
   gap: 0.8rem;
@@ -201,43 +273,12 @@ rss = "Overview of research software packages and implementations in Julia and P
   color: #0b7285;
 }
 
-.franklin-content .example-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.franklin-content .example-item {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0.8rem;
-  text-align: center;
-  overflow: hidden;
-}
-
-.franklin-content .example-item h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #526d82;
-  margin: 0.6rem 0 0 0;
-}
-
-.franklin-content .example-item img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 6px;
-  border: 1px solid #e2e8f0;
-  display: block;
-}
-
+/* ================= Responsive ================= */
 @media (max-width: 560px) {
   .franklin-content .software-card { padding: 1.2rem; }
   .franklin-content .software-links { flex-direction: column; }
-  .franklin-content .btn-primary, .franklin-content .btn-secondary { width: 100%; justify-content: center; }
+  .franklin-content .btn-primary,
+  .franklin-content .btn-secondary { width: 100%; justify-content: center; }
   .franklin-content .example-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -263,11 +304,9 @@ rss = "Overview of research software packages and implementations in Julia and P
   <p class="software-desc">
     Observer synthesis and peak reduction for the SIR model with output feedback under budget-constrained interventions. This package provides robust numerical tools for epidemiological optimal control, accompanying recent research on constrained interventions.
   </p>
-
   <div class="software-visual">
     <img src="/assets/ft_vs_ekf_u3tilde.gif" alt="FT-DREM vs EKF finite-time convergence animation">
   </div>
-
   <div class="software-links">
     <a href="https://anasxbouali.github.io/FT_Observer/stable/" class="btn-primary" target="_blank" rel="noopener">View Documentation ↗</a>
     <a href="https://github.com/AnasXbouali/FT_Observer.jl" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
