@@ -425,8 +425,16 @@ rss = "Overview of research software packages and implementations in Julia and P
   </p>
   <div class="example-grid">
     <div class="example-item">
-      <img src="/assets/srSIR.jpg" alt="SIR ODE Stochastic Rounding">
-      <h4>SIR Model Integration</h4>
+      <img src="/assets/S_example.jpg" alt="Susceptible (S) Model Example">
+      <h4>S (Susceptible)</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/I_example.jpg" alt="Infected (I) Model Example">
+      <h4>I (Infected)</h4>
+    </div>
+    <div class="example-item">
+      <img src="/assets/R_example.jpg" alt="Recovered (R) Model Example">
+      <h4>R (Recovered)</h4>
     </div>
   </div>
   <div class="software-links">
