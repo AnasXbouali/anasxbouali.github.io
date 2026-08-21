@@ -381,11 +381,11 @@ rss = "Overview of research software packages and implementations in Julia and P
   <div class="example-grid">
     <div class="example-item">
       <img src="/assets/x.jpg" alt="Regularization Scheme State">
-      <h4>State Trajectories</h4>
+      <h4>Example 1</h4>
     </div>
     <div class="example-item">
       <img src="/assets/xx.jpg" alt="Regularization Scheme Control">
-      <h4>Control Inputs</h4>
+      <h4>Example 2</h4>
     </div>
   </div>
   <div class="software-links">
