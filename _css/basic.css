@@ -1,5 +1,5 @@
 /* ==================================================================
-   Academic portfolio: header, navigation and tables
+   Academic portfolio: header, navigation, language flags and tables
 ================================================================== */
 
 :root {
@@ -19,8 +19,7 @@ header {
   padding: 1.6rem 7%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1.25rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -46,6 +45,8 @@ header .blog-name a:hover {
 
 nav {
   width: auto;
+  order: 2;
+  margin-left: auto;              /* pushes nav + flags to the right */
 }
 
 nav ul {
@@ -87,10 +88,48 @@ header li a:focus {
   display: none;
 }
 
+/* ---------- Language flags ---------- */
+
+.lang-switch {
+  order: 3;                        /* sits after the nav, far right */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);   /* subtle separator from the menu */
+}
+
+.lang-switch a {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+.lang-switch a:hover,
+.lang-switch a:focus {
+  opacity: 1;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* identical size + hairline ring so the FR white stripe stays visible */
+.lang-switch svg {
+  display: block;
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(16, 42, 67, 0.18);
+}
+
+/* French flag first (delete this line if you ever swap them in the HTML) */
+.lang-switch a[title="Français"] { order: -1; }
+
 /* ---------- Tablet ---------- */
 
 @media (max-width: 760px) {
   header {
+    position: relative;
     display: block;
     margin-bottom: 2.4rem;
     padding: 1.3rem 7%;
@@ -98,6 +137,14 @@ header li a:focus {
 
   header .blog-name {
     margin-bottom: 1rem;
+  }
+
+  .lang-switch {
+    position: absolute;            /* flags stay top-right, next to the name */
+    top: 1.6rem;
+    right: 7%;
+    padding-left: 0;
+    border-left: 0;
   }
 
   nav ul {
@@ -125,8 +172,15 @@ header li a:focus {
     font-size: 1.2rem;
   }
 
+  .lang-switch {
+    position: static;              /* back in the flow, left of the hamburger */
+    order: 2;
+    margin-left: auto;
+  }
+
   nav {
-    width: auto;
+    order: 3;
+    margin-left: 0;
   }
 
   #menu-icon {
