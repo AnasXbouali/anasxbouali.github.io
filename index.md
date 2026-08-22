@@ -191,7 +191,7 @@
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  color: #0b7285;                /* matches accent */
+  color: #0b7285;
   transition: color 0.18s ease, transform 0.18s ease;
 }
 
@@ -227,16 +227,46 @@
 </div>
 ~~~
 
+## Research profile
 
+I work on optimal control, hybrid and non-smooth dynamical systems, and numerical methods for constrained control problems. My research combines rigorous mathematical analysis with computational approaches, with applications motivated by epidemiology and mathematical biology.
 
+## Current position
 
+~~~
+<div class="info-card">
+  <p>
+    Since September 2024, I have been a postdoctoral researcher at Centre INRAE Occitanie-Montpellier (UMR MISTEA). 
+  </p>
+  <p>
+    I am working on the <a href="https://sites.google.com/view/nocime" target="_blank" rel="noopener">ANR project NOCIME</a> with 
+    <a href="https://sites.google.com/site/alainrapaport" target="_blank" rel="noopener">Alain Rapaport</a> and 
+    <a href="https://who.rocq.inria.fr/Pierre-Alexandre.Bliman/" target="_blank" rel="noopener">Pierre-Alexandre Bliman</a>. 
+    The project addresses new optimal control problems with non-standard cost functions motivated by epidemiology.
+  </p>
+</div>
+~~~
 
+## Academic background
 
-
-
-
-
-
+~~~
+<div class="info-card">
+  <p>
+    <strong>2023–2024:</strong> Temporary Lecturer and Research Assistant (ATER) at Avignon Université.
+  </p>
+  <p>
+    <strong>2020–2023:</strong> PhD at Avignon Université under the supervision of Térence Bayen and 
+    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>. 
+    My research focused on deriving necessary optimality conditions for hybrid optimal control problems and developing adapted numerical schemes. 
+    The <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">doctoral thesis is available here</a>.
+  </p>
+  <p>
+    <strong>Previously:</strong> Master's internship at the Laboratoire de Mathématiques Blaise Pascal under the supervision of 
+    <a href="https://lmbp.uca.fr/~munch/" target="_blank" rel="noopener">Arnaud Münch</a>. 
+    This work resulted in a <a href="https://raw.githubusercontent.com/AnasXbouali/anasxbouali.github.io/main/_assets/Memoire.pdf" target="_blank" rel="noopener">Master's thesis available here</a>.
+  </p>
+</div>
+~~~
 
 ## Research interests
 
@@ -296,7 +326,6 @@
   function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
   function label(L,x,y,cls,lh,fs,fill){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';if(fill)t.style.fill=fill;var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
 
-  /* measure parent radii first */
   DATA.forEach(function(tp){
     var T=TIER[tp.t], bl=wrap(tp.name,12);
     var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
@@ -315,7 +344,7 @@
       var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox(); kt.remove();
       var rk=Math.max(46,Math.max(kb.width/2,kb.height/2)+14);
       var x=kd.x,y=kd.y,dx=x-tp.x,dy=y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
-      var min=tp.Rb+rk+18;                       /* safety: never under the parent */
+      var min=tp.Rb+rk+18;
       if(d<min){x=tp.x+dx/d*min;y=tp.y+dy/d*min;}
       x=Math.max(M+rk,Math.min(W-M-rk,x)); y=Math.max(M+rk,Math.min(H-M-rk,y));
       return {L:kl,i:i,r:rk,x:x,y:y};
@@ -340,7 +369,6 @@
 })();
 </script>
 ~~~
-
 
 ## Links
 
@@ -382,6 +410,19 @@
       </svg>
     </span>
     <span>LinkedIn</span>
+  </a>
+
+  <a href="https://mistea.montpellier.hub.inrae.fr/" target="_blank" rel="noopener" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18"/>
+        <path d="M5 21V7l7-4 7 4v14"/>
+        <path d="M9 21v-6h6v6"/>
+        <path d="M10 9h4"/>
+        <path d="M10 12h4"/>
+      </svg>
+    </span>
+    <span>UMR MISTEA, INRAE</span>
   </a>
 </div>
 ~~~
