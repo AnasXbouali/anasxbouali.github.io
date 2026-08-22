@@ -295,7 +295,6 @@ I work on optimal control, hybrid and non-smooth dynamical systems, and numerica
 <div id="rmap-wrap">
   <div id="rmap"></div>
   <noscript><div class="image-container"><img src="/assets/map.svg" alt="Research interests map"></div></noscript>
-  <p id="rmap-hint">Hover over a topic to reveal its sub-fields.</p>
 </div>
 
 <script>
