@@ -238,7 +238,6 @@
 
 
 
-
 ## Research interests
 
 ~~~
@@ -271,19 +270,21 @@
 
 <script>
 (function(){
-  var NS='http://www.w3.org/2000/svg',W=1000,H=580,M=30;
+  var NS='http://www.w3.org/2000/svg',W=1000,H=640,M=30;
   var TIER={1:{r:95,fs:24,lh:28,sw:4.5},2:{r:84,fs:22,lh:26,sw:4},3:{r:70,fs:19,lh:23,sw:3.5}};
   var DATA=[
-    {name:'Optimal Control',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:295,y:165,dir:-90,step:48,
-     kids:['Hybrid Systems','Loss Control Regions','Pontryagin Maximum Principle','Optimal Synthesis','Feedback Controls']},
-    {name:'Numerical Optimization',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:725,y:145,dir:-45,step:60,
-     kids:['Shooting Methods','Regularization Schemes']},
-    {name:'Modelling',t:3,color:'#2f9e44',light:'#51cf66',tint:'#eefbee',kfill:'#f6fdf6',x:515,y:320,dir:90,step:70,
-     kids:['Resources Allocation','Epidemiology']},
-    {name:'State Estimation',t:3,color:'#f08c00',light:'#ffa94d',tint:'#fff5e6',kfill:'#fffaf2',x:270,y:455,dir:160,step:80,
-     kids:['KKL Observer','Extended Kalman Filter']},
-    {name:'Scientific Computing',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:795,y:425,dir:20,step:0,
-     kids:['Stochastic Rounding']}
+    {name:'Optimal Control',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:300,y:200,
+     kids:[{n:'Hybrid Systems',x:105,y:170},{n:'Loss Control Regions',x:170,y:82},
+           {n:'Pontryagin Maximum Principle',x:430,y:82},{n:'Optimal Synthesis',x:560,y:160},
+           {n:'Feedback Controls',x:470,y:270}]},
+    {name:'Numerical Optimization',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:740,y:170,
+     kids:[{n:'Shooting Methods',x:620,y:270},{n:'Regularization Schemes',x:880,y:90}]},
+    {name:'Modelling',t:3,color:'#2f9e44',light:'#51cf66',tint:'#eefbee',kfill:'#f6fdf6',x:540,y:390,
+     kids:[{n:'Resources Allocation',x:700,y:360},{n:'Epidemiology',x:565,y:530}]},
+    {name:'State Estimation',t:3,color:'#f08c00',light:'#ffa94d',tint:'#fff5e6',kfill:'#fffaf2',x:270,y:500,
+     kids:[{n:'KKL Observer',x:95,y:430},{n:'Extended Kalman Filter',x:140,y:555}]},
+    {name:'Scientific Computing',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:810,y:470,
+     kids:[{n:'Stochastic Rounding',x:920,y:350}]}
   ];
   var host=document.getElementById('rmap'); if(!host)return;
   var svg=document.createElementNS(NS,'svg');
@@ -294,7 +295,13 @@
   function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
   function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
   function label(L,x,y,cls,lh,fs,fill){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';if(fill)t.style.fill=fill;var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
-  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+
+  /* measure parent radii first */
+  DATA.forEach(function(tp){
+    var T=TIER[tp.t], bl=wrap(tp.name,12);
+    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
+    tp.Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
+  });
 
   DATA.forEach(function(tp,idx){
     var T=TIER[tp.t];
@@ -303,47 +310,36 @@
     el('stop',{offset:'100%','stop-color':tp.tint},grad);
 
     var g=el('g',{'class':'topic',tabindex:'0'});
-    var bl=wrap(tp.name,12);
-    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
-    var Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
-
-    var n=tp.kids.length, kids=[];
-    tp.kids.forEach(function(name,i){
-      var kl=wrap(name,13);
+    var kids=tp.kids.map(function(kd,i){
+      var kl=wrap(kd.n,13);
       var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox(); kt.remove();
-      var rk=Math.max(40,Math.max(kb.width/2,kb.height/2)+14);
-      var ang=(tp.dir+(i-(n-1)/2)*tp.step)*Math.PI/180, orbit=Rb+rk+60;
-      kids.push({L:kl,i:i,r:rk,
-        x:clamp(tp.x+orbit*Math.cos(ang),M+rk,W-M-rk),
-        y:clamp(tp.y+orbit*Math.sin(ang),M+rk,H-M-rk)});
+      var rk=Math.max(46,Math.max(kb.width/2,kb.height/2)+14);
+      var x=kd.x,y=kd.y,dx=x-tp.x,dy=y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
+      var min=tp.Rb+rk+18;                       /* safety: never under the parent */
+      if(d<min){x=tp.x+dx/d*min;y=tp.y+dy/d*min;}
+      x=Math.max(M+rk,Math.min(W-M-rk,x)); y=Math.max(M+rk,Math.min(H-M-rk,y));
+      return {L:kl,i:i,r:rk,x:x,y:y};
     });
 
     var kg=el('g',{'class':'kids'},g);
     kids.forEach(function(kd){
-      var mx=(tp.x+kd.x)/2, my=(tp.y+kd.y)/2;
-      var dx=kd.x-tp.x, dy=kd.y-tp.y, d=Math.sqrt(dx*dx+dy*dy)||1;
-      var cx=mx-dy/d*d*0.18, cy=my+dx/d*d*0.18;
-      var p=el('path',{d:'M'+tp.x+' '+tp.y+' Q'+cx+' '+cy+' '+kd.x+' '+kd.y,'class':'link',stroke:tp.light},kg);
-      var len=p.getTotalLength(); p.style.setProperty('--len',len);
+      var mx=(tp.x+kd.x)/2,my=(tp.y+kd.y)/2,dx=kd.x-tp.x,dy=kd.y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
+      var p=el('path',{d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,'class':'link',stroke:tp.light},kg);
+      p.style.setProperty('--len',p.getTotalLength());
       p.style.transitionDelay=(kd.i*60)+'ms';
       var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*60)+'ms';
       el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light,fill:tp.kfill},kgg);
       kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',16,13,tp.color));
     });
 
-    el('circle',{cx:tp.x,cy:tp.y,r:Rb+7,'class':'halo',stroke:tp.light},g);
-    var big=el('circle',{cx:tp.x,cy:tp.y,r:Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
+    el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb+7,'class':'halo',stroke:tp.light},g);
+    var big=el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
     big.style.strokeWidth=T.sw+'px';
-    g.appendChild(label(bl,tp.x,tp.y,'bt',T.lh,T.fs));
+    g.appendChild(label(wrap(tp.name,12),tp.x,tp.y,'bt',T.lh,T.fs));
   });
 })();
 </script>
 ~~~
-
-
-
-
-
 
 
 ## Links
