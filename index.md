@@ -229,74 +229,84 @@
 
 
 
+
+
+
+
 ## Research interests
 
 ~~~
 <style>
-#rmap-wrap{background:#fff;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
+#rmap-wrap{background:#fff radial-gradient(#edf1f7 1.2px, transparent 1.2px);background-size:22px 22px;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
 #rmap-hint{font-size:.85rem;color:#526d82;text-align:center;font-style:italic;margin:.4rem 0 .6rem;}
 .rmap{width:100%;height:auto;display:block;}
-.rmap .bt{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;fill:#1f2d3d;}
-.rmap .kt{font-family:"Inter",Arial,sans-serif;font-size:11.5px;font-weight:600;fill:#3f4c5c;}
+.rmap .bt{font-family:"Fraunces",Georgia,serif;font-weight:600;fill:#1f2d3d;}
+.rmap .kt{font-family:"Inter",Arial,sans-serif;font-weight:600;fill:#3f4c5c;}
 .rmap text{pointer-events:none;}
-.rmap .big{fill:#fff;stroke-width:3.5;filter:url(#rsh);transition:stroke-width .2s ease;}
+.rmap .big{stroke-width:3.5;filter:drop-shadow(0 3px 6px rgba(16,42,67,.18));transition:stroke-width .2s ease,filter .25s ease;}
 .rmap .topic{cursor:pointer;outline:none;}
-.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5.5;}
+.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5.5;filter:drop-shadow(0 8px 18px rgba(16,42,67,.30));}
 .rmap .kids{pointer-events:none;}
 .rmap .topic:hover .kids,.rmap .topic:focus .kids{pointer-events:auto;}
-.rmap .kid circle{fill:#fff;stroke-width:2.5;filter:url(#rsh);}
+.rmap .kid circle{stroke-width:2.5;filter:drop-shadow(0 2px 5px rgba(16,42,67,.15));}
 .rmap .kid,.rmap .link{opacity:0;transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);}
 .rmap .kid{transform-box:fill-box;transform-origin:center;transform:scale(.4);}
-.rmap .link{stroke-width:2;stroke-linecap:round;}
+.rmap .link{stroke-width:2.5;stroke-linecap:round;}
 .rmap .topic:hover .kid,.rmap .topic:focus .kid{opacity:1;transform:scale(1);}
-.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.9;}
+.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.85;}
 @media (hover:none){.rmap .kid,.rmap .link{opacity:1;transform:scale(1);}}
 </style>
 
 <div id="rmap-wrap">
   <div id="rmap"></div>
   <noscript><div class="image-container"><img src="/assets/map.svg" alt="Research interests map"></div></noscript>
+  <p id="rmap-hint">Hover over a topic to reveal its sub-fields.</p>
 </div>
 
 <script>
 (function(){
-  var NS='http://www.w3.org/2000/svg',W=1000,H=560,M=26;
+  var NS='http://www.w3.org/2000/svg',W=1000,H=620,M=30;
+  var TIER={1:{r:95,fs:24,lh:28,sw:4.5},2:{r:84,fs:22,lh:26,sw:4},3:{r:70,fs:19,lh:23,sw:3.5}};
   var DATA=[
-    {name:'Optimal Control',color:'#2b3eb5',light:'#4c6ef5',x:300,y:130,dir:-90,
+    {name:'Optimal Control',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:300,y:185,dir:-90,
      kids:['Hybrid Systems','Loss Control Regions','Pontryagin Maximum Principle','Optimal Synthesis','Feedback Controls']},
-    {name:'Numerical Optimization',color:'#e03131',light:'#fa5252',x:720,y:130,dir:0,
+    {name:'Numerical Optimization',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:725,y:160,dir:0,
      kids:['Shooting Methods','Regularization Schemes']},
-    {name:'Modelling',color:'#2f9e44',light:'#51cf66',x:515,y:300,dir:0,
+    {name:'Modelling',t:3,color:'#2f9e44',light:'#51cf66',tint:'#eefbee',kfill:'#f6fdf6',x:530,y:360,dir:0,
      kids:['Resources Allocation','Epidemiology']},
-    {name:'State Estimation',color:'#f08c00',light:'#ffa94d',x:285,y:430,dir:180,
+    {name:'State Estimation',t:3,color:'#f08c00',light:'#ffa94d',tint:'#fff5e6',kfill:'#fffaf2',x:275,y:485,dir:180,
      kids:['KKL Observer','Extended Kalman Filter']},
-    {name:'Scientific Computing',color:'#0c8599',light:'#22b8cf',x:790,y:400,dir:0,
+    {name:'Scientific Computing',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:800,y:445,dir:0,
      kids:['Stochastic Rounding']}
   ];
   var host=document.getElementById('rmap'); if(!host)return;
   var svg=document.createElementNS(NS,'svg');
   svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('class','rmap');
   host.appendChild(svg);
-  var defs=document.createElementNS(NS,'defs');
-  defs.innerHTML='<filter id="rsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2.5" stdDeviation="5" flood-color="#102a43" flood-opacity="0.16"/></filter>';
-  svg.appendChild(defs);
+  var defs=document.createElementNS(NS,'defs'); svg.appendChild(defs);
+
   function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
   function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
-  function label(L,x,y,cls,lh){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
+  function label(L,x,y,cls,lh,fs){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
   function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
 
-  DATA.forEach(function(tp){
+  DATA.forEach(function(tp,idx){
+    var T=TIER[tp.t];
+    var grad=el('radialGradient',{id:'rg'+idx,cx:'35%',cy:'30%',r:'80%'},defs);
+    el('stop',{offset:'0%','stop-color':'#ffffff'},grad);
+    el('stop',{offset:'100%','stop-color':tp.tint},grad);
+
     var g=el('g',{'class':'topic',tabindex:'0'});
     var bl=wrap(tp.name,12);
-    var tmp=label(bl,tp.x,tp.y,'bt',24), bb=tmp.getBBox(); tmp.remove();
-    var Rb=Math.max(bb.width/2,bb.height/2)+18;
+    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
+    var Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
 
     var n=tp.kids.length, kids=[];
     tp.kids.forEach(function(name,i){
       var kl=wrap(name,13);
-      var kt=label(kl,tp.x,tp.y,'kt',14), kb=kt.getBBox(); kt.remove();
-      var rk=Math.max(30,Math.max(kb.width/2,kb.height/2)+12);
-      var ang=(tp.dir+i*360/n)*Math.PI/180, orbit=Rb+rk+34;
+      var kt=label(kl,tp.x,tp.y,'kt',15,12), kb=kt.getBBox(); kt.remove();
+      var rk=Math.max(34,Math.max(kb.width/2,kb.height/2)+13);
+      var ang=(tp.dir+i*360/n)*Math.PI/180, orbit=Rb+rk+45;
       kids.push({L:kl,i:i,r:rk,
         x:clamp(tp.x+orbit*Math.cos(ang),M+rk,W-M-rk),
         y:clamp(tp.y+orbit*Math.sin(ang),M+rk,H-M-rk)});
@@ -305,18 +315,24 @@
     var kg=el('g',{'class':'kids'},g);
     kids.forEach(function(kd){
       var ln=el('line',{x1:tp.x,y1:tp.y,x2:kd.x,y2:kd.y,'class':'link',stroke:tp.light},kg);
-      ln.style.transitionDelay=(kd.i*45)+'ms';
-      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*45)+'ms';
-      el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light},kgg);
-      kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',14));
+      ln.style.transitionDelay=(kd.i*60)+'ms';
+      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*60)+'ms';
+      el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light,fill:tp.kfill},kgg);
+      kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',15,12));
     });
 
-    el('circle',{cx:tp.x,cy:tp.y,r:Rb,'class':'big',stroke:tp.color},g);
-    g.appendChild(label(bl,tp.x,tp.y,'bt',24));
+    var big=el('circle',{cx:tp.x,cy:tp.y,r:Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
+    big.style.strokeWidth=T.sw+'px';
+    g.appendChild(label(bl,tp.x,tp.y,'bt',T.lh,T.fs));
   });
 })();
 </script>
 ~~~
+
+
+
+
+
 
 
 
