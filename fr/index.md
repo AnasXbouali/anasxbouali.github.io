@@ -304,7 +304,7 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
   var TIER={1:{r:95,fs:24,lh:28,sw:4.5},2:{r:84,fs:22,lh:26,sw:4},3:{r:70,fs:19,lh:23,sw:3.5}};
   var DATA=[
     {name:'Contrôle optimal',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:300,y:200,
-     kids:[{n:'Systèmes hybrides',x:105,y:170},{n:'Régions de contrôle avec perte',x:170,y:82},
+     kids:[{n:'Systèmes hybrides',x:105,y:170},{n:'Régions de perte de contrôle',x:170,y:82},
            {n:'Principe du maximum de Pontryagin',x:430,y:82},{n:'Synthèse optimale',x:560,y:160},
            {n:'Contrôles par retour',x:470,y:270}]},
     {name:'Optimisation numérique',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:740,y:170,
