@@ -183,9 +183,27 @@
   color: #0b7285;
 }
 
+/* new — sized, centered SVG icons */
 .franklin-content .link-icon {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: #0b7285;                /* matches accent */
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.franklin-content .link-card:hover .link-icon {
+  color: #0b7285;
+  transform: scale(1.08);
+}
+
+.franklin-content .link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* 6) Small screens */
