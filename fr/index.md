@@ -253,8 +253,95 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
 ## Intérêts de recherche
 
 ~~~
-<div class="image-container">
-  <img src="/assets/map.svg" alt="Carte des intérêts de recherche">
+<style>
+.rmap-wrap { background:#ffffff; border:1px solid #d9e2ec; border-radius:12px; padding:1rem; box-shadow:0 1px 2px rgba(16,42,67,.06); }
+.rmap-hint { font-size:.85rem; color:#526d82; text-align:center; margin:.6rem 0 0; font-style:italic; }
+.rmap { width:100%; height:auto; display:block; }
+.rmap text { font-family: Georgia, "Times New Roman", serif; fill:#3d3d3d; pointer-events:none; }
+.rmap .bt { font-size:21px; }
+.rmap .kt { font-size:12px; }
+.rmap circle { fill:#ffffff; }
+.rmap .big { stroke-width:4; cursor:pointer; }
+.rmap .kid circle { stroke-width:2.5; }
+.rmap line { stroke-width:2; }
+.rmap .kids { opacity:0; transition:opacity .3s ease; pointer-events:none; }
+.rmap .topic:hover .kids { opacity:1; pointer-events:auto; }
+.g-oc .big{stroke:#2b3eb5;} .g-oc .kid circle,.g-oc line{stroke:#4c6ef5;}
+.g-no .big{stroke:#e03131;} .g-no .kid circle,.g-no line{stroke:#fa5252;}
+.g-mo .big{stroke:#2f9e44;} .g-mo .kid circle,.g-mo line{stroke:#51cf66;}
+.g-se .big{stroke:#f08c00;} .g-se .kid circle,.g-se line{stroke:#ffa94d;}
+.g-sc .big{stroke:#0c8599;} .g-sc .kid circle,.g-sc line{stroke:#22b8cf;}
+@media (hover:none){ .rmap .kids{opacity:1; pointer-events:auto;} }
+</style>
+
+<div class="rmap-wrap">
+<svg class="rmap" viewBox="0 0 1000 500" role="img" aria-label="Carte des intérêts de recherche">
+
+  <!-- ================= Contrôle optimal ================= -->
+  <g class="topic g-oc">
+    <g class="kids">
+      <line x1="320" y1="115" x2="165" y2="85"/>
+      <line x1="320" y1="115" x2="475" y2="80"/>
+      <line x1="320" y1="115" x2="135" y2="215"/>
+      <line x1="320" y1="115" x2="275" y2="245"/>
+      <line x1="320" y1="115" x2="405" y2="235"/>
+      <g class="kid"><circle cx="165" cy="85" r="40"/><text class="kt" x="165" y="81"><tspan x="165">Systèmes</tspan><tspan x="165" dy="13">hybrides</tspan></text></g>
+      <g class="kid"><circle cx="475" cy="80" r="40"/><text class="kt" x="475" y="67"><tspan x="475">Régions de</tspan><tspan x="475" dy="13">contrôle</tspan><tspan x="475" dy="13">avec perte</tspan></text></g>
+      <g class="kid"><circle cx="135" cy="215" r="44"/><text class="kt" x="135" y="206"><tspan x="135">Principe du</tspan><tspan x="135" dy="13">maximum</tspan><tspan x="135" dy="13">de Pontryagin</tspan></text></g>
+      <g class="kid"><circle cx="275" cy="245" r="40"/><text class="kt" x="275" y="241"><tspan x="275">Synthèse</tspan><tspan x="275" dy="13">optimale</tspan></text></g>
+      <g class="kid"><circle cx="405" cy="235" r="40"/><text class="kt" x="405" y="231"><tspan x="405">Contrôles</tspan><tspan x="405" dy="13">par retour</tspan></text></g>
+    </g>
+    <circle class="big" cx="320" cy="115" r="70"/>
+    <text class="bt" x="320" y="109"><tspan x="320">Contrôle</tspan><tspan x="320" dy="24">optimal</tspan></text>
+  </g>
+
+  <!-- ================= Optimisation numérique ================= -->
+  <g class="topic g-no">
+    <g class="kids">
+      <line x1="720" y1="115" x2="605" y2="190"/>
+      <line x1="720" y1="115" x2="865" y2="205"/>
+      <g class="kid"><circle cx="605" cy="190" r="40"/><text class="kt" x="605" y="186"><tspan x="605">Méthodes</tspan><tspan x="605" dy="13">de tir</tspan></text></g>
+      <g class="kid"><circle cx="865" cy="205" r="44"/><text class="kt" x="865" y="201"><tspan x="865">Schémas de</tspan><tspan x="865" dy="13">régularisation</tspan></text></g>
+    </g>
+    <circle class="big" cx="720" cy="115" r="74"/>
+    <text class="bt" x="720" y="109"><tspan x="720">Optimisation</tspan><tspan x="720" dy="24">numérique</tspan></text>
+  </g>
+
+  <!-- ================= Modélisation ================= -->
+  <g class="topic g-mo">
+    <g class="kids">
+      <line x1="520" y1="265" x2="670" y2="255"/>
+      <line x1="520" y1="265" x2="545" y2="395"/>
+      <g class="kid"><circle cx="670" cy="255" r="40"/><text class="kt" x="670" y="251"><tspan x="670">Allocation</tspan><tspan x="670" dy="13">de ressources</tspan></text></g>
+      <g class="kid"><circle cx="545" cy="395" r="42"/><text class="kt" x="545" y="399">Épidémiologie</text></g>
+    </g>
+    <circle class="big" cx="520" cy="265" r="66"/>
+    <text class="bt" x="520" y="272">Modélisation</text>
+  </g>
+
+  <!-- ================= Estimation d'état ================= -->
+  <g class="topic g-se">
+    <g class="kids">
+      <line x1="295" y1="375" x2="155" y2="395"/>
+      <line x1="295" y1="375" x2="440" y2="430"/>
+      <g class="kid"><circle cx="155" cy="395" r="40"/><text class="kt" x="155" y="391"><tspan x="155">Observateur</tspan><tspan x="155" dy="13">KKL</tspan></text></g>
+      <g class="kid"><circle cx="440" cy="430" r="44"/><text class="kt" x="440" y="421"><tspan x="440">Filtre de</tspan><tspan x="440" dy="13">Kalman</tspan><tspan x="440" dy="13">étendu</tspan></text></g>
+    </g>
+    <circle class="big" cx="295" cy="375" r="62"/>
+    <text class="bt" x="295" y="369"><tspan x="295">Estimation</tspan><tspan x="295" dy="24">d'état</tspan></text>
+  </g>
+
+  <!-- ================= Calcul scientifique ================= -->
+  <g class="topic g-sc">
+    <g class="kids">
+      <line x1="795" y1="335" x2="665" y2="405"/>
+      <g class="kid"><circle cx="665" cy="405" r="42"/><text class="kt" x="665" y="401"><tspan x="665">Arrondi</tspan><tspan x="665" dy="13">stochastique</tspan></text></g>
+    </g>
+    <circle class="big" cx="795" cy="335" r="62"/>
+    <text class="bt" x="795" y="329"><tspan x="795">Calcul</tspan><tspan x="795" dy="24">scientifique</tspan></text>
+  </g>
+
+</svg>
 </div>
 ~~~
 
