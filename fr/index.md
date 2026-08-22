@@ -295,7 +295,6 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
 <div id="rmap-wrap">
   <div id="rmap"></div>
   <noscript><div class="image-container"><img src="/assets/map.svg" alt="Carte des intérêts de recherche"></div></noscript>
-  <p id="rmap-hint">Survolez un thème pour dévoiler ses sous-domaines.</p>
 </div>
 
 <script>
