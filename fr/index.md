@@ -411,18 +411,5 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
     </span>
     <span>LinkedIn</span>
   </a>
-
-  <a href="https://mistea.montpellier.hub.inrae.fr/" target="_blank" rel="noopener" class="link-card">
-    <span class="link-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 21h18"/>
-        <path d="M5 21V7l7-4 7 4v14"/>
-        <path d="M9 21v-6h6v6"/>
-        <path d="M10 9h4"/>
-        <path d="M10 12h4"/>
-      </svg>
-    </span>
-    <span>UMR MISTEA, INRAE</span>
-  </a>
 </div>
 ~~~
