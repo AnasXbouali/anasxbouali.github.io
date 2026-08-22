@@ -227,142 +227,100 @@
 </div>
 ~~~
 
-## Research profile
 
-I work on optimal control, hybrid and non-smooth dynamical systems, and numerical methods for constrained control problems. My research combines rigorous mathematical analysis with computational approaches, with applications motivated by epidemiology and mathematical biology.
-
-## Current position
-
-~~~
-<div class="info-card">
-  <p>
-    Since September 2024, I have been a postdoctoral researcher at Centre INRAE Occitanie-Montpellier (UMR MISTEA). 
-  </p>
-  <p>
-    I am working on the <a href="https://sites.google.com/view/nocime" target="_blank" rel="noopener">ANR project NOCIME</a> with 
-    <a href="https://sites.google.com/site/alainrapaport" target="_blank" rel="noopener">Alain Rapaport</a> and 
-    <a href="https://who.rocq.inria.fr/Pierre-Alexandre.Bliman/" target="_blank" rel="noopener">Pierre-Alexandre Bliman</a>. 
-    The project addresses new optimal control problems with non-standard cost functions motivated by epidemiology.
-  </p>
-</div>
-~~~
-
-## Academic background
-
-~~~
-<div class="info-card">
-  <p>
-    <strong>2023–2024:</strong> Temporary Lecturer and Research Assistant (ATER) at Avignon Université.
-  </p>
-  <p>
-    <strong>2020–2023:</strong> PhD at Avignon Université under the supervision of Térence Bayen and 
-    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>. 
-    My research focused on deriving necessary optimality conditions for hybrid optimal control problems and developing adapted numerical schemes. 
-    The <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">doctoral thesis is available here</a>.
-  </p>
-  <p>
-    <strong>Previously:</strong> Master's internship at the Laboratoire de Mathématiques Blaise Pascal under the supervision of 
-    <a href="https://lmbp.uca.fr/~munch/" target="_blank" rel="noopener">Arnaud Münch</a>. 
-    This work resulted in a <a href="https://raw.githubusercontent.com/AnasXbouali/anasxbouali.github.io/main/_assets/Memoire.pdf" target="_blank" rel="noopener">Master's thesis available here</a>.
-  </p>
-</div>
-~~~
 
 ## Research interests
 
 ~~~
 <style>
-.rmap-wrap { background:#ffffff; border:1px solid #d9e2ec; border-radius:12px; padding:1rem; box-shadow:0 1px 2px rgba(16,42,67,.06); }
-.rmap-hint { font-size:.85rem; color:#526d82; text-align:center; margin:.6rem 0 0; font-style:italic; }
-.rmap { width:100%; height:auto; display:block; }
-.rmap text { font-family: Georgia, "Times New Roman", serif; fill:#3d3d3d; pointer-events:none; }
-.rmap .bt { font-size:21px; }
-.rmap .kt { font-size:12px; }
-.rmap circle { fill:#ffffff; }
-.rmap .big { stroke-width:4; cursor:pointer; }
-.rmap .kid circle { stroke-width:2.5; }
-.rmap line { stroke-width:2; }
-.rmap .kids { opacity:0; transition:opacity .3s ease; pointer-events:none; }
-.rmap .topic:hover .kids { opacity:1; pointer-events:auto; }
-.g-oc .big{stroke:#2b3eb5;} .g-oc .kid circle,.g-oc line{stroke:#4c6ef5;}
-.g-no .big{stroke:#e03131;} .g-no .kid circle,.g-no line{stroke:#fa5252;}
-.g-mo .big{stroke:#2f9e44;} .g-mo .kid circle,.g-mo line{stroke:#51cf66;}
-.g-se .big{stroke:#f08c00;} .g-se .kid circle,.g-se line{stroke:#ffa94d;}
-.g-sc .big{stroke:#0c8599;} .g-sc .kid circle,.g-sc line{stroke:#22b8cf;}
-@media (hover:none){ .rmap .kids{opacity:1; pointer-events:auto;} }
+#rmap-wrap{background:#fff;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
+#rmap-hint{font-size:.85rem;color:#526d82;text-align:center;font-style:italic;margin:.4rem 0 .6rem;}
+.rmap{width:100%;height:auto;display:block;}
+.rmap .bt{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;fill:#1f2d3d;}
+.rmap .kt{font-family:"Inter",Arial,sans-serif;font-size:11.5px;font-weight:600;fill:#3f4c5c;}
+.rmap text{pointer-events:none;}
+.rmap .big{fill:#fff;stroke-width:3.5;filter:url(#rsh);transition:stroke-width .2s ease;}
+.rmap .topic{cursor:pointer;outline:none;}
+.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5.5;}
+.rmap .kids{pointer-events:none;}
+.rmap .topic:hover .kids,.rmap .topic:focus .kids{pointer-events:auto;}
+.rmap .kid circle{fill:#fff;stroke-width:2.5;filter:url(#rsh);}
+.rmap .kid,.rmap .link{opacity:0;transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);}
+.rmap .kid{transform-box:fill-box;transform-origin:center;transform:scale(.4);}
+.rmap .link{stroke-width:2;stroke-linecap:round;}
+.rmap .topic:hover .kid,.rmap .topic:focus .kid{opacity:1;transform:scale(1);}
+.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.9;}
+@media (hover:none){.rmap .kid,.rmap .link{opacity:1;transform:scale(1);}}
 </style>
 
-<div class="rmap-wrap">
-<svg class="rmap" viewBox="0 0 1000 500" role="img" aria-label="Map of research interests">
-
-  <!-- ================= Optimal Control ================= -->
-  <g class="topic g-oc">
-    <g class="kids">
-      <line x1="320" y1="115" x2="165" y2="85"/>
-      <line x1="320" y1="115" x2="475" y2="80"/>
-      <line x1="320" y1="115" x2="135" y2="215"/>
-      <line x1="320" y1="115" x2="275" y2="245"/>
-      <line x1="320" y1="115" x2="405" y2="235"/>
-      <g class="kid"><circle cx="165" cy="85" r="40"/><text class="kt" x="165" y="81"><tspan x="165">Hybrid</tspan><tspan x="165" dy="13">Systems</tspan></text></g>
-      <g class="kid"><circle cx="475" cy="80" r="40"/><text class="kt" x="475" y="67"><tspan x="475">Loss</tspan><tspan x="475" dy="13">Control</tspan><tspan x="475" dy="13">Regions</tspan></text></g>
-      <g class="kid"><circle cx="135" cy="215" r="44"/><text class="kt" x="135" y="206"><tspan x="135">Pontryagin</tspan><tspan x="135" dy="13">Maximum</tspan><tspan x="135" dy="13">Principle</tspan></text></g>
-      <g class="kid"><circle cx="275" cy="245" r="40"/><text class="kt" x="275" y="241"><tspan x="275">Optimal</tspan><tspan x="275" dy="13">Synthesis</tspan></text></g>
-      <g class="kid"><circle cx="405" cy="235" r="40"/><text class="kt" x="405" y="231"><tspan x="405">Feedback</tspan><tspan x="405" dy="13">Controls</tspan></text></g>
-    </g>
-    <circle class="big" cx="320" cy="115" r="70"/>
-    <text class="bt" x="320" y="109"><tspan x="320">Optimal</tspan><tspan x="320" dy="24">Control</tspan></text>
-  </g>
-
-  <!-- ================= Numerical Optimization ================= -->
-  <g class="topic g-no">
-    <g class="kids">
-      <line x1="720" y1="115" x2="605" y2="190"/>
-      <line x1="720" y1="115" x2="865" y2="205"/>
-      <g class="kid"><circle cx="605" cy="190" r="40"/><text class="kt" x="605" y="186"><tspan x="605">Shooting</tspan><tspan x="605" dy="13">Methods</tspan></text></g>
-      <g class="kid"><circle cx="865" cy="205" r="44"/><text class="kt" x="865" y="201"><tspan x="865">Regularization</tspan><tspan x="865" dy="13">Schemes</tspan></text></g>
-    </g>
-    <circle class="big" cx="720" cy="115" r="74"/>
-    <text class="bt" x="720" y="109"><tspan x="720">Numerical</tspan><tspan x="720" dy="24">Optimization</tspan></text>
-  </g>
-
-  <!-- ================= Modelling ================= -->
-  <g class="topic g-mo">
-    <g class="kids">
-      <line x1="520" y1="265" x2="670" y2="255"/>
-      <line x1="520" y1="265" x2="545" y2="395"/>
-      <g class="kid"><circle cx="670" cy="255" r="40"/><text class="kt" x="670" y="251"><tspan x="670">Resources</tspan><tspan x="670" dy="13">Allocation</tspan></text></g>
-      <g class="kid"><circle cx="545" cy="395" r="40"/><text class="kt" x="545" y="399">Epidemiology</text></g>
-    </g>
-    <circle class="big" cx="520" cy="265" r="66"/>
-    <text class="bt" x="520" y="272">Modelling</text>
-  </g>
-
-  <!-- ================= State Estimation ================= -->
-  <g class="topic g-se">
-    <g class="kids">
-      <line x1="295" y1="375" x2="155" y2="395"/>
-      <line x1="295" y1="375" x2="440" y2="430"/>
-      <g class="kid"><circle cx="155" cy="395" r="40"/><text class="kt" x="155" y="391"><tspan x="155">KKL</tspan><tspan x="155" dy="13">Observer</tspan></text></g>
-      <g class="kid"><circle cx="440" cy="430" r="44"/><text class="kt" x="440" y="421"><tspan x="440">Extended</tspan><tspan x="440" dy="13">Kalman</tspan><tspan x="440" dy="13">Filter</tspan></text></g>
-    </g>
-    <circle class="big" cx="295" cy="375" r="62"/>
-    <text class="bt" x="295" y="369"><tspan x="295">State</tspan><tspan x="295" dy="24">Estimation</tspan></text>
-  </g>
-
-  <!-- ================= Scientific Computing ================= -->
-  <g class="topic g-sc">
-    <g class="kids">
-      <line x1="795" y1="335" x2="665" y2="405"/>
-      <g class="kid"><circle cx="665" cy="405" r="42"/><text class="kt" x="665" y="401"><tspan x="665">Stochastic</tspan><tspan x="665" dy="13">Rounding</tspan></text></g>
-    </g>
-    <circle class="big" cx="795" cy="335" r="62"/>
-    <text class="bt" x="795" y="329"><tspan x="795">Scientific</tspan><tspan x="795" dy="24">Computing</tspan></text>
-  </g>
-
-</svg>
-<p class="rmap-hint">Hover over a topic to reveal its sub-fields.</p>
+<div id="rmap-wrap">
+  <div id="rmap"></div>
+  <noscript><div class="image-container"><img src="/assets/map.svg" alt="Research interests map"></div></noscript>
+  <p id="rmap-hint">Hover over a topic to reveal its sub-fields.</p>
 </div>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg',W=1000,H=560,M=26;
+  var DATA=[
+    {name:'Optimal Control',color:'#2b3eb5',light:'#4c6ef5',x:300,y:130,dir:-90,
+     kids:['Hybrid Systems','Loss Control Regions','Pontryagin Maximum Principle','Optimal Synthesis','Feedback Controls']},
+    {name:'Numerical Optimization',color:'#e03131',light:'#fa5252',x:720,y:130,dir:0,
+     kids:['Shooting Methods','Regularization Schemes']},
+    {name:'Modelling',color:'#2f9e44',light:'#51cf66',x:515,y:300,dir:0,
+     kids:['Resources Allocation','Epidemiology']},
+    {name:'State Estimation',color:'#f08c00',light:'#ffa94d',x:285,y:430,dir:180,
+     kids:['KKL Observer','Extended Kalman Filter']},
+    {name:'Scientific Computing',color:'#0c8599',light:'#22b8cf',x:790,y:400,dir:0,
+     kids:['Stochastic Rounding']}
+  ];
+  var host=document.getElementById('rmap'); if(!host)return;
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('class','rmap');
+  host.appendChild(svg);
+  var defs=document.createElementNS(NS,'defs');
+  defs.innerHTML='<filter id="rsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2.5" stdDeviation="5" flood-color="#102a43" flood-opacity="0.16"/></filter>';
+  svg.appendChild(defs);
+  function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
+  function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
+  function label(L,x,y,cls,lh){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+
+  DATA.forEach(function(tp){
+    var g=el('g',{'class':'topic',tabindex:'0'});
+    var bl=wrap(tp.name,12);
+    var tmp=label(bl,tp.x,tp.y,'bt',24), bb=tmp.getBBox(); tmp.remove();
+    var Rb=Math.max(bb.width/2,bb.height/2)+18;
+
+    var n=tp.kids.length, kids=[];
+    tp.kids.forEach(function(name,i){
+      var kl=wrap(name,13);
+      var kt=label(kl,tp.x,tp.y,'kt',14), kb=kt.getBBox(); kt.remove();
+      var rk=Math.max(30,Math.max(kb.width/2,kb.height/2)+12);
+      var ang=(tp.dir+i*360/n)*Math.PI/180, orbit=Rb+rk+34;
+      kids.push({L:kl,i:i,r:rk,
+        x:clamp(tp.x+orbit*Math.cos(ang),M+rk,W-M-rk),
+        y:clamp(tp.y+orbit*Math.sin(ang),M+rk,H-M-rk)});
+    });
+
+    var kg=el('g',{'class':'kids'},g);
+    kids.forEach(function(kd){
+      var ln=el('line',{x1:tp.x,y1:tp.y,x2:kd.x,y2:kd.y,'class':'link',stroke:tp.light},kg);
+      ln.style.transitionDelay=(kd.i*45)+'ms';
+      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*45)+'ms';
+      el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light},kgg);
+      kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',14));
+    });
+
+    el('circle',{cx:tp.x,cy:tp.y,r:Rb,'class':'big',stroke:tp.color},g);
+    g.appendChild(label(bl,tp.x,tp.y,'bt',24));
+  });
+})();
+</script>
 ~~~
+
+
+
 
 ## Links
 
