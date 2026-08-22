@@ -183,9 +183,27 @@
   color: #0b7285;
 }
 
+/* new — sized, centered SVG icons */
 .franklin-content .link-icon {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: #0b7285;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.franklin-content .link-card:hover .link-icon {
+  color: #0b7285;
+  transform: scale(1.08);
+}
+
+.franklin-content .link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* 6) Small screens */
@@ -254,95 +272,102 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
 
 ~~~
 <style>
-.rmap-wrap { background:#ffffff; border:1px solid #d9e2ec; border-radius:12px; padding:1rem; box-shadow:0 1px 2px rgba(16,42,67,.06); }
-.rmap-hint { font-size:.85rem; color:#526d82; text-align:center; margin:.6rem 0 0; font-style:italic; }
-.rmap { width:100%; height:auto; display:block; }
-.rmap text { font-family: Georgia, "Times New Roman", serif; fill:#3d3d3d; pointer-events:none; }
-.rmap .bt { font-size:21px; }
-.rmap .kt { font-size:12px; }
-.rmap circle { fill:#ffffff; }
-.rmap .big { stroke-width:4; cursor:pointer; }
-.rmap .kid circle { stroke-width:2.5; }
-.rmap line { stroke-width:2; }
-.rmap .kids { opacity:0; transition:opacity .3s ease; pointer-events:none; }
-.rmap .topic:hover .kids { opacity:1; pointer-events:auto; }
-.g-oc .big{stroke:#2b3eb5;} .g-oc .kid circle,.g-oc line{stroke:#4c6ef5;}
-.g-no .big{stroke:#e03131;} .g-no .kid circle,.g-no line{stroke:#fa5252;}
-.g-mo .big{stroke:#2f9e44;} .g-mo .kid circle,.g-mo line{stroke:#51cf66;}
-.g-se .big{stroke:#f08c00;} .g-se .kid circle,.g-se line{stroke:#ffa94d;}
-.g-sc .big{stroke:#0c8599;} .g-sc .kid circle,.g-sc line{stroke:#22b8cf;}
-@media (hover:none){ .rmap .kids{opacity:1; pointer-events:auto;} }
+#rmap-wrap{background:#fff radial-gradient(#edf1f7 1.2px, transparent 1.2px);background-size:22px 22px;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
+#rmap-hint{font-size:.85rem;color:#526d82;text-align:center;font-style:italic;margin:.4rem 0 .6rem;}
+.rmap{width:100%;height:auto;display:block;}
+.rmap .bt{font-family:"Fraunces",Georgia,serif;font-weight:600;fill:#1f2d3d;}
+.rmap .kt{font-family:"Inter",Arial,sans-serif;font-weight:700;}
+.rmap text{pointer-events:none;}
+.rmap .halo{fill:none;stroke-width:1.5;stroke-dasharray:3 7;opacity:.45;}
+.rmap .big{filter:drop-shadow(0 3px 6px rgba(16,42,67,.18));transition:stroke-width .2s ease,filter .25s ease;}
+.rmap .topic{cursor:pointer;outline:none;}
+.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5.5;filter:drop-shadow(0 8px 18px rgba(16,42,67,.30));}
+.rmap .kids{pointer-events:none;}
+.rmap .topic:hover .kids,.rmap .topic:focus .kids{pointer-events:auto;}
+.rmap .kid circle{stroke-width:2.5;filter:drop-shadow(0 2px 5px rgba(16,42,67,.15));}
+.rmap .kid{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);}
+.rmap .link{fill:none;stroke-width:2.5;stroke-linecap:round;opacity:0;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset .6s ease .05s,opacity .2s ease;}
+.rmap .topic:hover .kid,.rmap .topic:focus .kid{opacity:1;transform:scale(1);}
+.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.9;stroke-dashoffset:0;}
+@media (hover:none){.rmap .kid{opacity:1;transform:scale(1);}.rmap .link{opacity:.9;stroke-dashoffset:0;}}
 </style>
 
-<div class="rmap-wrap">
-<svg class="rmap" viewBox="0 0 1000 500" role="img" aria-label="Carte des intérêts de recherche">
-
-  <!-- ================= Contrôle optimal ================= -->
-  <g class="topic g-oc">
-    <g class="kids">
-      <line x1="320" y1="115" x2="165" y2="85"/>
-      <line x1="320" y1="115" x2="475" y2="80"/>
-      <line x1="320" y1="115" x2="135" y2="215"/>
-      <line x1="320" y1="115" x2="275" y2="245"/>
-      <line x1="320" y1="115" x2="405" y2="235"/>
-      <g class="kid"><circle cx="165" cy="85" r="40"/><text class="kt" x="165" y="81"><tspan x="165">Systèmes</tspan><tspan x="165" dy="13">hybrides</tspan></text></g>
-      <g class="kid"><circle cx="475" cy="80" r="40"/><text class="kt" x="475" y="67"><tspan x="475">Régions de</tspan><tspan x="475" dy="13">contrôle</tspan><tspan x="475" dy="13">avec perte</tspan></text></g>
-      <g class="kid"><circle cx="135" cy="215" r="44"/><text class="kt" x="135" y="206"><tspan x="135">Principe du</tspan><tspan x="135" dy="13">maximum</tspan><tspan x="135" dy="13">de Pontryagin</tspan></text></g>
-      <g class="kid"><circle cx="275" cy="245" r="40"/><text class="kt" x="275" y="241"><tspan x="275">Synthèse</tspan><tspan x="275" dy="13">optimale</tspan></text></g>
-      <g class="kid"><circle cx="405" cy="235" r="40"/><text class="kt" x="405" y="231"><tspan x="405">Contrôles</tspan><tspan x="405" dy="13">par retour</tspan></text></g>
-    </g>
-    <circle class="big" cx="320" cy="115" r="70"/>
-    <text class="bt" x="320" y="109"><tspan x="320">Contrôle</tspan><tspan x="320" dy="24">optimal</tspan></text>
-  </g>
-
-  <!-- ================= Optimisation numérique ================= -->
-  <g class="topic g-no">
-    <g class="kids">
-      <line x1="720" y1="115" x2="605" y2="190"/>
-      <line x1="720" y1="115" x2="865" y2="205"/>
-      <g class="kid"><circle cx="605" cy="190" r="40"/><text class="kt" x="605" y="186"><tspan x="605">Méthodes</tspan><tspan x="605" dy="13">de tir</tspan></text></g>
-      <g class="kid"><circle cx="865" cy="205" r="44"/><text class="kt" x="865" y="201"><tspan x="865">Schémas de</tspan><tspan x="865" dy="13">régularisation</tspan></text></g>
-    </g>
-    <circle class="big" cx="720" cy="115" r="74"/>
-    <text class="bt" x="720" y="109"><tspan x="720">Optimisation</tspan><tspan x="720" dy="24">numérique</tspan></text>
-  </g>
-
-  <!-- ================= Modélisation ================= -->
-  <g class="topic g-mo">
-    <g class="kids">
-      <line x1="520" y1="265" x2="670" y2="255"/>
-      <line x1="520" y1="265" x2="545" y2="395"/>
-      <g class="kid"><circle cx="670" cy="255" r="40"/><text class="kt" x="670" y="251"><tspan x="670">Allocation</tspan><tspan x="670" dy="13">de ressources</tspan></text></g>
-      <g class="kid"><circle cx="545" cy="395" r="42"/><text class="kt" x="545" y="399">Épidémiologie</text></g>
-    </g>
-    <circle class="big" cx="520" cy="265" r="66"/>
-    <text class="bt" x="520" y="272">Modélisation</text>
-  </g>
-
-  <!-- ================= Estimation d'état ================= -->
-  <g class="topic g-se">
-    <g class="kids">
-      <line x1="295" y1="375" x2="155" y2="395"/>
-      <line x1="295" y1="375" x2="440" y2="430"/>
-      <g class="kid"><circle cx="155" cy="395" r="40"/><text class="kt" x="155" y="391"><tspan x="155">Observateur</tspan><tspan x="155" dy="13">KKL</tspan></text></g>
-      <g class="kid"><circle cx="440" cy="430" r="44"/><text class="kt" x="440" y="421"><tspan x="440">Filtre de</tspan><tspan x="440" dy="13">Kalman</tspan><tspan x="440" dy="13">étendu</tspan></text></g>
-    </g>
-    <circle class="big" cx="295" cy="375" r="62"/>
-    <text class="bt" x="295" y="369"><tspan x="295">Estimation</tspan><tspan x="295" dy="24">d'état</tspan></text>
-  </g>
-
-  <!-- ================= Calcul scientifique ================= -->
-  <g class="topic g-sc">
-    <g class="kids">
-      <line x1="795" y1="335" x2="665" y2="405"/>
-      <g class="kid"><circle cx="665" cy="405" r="42"/><text class="kt" x="665" y="401"><tspan x="665">Arrondi</tspan><tspan x="665" dy="13">stochastique</tspan></text></g>
-    </g>
-    <circle class="big" cx="795" cy="335" r="62"/>
-    <text class="bt" x="795" y="329"><tspan x="795">Calcul</tspan><tspan x="795" dy="24">scientifique</tspan></text>
-  </g>
-
-</svg>
+<div id="rmap-wrap">
+  <div id="rmap"></div>
+  <noscript><div class="image-container"><img src="/assets/map.svg" alt="Carte des intérêts de recherche"></div></noscript>
+  <p id="rmap-hint">Survolez un thème pour dévoiler ses sous-domaines.</p>
 </div>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg',W=1000,H=640,M=30;
+  var TIER={1:{r:95,fs:24,lh:28,sw:4.5},2:{r:84,fs:22,lh:26,sw:4},3:{r:70,fs:19,lh:23,sw:3.5}};
+  var DATA=[
+    {name:'Contrôle optimal',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:300,y:200,
+     kids:[{n:'Systèmes hybrides',x:105,y:170},{n:'Régions de contrôle avec perte',x:170,y:82},
+           {n:'Principe du maximum de Pontryagin',x:430,y:82},{n:'Synthèse optimale',x:560,y:160},
+           {n:'Contrôles par retour',x:470,y:270}]},
+    {name:'Optimisation numérique',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:740,y:170,
+     kids:[{n:'Méthodes de tir',x:620,y:270},{n:'Schémas de régularisation',x:880,y:90}]},
+    {name:'Modélisation',t:3,color:'#2f9e44',light:'#51cf66',tint:'#eefbee',kfill:'#f6fdf6',x:540,y:390,
+     kids:[{n:'Allocation de ressources',x:700,y:360},{n:'Épidémiologie',x:565,y:530}]},
+    {name:"Estimation d'état",t:3,color:'#f08c00',light:'#ffa94d',tint:'#fff5e6',kfill:'#fffaf2',x:270,y:500,
+     kids:[{n:'Observateur KKL',x:95,y:430},{n:'Filtre de Kalman étendu',x:140,y:555}]},
+    {name:'Calcul scientifique',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:810,y:470,
+     kids:[{n:'Arrondi stochastique',x:920,y:350}]}
+  ];
+  var host=document.getElementById('rmap'); if(!host)return;
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('class','rmap');
+  host.appendChild(svg);
+  var defs=document.createElementNS(NS,'defs'); svg.appendChild(defs);
+
+  function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
+  function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
+  function label(L,x,y,cls,lh,fs,fill){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';if(fill)t.style.fill=fill;var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
+
+  DATA.forEach(function(tp){
+    var T=TIER[tp.t], bl=wrap(tp.name,12);
+    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
+    tp.Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
+  });
+
+  DATA.forEach(function(tp,idx){
+    var T=TIER[tp.t];
+    var grad=el('radialGradient',{id:'rg'+idx,cx:'35%',cy:'30%',r:'80%'},defs);
+    el('stop',{offset:'0%','stop-color':'#ffffff'},grad);
+    el('stop',{offset:'100%','stop-color':tp.tint},grad);
+
+    var g=el('g',{'class':'topic',tabindex:'0'});
+    var kids=tp.kids.map(function(kd,i){
+      var kl=wrap(kd.n,13);
+      var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox(); kt.remove();
+      var rk=Math.max(46,Math.max(kb.width/2,kb.height/2)+14);
+      var x=kd.x,y=kd.y,dx=x-tp.x,dy=y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
+      var min=tp.Rb+rk+18;
+      if(d<min){x=tp.x+dx/d*min;y=tp.y+dy/d*min;}
+      x=Math.max(M+rk,Math.min(W-M-rk,x)); y=Math.max(M+rk,Math.min(H-M-rk,y));
+      return {L:kl,i:i,r:rk,x:x,y:y};
+    });
+
+    var kg=el('g',{'class':'kids'},g);
+    kids.forEach(function(kd){
+      var mx=(tp.x+kd.x)/2,my=(tp.y+kd.y)/2,dx=kd.x-tp.x,dy=kd.y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
+      var p=el('path',{d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,'class':'link',stroke:tp.light},kg);
+      p.style.setProperty('--len',p.getTotalLength());
+      p.style.transitionDelay=(kd.i*60)+'ms';
+      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*60)+'ms';
+      el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light,fill:tp.kfill},kgg);
+      kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',16,13,tp.color));
+    });
+
+    el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb+7,'class':'halo',stroke:tp.light},g);
+    var big=el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
+    big.style.strokeWidth=T.sw+'px';
+    g.appendChild(label(wrap(tp.name,12),tp.x,tp.y,'bt',T.lh,T.fs));
+  });
+})();
+</script>
 ~~~
 
 ## Liens
@@ -385,6 +410,19 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
       </svg>
     </span>
     <span>LinkedIn</span>
+  </a>
+
+  <a href="https://mistea.montpellier.hub.inrae.fr/" target="_blank" rel="noopener" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18"/>
+        <path d="M5 21V7l7-4 7 4v14"/>
+        <path d="M9 21v-6h6v6"/>
+        <path d="M10 9h4"/>
+        <path d="M10 12h4"/>
+      </svg>
+    </span>
+    <span>UMR MISTEA, INRAE</span>
   </a>
 </div>
 ~~~
