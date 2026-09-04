@@ -220,7 +220,7 @@
 
 ## Research profile
 
-I work on optimal control, hybrid and non-smooth dynamical systems, and numerical methods for constrained control problems. My research combines rigorous mathematical analysis with computational approaches, with applications motivated by epidemiology and mathematical biology.
+I develop rigorous theoretical and computational tools for optimal control of hybrid and non-smooth dynamical systems. My work connects mathematical analysis with reliable numerical methods, with a particular focus on budget-constrained epidemic control and applications in mathematical biology. I am also interested in extending these approaches to robust optimization under uncertainty and, in the longer term, to scientific machine learning.
 
 ## Current position
 
