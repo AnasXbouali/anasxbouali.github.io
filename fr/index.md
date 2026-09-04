@@ -1,4 +1,4 @@
-@def title = "Anas Bouali | Mathématicien appliqué"
+@def title = "Anas Bouali"
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
@@ -55,14 +55,6 @@
   margin: 0 0 0.4rem 0;
   letter-spacing: -0.02em;
   line-height: 1.1;
-}
-
-.franklin-content .hero-title {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #0b7285;
-  margin: 0 0 1rem 0;
-  letter-spacing: 0.02em;
 }
 
 .franklin-content .hero-role {
@@ -218,11 +210,10 @@
 ~~~
 <div class="hero-banner">
   <h1 class="hero-name">Anas Bouali</h1>
-  <p class="hero-title">Mathématicien appliqué</p>
   <p class="hero-role">
     Contrôle optimal · Systèmes hybrides · Optimisation numérique<br>
-    Chercheur postdoctoral en mathématiques appliquées au 
-    <a href="https://mistea.montpellier.hub.inrae.fr/" target="_blank" rel="noopener">Centre INRAE Occitanie-Montpellier</a>
+    Attaché temporaire d'enseignement et de recherche (ATER) à l'
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
   </p>
 </div>
 ~~~
@@ -236,7 +227,8 @@ Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non 
 ~~~
 <div class="info-card">
   <p>
-    Depuis septembre 2024, je suis chercheur postdoctoral au Centre INRAE Occitanie-Montpellier (UMR MISTEA). 
+    Je suis actuellement Attaché temporaire d'enseignement et de recherche (ATER) à l'
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
   </p>
   <p>
     Je travaille sur le <a href="https://sites.google.com/view/nocime" target="_blank" rel="noopener">projet ANR NOCIME</a> avec 
