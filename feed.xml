@@ -23,25 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  Publications | Anas Bouali  ]]>
-  </title>
-  <link> https://anasxbouali.github.io/fr/Publications/index.html </link>
-  <guid> https://anasxbouali.github.io/fr/Publications/index.html </guid>
-  <description>
-    <![CDATA[  Publications scientifiques d&#39;Anas Bouali sur le contrôle optimal, la dynamique hybride et la modélisation mathématique.  ]]>
-  </description>  
-    
-  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Anas Bouali</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Research Projects | Anas Bouali  ]]>
   </title>
   <link> https://anasxbouali.github.io/Projects/index.html </link>
@@ -61,50 +42,12 @@
 
 <item>
   <title>
-    <![CDATA[  Research Software | Anas Bouali  ]]>
+    <![CDATA[  Projets de recherche | Anas Bouali  ]]>
   </title>
-  <link> https://anasxbouali.github.io/Code/index.html </link>
-  <guid> https://anasxbouali.github.io/Code/index.html </guid>
+  <link> https://anasxbouali.github.io/fr/Projects/index.html </link>
+  <guid> https://anasxbouali.github.io/fr/Projects/index.html </guid>
   <description>
-    <![CDATA[  Overview of research software packages and implementations in Julia and Python.  ]]>
-  </description>  
-    
-  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Anas Bouali</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Talks &amp; Presentations  ]]>
-  </title>
-  <link> https://anasxbouali.github.io/Talks/index.html </link>
-  <guid> https://anasxbouali.github.io/Talks/index.html </guid>
-  <description>
-    <![CDATA[  A list of talks, presentations, and posters by Anas Bouali.  ]]>
-  </description>  
-    
-  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Anas Bouali</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Teaching and Supervision | Anas Bouali  ]]>
-  </title>
-  <link> https://anasxbouali.github.io/Teaching/index.html </link>
-  <guid> https://anasxbouali.github.io/Teaching/index.html </guid>
-  <description>
-    <![CDATA[  Details of teaching experience and student supervision by Anas Bouali.  ]]>
+    <![CDATA[  Un résumé des projets de recherche et des collaborations.  ]]>
   </description>  
     
   <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
@@ -143,6 +86,82 @@
   <guid> https://anasxbouali.github.io/Publications/index.html </guid>
   <description>
     <![CDATA[  Scientific publications by Anas Bouali on optimal control, hybrid dynamics, and mathematical modeling.  ]]>
+  </description>  
+    
+  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Publications | Anas Bouali  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/fr/Publications/index.html </link>
+  <guid> https://anasxbouali.github.io/fr/Publications/index.html </guid>
+  <description>
+    <![CDATA[  Publications scientifiques d&#39;Anas Bouali sur le contrôle optimal, la dynamique hybride et la modélisation mathématique.  ]]>
+  </description>  
+    
+  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Talks &amp; Presentations  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Talks/index.html </link>
+  <guid> https://anasxbouali.github.io/Talks/index.html </guid>
+  <description>
+    <![CDATA[  A list of talks, presentations, and posters by Anas Bouali.  ]]>
+  </description>  
+    
+  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Research Software | Anas Bouali  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Code/index.html </link>
+  <guid> https://anasxbouali.github.io/Code/index.html </guid>
+  <description>
+    <![CDATA[  Overview of research software packages and implementations in Julia and Python.  ]]>
+  </description>  
+    
+  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Anas Bouali</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Teaching and Supervision | Anas Bouali  ]]>
+  </title>
+  <link> https://anasxbouali.github.io/Teaching/index.html </link>
+  <guid> https://anasxbouali.github.io/Teaching/index.html </guid>
+  <description>
+    <![CDATA[  Details of teaching experience and student supervision by Anas Bouali.  ]]>
   </description>  
     
   <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>  
