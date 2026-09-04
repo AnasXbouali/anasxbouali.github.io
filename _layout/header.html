@@ -1,5 +1,9 @@
 <header>
+{{if isfr}}
+<div class="blog-name"><a href="/fr/">Anas Bouali</a></div>
+{{else}}
 <div class="blog-name"><a href="/">Anas Bouali</a></div>
+{{end}}
 
 <!-- language flags : UK = English site, FR = French site -->
 <span class="lang-switch">
@@ -24,11 +28,19 @@
 
 <nav>
   <ul>
+    {{if isfr}}
+    <li><a href="/Publications/">Publications</a></li>
+    <li><a href="/fr/Talks/">Conférences</a></li>
+    <li><a href="/Projects/">Projets</a></li>
+    <li><a href="/Code/">Code</a></li>
+    <li><a href="/Teaching/">Enseignement</a></li>
+    {{else}}
     <li><a href="/Publications/">Publications</a></li>
     <li><a href="/Talks/">Talks</a></li>
     <li><a href="/Projects/">Projects</a></li>
     <li><a href="/Code/">Code</a></li>
     <li><a href="/Teaching/">Teaching</a></li>
+    {{end}}
   </ul>
   <img src="/assets/hamburger.svg" id="menu-icon" alt="Menu">
 </nav>
