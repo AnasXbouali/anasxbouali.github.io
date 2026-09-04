@@ -264,7 +264,7 @@ I develop rigorous theoretical and computational tools for optimal control of hy
     <strong>Master’s degree:</strong> Master’s degree in Applied Mathematics, Université Clermont Auvergne, Clermont-Ferrand (France).
   </p>
   <p>
-    <strong>Bachelor’s degree (Licence):</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
+    <strong>Bachelor’s degree:</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
   </p>
 </div>
 ~~~
