@@ -227,35 +227,44 @@ I develop rigorous theoretical and computational tools for optimal control of hy
 ~~~
 <div class="info-card">
   <p>
-    I am currently an Attaché temporaire d'enseignement et de recherche (ATER) at 
+    Since September 2026, I have been a Temporary Teaching and Research Fellow (ATER) at
     <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
-  </p>
-  <p>
-    I am working on the <a href="https://sites.google.com/view/nocime" target="_blank" rel="noopener">ANR project NOCIME</a> with 
-    <a href="https://sites.google.com/site/alainrapaport" target="_blank" rel="noopener">Alain Rapaport</a> and 
-    <a href="https://who.rocq.inria.fr/Pierre-Alexandre.Bliman/" target="_blank" rel="noopener">Pierre-Alexandre Bliman</a>. 
-    The project addresses new optimal control problems with non-standard cost functions motivated by epidemiology.
+    My work combines university teaching with research in optimal control, hybrid and non-smooth dynamical systems, and numerical optimisation.
   </p>
 </div>
 ~~~
 
-## Academic background
+## Academic and professional experience
 
 ~~~
 <div class="info-card">
   <p>
-    <strong>2023–2024:</strong> Temporary Lecturer and Research Assistant (ATER) at Avignon Université.
+    <strong>2026–present:</strong> Temporary Teaching and Research Fellow, Université de Toulouse (France).
   </p>
   <p>
-    <strong>2020–2023:</strong> PhD at Avignon Université under the supervision of Térence Bayen and 
-    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>. 
-    My research focused on deriving necessary optimality conditions for hybrid optimal control problems and developing adapted numerical schemes. 
-    The <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">doctoral thesis is available here</a>.
+    <strong>2024–2026:</strong> Postdoctoral Researcher, UMR MISTEA, INRAE Occitanie–Montpellier (France).
   </p>
   <p>
-    <strong>Previously:</strong> Master's internship at the Laboratoire de Mathématiques Blaise Pascal under the supervision of 
-    <a href="https://lmbp.uca.fr/~munch/" target="_blank" rel="noopener">Arnaud Münch</a>. 
-    This work resulted in a <a href="https://raw.githubusercontent.com/AnasXbouali/anasxbouali.github.io/main/_assets/Memoire.pdf" target="_blank" rel="noopener">Master's thesis available here</a>.
+    <strong>2023–2024:</strong> Temporary Teaching and Research Fellow, Avignon Université (France).
+  </p>
+</div>
+~~~
+
+## Education
+
+~~~
+<div class="info-card">
+  <p>
+    <strong>2020–2023:</strong> PhD in Applied Mathematics, Avignon Université, supervised by Térence Bayen and
+    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>.
+    My thesis focused on necessary optimality conditions and adapted numerical schemes for hybrid optimal control problems.
+    <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Read the thesis</a>.
+  </p>
+  <p>
+    <strong>Master’s degree:</strong> Master’s degree in Applied Mathematics, Université Clermont Auvergne, Clermont-Ferrand (France).
+  </p>
+  <p>
+    <strong>Bachelor’s degree (Licence):</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
   </p>
 </div>
 ~~~
