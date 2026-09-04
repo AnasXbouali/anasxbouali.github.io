@@ -17,6 +17,9 @@ generate_rss = true
 website_title = "Anas Bouali"
 website_descr = "Postdoc Researcher"
 website_url   = "https://anasxbouali.github.io/"
+
+# 🇫🇷 French menu switch (set to true in fr/ pages)
+isfr = false
 +++
 
 \newcommand{\R}{\mathbb{R}} 
