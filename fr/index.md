@@ -1,6 +1,7 @@
 @def title = "Anas Bouali"
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
+@def isfr = true
 
 ~~~
 <style>
