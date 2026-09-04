@@ -212,50 +212,57 @@
   <h1 class="hero-name">Anas Bouali</h1>
   <p class="hero-role">
     Contrôle optimal · Systèmes hybrides · Optimisation numérique<br>
-    Attaché temporaire d'enseignement et de recherche (ATER) à l'
-    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
+    Attaché temporaire d'enseignement et de recherche (ATER) à l’<a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
   </p>
 </div>
 ~~~
 
 ## Profil de recherche
 
-Je travaille sur le contrôle optimal, les systèmes dynamiques hybrides et non lisses, et les méthodes numériques pour les problèmes de contrôle contraint. Mes recherches combinent une analyse mathématique rigoureuse et des approches computationnelles, avec des applications motivées par l'épidémiologie et la biologie mathématique.
+Je développe des outils théoriques et computationnels rigoureux pour le contrôle optimal de systèmes dynamiques hybrides et non lisses. Mes travaux font le lien entre l'analyse mathématique et des méthodes numériques fiables, avec un intérêt particulier pour le contrôle des épidémies sous contrainte budgétaire et les applications en biologie mathématique. Je m'intéresse également à l'extension de ces approches à l'optimisation robuste sous incertitude et, à plus long terme, à l'apprentissage automatique scientifique.
 
 ## Poste actuel
 
 ~~~
 <div class="info-card">
   <p>
-    Je suis actuellement Attaché temporaire d'enseignement et de recherche (ATER) à l'
-    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
-  </p>
-  <p>
-    Je travaille sur le <a href="https://sites.google.com/view/nocime" target="_blank" rel="noopener">projet ANR NOCIME</a> avec 
-    <a href="https://sites.google.com/site/alainrapaport" target="_blank" rel="noopener">Alain Rapaport</a> et 
-    <a href="https://who.rocq.inria.fr/Pierre-Alexandre.Bliman/" target="_blank" rel="noopener">Pierre-Alexandre Bliman</a>. 
-    Ce projet aborde de nouveaux problèmes de contrôle optimal avec des fonctions de coût non standard motivées par l'épidémiologie.
+    Depuis septembre 2026, je suis Attaché temporaire d'enseignement et de recherche (ATER) à l’<a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
+    Mes activités associent l'enseignement universitaire et la recherche en contrôle optimal, systèmes dynamiques hybrides et non lisses, et optimisation numérique.
   </p>
 </div>
 ~~~
 
-## Parcours académique
+## Parcours académique et professionnel
 
 ~~~
 <div class="info-card">
   <p>
-    <strong>2023–2024 :</strong> Attaché temporaire d'enseignement et de recherche (ATER) à Avignon Université.
+    <strong>2026–aujourd’hui :</strong> Attaché temporaire d'enseignement et de recherche, Université de Toulouse (France).
   </p>
   <p>
-    <strong>2020–2023 :</strong> Doctorat à Avignon Université sous la direction de Térence Bayen et de 
-    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>. 
-    Mes travaux ont porté sur l'établissement de conditions nécessaires d'optimalité pour des problèmes de contrôle optimal hybrides et sur le développement de schémas numériques adaptés. 
-    La <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">thèse de doctorat est disponible ici</a>.
+    <strong>2024–2026 :</strong> Chercheur postdoctoral, UMR MISTEA, INRAE Occitanie–Montpellier (France).
   </p>
   <p>
-    <strong>Auparavant :</strong> stage de master au Laboratoire de Mathématiques Blaise Pascal sous la direction d'
-    <a href="https://lmbp.uca.fr/~munch/" target="_blank" rel="noopener">Arnaud Münch</a>. 
-    Ce travail a donné lieu à un <a href="https://raw.githubusercontent.com/AnasXbouali/anasxbouali.github.io/main/_assets/Memoire.pdf" target="_blank" rel="noopener">mémoire de master, disponible ici</a>.
+    <strong>2023–2024 :</strong> Attaché temporaire d'enseignement et de recherche, Avignon Université (France).
+  </p>
+</div>
+~~~
+
+## Formation
+
+~~~
+<div class="info-card">
+  <p>
+    <strong>2020–2023 :</strong> Doctorat en mathématiques appliquées, Avignon Université, sous la direction de Térence Bayen et de
+    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>.
+    Ma thèse a porté sur l'établissement de conditions nécessaires d'optimalité et le développement de schémas numériques adaptés aux problèmes de contrôle optimal hybrides.
+    <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Lire la thèse</a>.
+  </p>
+  <p>
+    <strong>Master :</strong> Master de mathématiques appliquées, Université Clermont Auvergne, Clermont-Ferrand (France).
+  </p>
+  <p>
+    <strong>Licence :</strong> Licence de mathématiques, Université Ibn Tofail, Kénitra (Maroc).
   </p>
 </div>
 ~~~
