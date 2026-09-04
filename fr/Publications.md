@@ -176,7 +176,7 @@ isfr = true
 
 ~~~
 <div class="publications-intro">
-  Recherches évaluées par les pairs sur le contrôle optimal, la dynamique hybride et non lisse,
+  Recherches évaluées par les pairs sur le contrôle optimal, dynamiques hybride/non lisse,
   les méthodes numériques et la biologie mathématique.
 </div>
 ~~~
