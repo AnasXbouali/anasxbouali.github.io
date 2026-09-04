@@ -212,7 +212,7 @@
   <h1 class="hero-name">Anas Bouali</h1>
   <p class="hero-role">
     Optimal control · Hybrid systems · Numerical optimisation<br>
-    Attaché temporaire d'enseignement et de recherche (ATER) at 
+    Temporary Teaching and Research Fellow at 
     <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
   </p>
 </div>
