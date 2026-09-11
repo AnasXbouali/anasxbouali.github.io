@@ -190,6 +190,21 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
 <div class="teaching-position">
   <h3 class="position-title">Temporary Teaching and Research Assistant (ATER)</h3>
   <p class="position-meta"><strong>Université de Toulouse</strong> · 2026–2027</p>
+  
+  <div class="course">
+    <h4 class="course-title">Analysis 2</h4>
+    <p class="course-meta">Second-year BSc Mathematics · Integration and Numerical Series</p>
+  </div>
+  
+  <div class="course">
+    <h4 class="course-title">Introduction to Statistics and Introduction to R</h4>
+    <p class="course-meta">Second-year BSc Mathematics</p>
+  </div>
+  
+  <div class="course">
+    <h4 class="course-title">Numerical Methods</h4>
+    <p class="course-meta">Third-year BSc Mathematics</p>
+  </div>
 </div>
 ~~~
 
