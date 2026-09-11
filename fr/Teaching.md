@@ -191,46 +191,6 @@ isfr = true
 <div class="teaching-position">
   <h3 class="position-title">Attaché temporaire d'enseignement et de recherche (ATER)</h3>
   <p class="position-meta"><strong>Université de Toulouse</strong> · 2026–2027</p>
-  
-  <div class="course">
-    <h4 class="course-title">Analyse 2</h4>
-    <p class="course-meta">Licence 2 Mathématiques · Intégration et séries numériques</p>
-    <div class="course-content">
-      <ul>
-        <li>Intégrale de Riemann et ses propriétés</li>
-        <li>Techniques d'intégration (par parties, changement de variables)</li>
-        <li>Intégrales impropres</li>
-        <li>Séries numériques et critères de convergence</li>
-        <li>Séries entières et développements de Taylor</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="course">
-    <h4 class="course-title">Introduction aux statistiques et initiation à R</h4>
-    <p class="course-meta">Licence 2 Mathématiques</p>
-    <div class="course-content">
-      <ul>
-        <li>Statistiques descriptives : mesures de tendance centrale et de dispersion</li>
-        <li>Introduction aux probabilités et variables aléatoires discrètes</li>
-        <li>Inférence statistique : intervalles de confiance et tests d'hypothèses</li>
-        <li>Programmation pratique dans le langage R</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="course">
-    <h4 class="course-title">Méthodes numériques</h4>
-    <p class="course-meta">Licence 3 Mathématiques</p>
-    <div class="course-content">
-      <ul>
-        <li>Interpolation polynomiale (Lagrange, Newton, splines)</li>
-        <li>Résolution numérique d'équations non linéaires (dichotomie, méthode de Newton)</li>
-        <li>Intégration numérique (règles des rectangles, des trapèzes et de Simpson)</li>
-        <li>Résolution numérique d'équations différentielles ordinaires (Euler, Runge-Kutta)</li>
-      </ul>
-    </div>
-  </div>
 </div>
 ~~~
 
