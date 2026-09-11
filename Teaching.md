@@ -190,46 +190,6 @@ rss = "Details of teaching experience and student supervision by Anas Bouali."
 <div class="teaching-position">
   <h3 class="position-title">Temporary Teaching and Research Assistant (ATER)</h3>
   <p class="position-meta"><strong>Université de Toulouse</strong> · 2026–2027</p>
-  
-  <div class="course">
-    <h4 class="course-title">Analysis 2</h4>
-    <p class="course-meta">Second-year BSc Mathematics · Integration and Numerical Series</p>
-    <div class="course-content">
-      <ul>
-        <li>Riemann integral and its properties</li>
-        <li>Integration techniques (by parts, change of variables)</li>
-        <li>Improper integrals</li>
-        <li>Numerical series and convergence tests</li>
-        <li>Power series and Taylor expansions</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="course">
-    <h4 class="course-title">Introduction to Statistics and Introduction to R</h4>
-    <p class="course-meta">Second-year BSc Mathematics</p>
-    <div class="course-content">
-      <ul>
-        <li>Descriptive statistics: measures of central tendency and dispersion</li>
-        <li>Introduction to probability and discrete random variables</li>
-        <li>Statistical inference: confidence intervals and hypothesis testing</li>
-        <li>Hands-on programming in the R language</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="course">
-    <h4 class="course-title">Numerical Methods</h4>
-    <p class="course-meta">Third-year BSc Mathematics</p>
-    <div class="course-content">
-      <ul>
-        <li>Polynomial interpolation (Lagrange, Newton, splines)</li>
-        <li>Numerical solution of nonlinear equations (bisection, Newton's method)</li>
-        <li>Numerical integration (rectangle, trapezoidal, Simpson's rules)</li>
-        <li>Numerical solution of ordinary differential equations (Euler, Runge-Kutta)</li>
-      </ul>
-    </div>
-  </div>
 </div>
 ~~~
 
