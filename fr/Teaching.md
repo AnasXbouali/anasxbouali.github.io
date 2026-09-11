@@ -191,6 +191,21 @@ isfr = true
 <div class="teaching-position">
   <h3 class="position-title">Attaché temporaire d'enseignement et de recherche (ATER)</h3>
   <p class="position-meta"><strong>Université de Toulouse</strong> · 2026–2027</p>
+  
+  <div class="course">
+    <h4 class="course-title">Analyse 2</h4>
+    <p class="course-meta">Licence 2 Mathématiques · Intégration et séries numériques</p>
+  </div>
+  
+  <div class="course">
+    <h4 class="course-title">Introduction aux statistiques et initiation à R</h4>
+    <p class="course-meta">Licence 2 Mathématiques</p>
+  </div>
+  
+  <div class="course">
+    <h4 class="course-title">Méthodes numériques</h4>
+    <p class="course-meta">Licence 3 Mathématiques</p>
+  </div>
 </div>
 ~~~
 
