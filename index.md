@@ -3,14 +3,19 @@
 @def hascode = false
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+   Homepage redesign
+   Keep the existing HTML structure and the research-bubble block.
+   ============================================================ */
 
 :root {
-  --paper: #f7f5ef;
+  --paper: #fbfaf7;
   --ink: #17212b;
-  --muted: #66717c;
-  --rule: #d8d4ca;
-  --accent: #9a3f2f;
+  --muted: #68717a;
+  --rule: #d8d5ce;
+  --accent: #9b3f32;
 }
 
 body {
@@ -21,11 +26,12 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: var(--ink);
   line-height: 1.72;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  counter-reset: home-section;
 }
+
+/* ------------------------------------------------------------
+   Headings: editorial numbering instead of colored side bars
+   ------------------------------------------------------------ */
 
 .franklin-content h1,
 .franklin-content h2,
@@ -35,394 +41,346 @@ body {
   color: var(--ink);
 }
 
-.franklin-content a {
-  color: inherit;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-.franklin-content a:hover {
-  color: var(--accent);
-}
-
-/* ============================================================
-   HERO — editorial, no card, no gradient, no rounded box
-   ============================================================ */
-
-.home-hero {
+.franklin-content h2 {
+  counter-increment: home-section;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(240px, .55fr);
-  gap: 4rem;
-  align-items: end;
-  padding: 5.5rem 0 3.5rem;
-  border-bottom: 1px solid var(--ink);
+  grid-template-columns: 3rem minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.8rem;
+
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+
+  margin: 4.8rem 0 1.7rem;
+  padding: 0 !important;
+  border-left: 0 !important;
 }
 
-.hero-kicker {
+.franklin-content h2::before {
+  content: "0" counter(home-section);
   font-family: "IBM Plex Mono", monospace;
-  font-size: .72rem;
-  letter-spacing: .11em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.7rem;
-}
-
-.hero-name {
-  font-family: "Source Serif 4", Georgia, serif !important;
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: -0.055em;
-  line-height: .92;
-  margin: 0 !important;
+  letter-spacing: 0.06em;
+  color: var(--accent);
 }
 
-.hero-subtitle {
-  margin-top: 2rem;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
-  line-height: 1.45;
-  max-width: 720px;
+/* ------------------------------------------------------------
+   Hero: no card, no gradient, no rounded container
+   ------------------------------------------------------------ */
+
+.franklin-content .hero-banner {
+  position: relative;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+
+  padding: 4.4rem 0 3.4rem;
+  margin: 3.2rem 0 0;
+  text-align: left;
 }
 
-.hero-meta {
-  border-top: 1px solid var(--rule);
-  padding-top: 1rem;
-}
+.franklin-content .hero-banner::before {
+  content: "APPLIED MATHEMATICS · TOULOUSE";
+  display: block;
+  margin-bottom: 1.5rem;
 
-.hero-meta-label {
   font-family: "IBM Plex Mono", monospace;
-  font-size: .68rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: .7rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  color: var(--accent);
 }
 
-.hero-meta p {
+.franklin-content .hero-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(3.7rem, 8vw, 6.7rem);
+  font-weight: 600;
+  color: var(--ink);
+
+  margin: 0 0 1.45rem 0;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.franklin-content .hero-role {
+  max-width: 760px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+  color: #2f3942;
   margin: 0;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.05rem;
   line-height: 1.55;
 }
 
-/* ============================================================
-   SECTION LAYOUT
-   ============================================================ */
-
-.page-section {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 3rem;
-  padding: 4.3rem 0;
-  border-bottom: 1px solid var(--rule);
+.franklin-content .hero-role a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  border: 0;
 }
 
-.section-code {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: .7rem;
-  letter-spacing: .08em;
+.franklin-content .hero-role a:hover {
   color: var(--accent);
-  padding-top: .45rem;
+  background: transparent;
+  padding: 0;
 }
 
-.section-body {
-  min-width: 0;
-}
+/* ------------------------------------------------------------
+   Normal text / links
+   ------------------------------------------------------------ */
 
-.section-title {
-  font-family: "Source Serif 4", Georgia, serif !important;
-  font-size: clamp(2rem, 4vw, 3rem) !important;
-  font-weight: 500 !important;
-  letter-spacing: -0.03em !important;
-  line-height: 1.08 !important;
-  margin: 0 0 2rem !important;
-}
-
-.section-body > p {
-  max-width: 860px;
-  margin: 0;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.18rem;
-  line-height: 1.72;
-}
-
-/* ============================================================
-   POSITION / EXPERIENCE / EDUCATION
-   ============================================================ */
-
-.position-strip {
-  display: grid;
-  grid-template-columns: 150px minmax(0,1fr);
-  gap: 2rem;
-  padding-top: 1.15rem;
-  border-top: 1px solid var(--ink);
-}
-
-.position-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: .72rem;
-  color: var(--accent);
-  padding-top: .15rem;
-}
-
-.position-copy {
-  max-width: 800px;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.12rem;
-  line-height: 1.7;
-}
-
-.position-copy p {
-  margin: 0;
-}
-
-.cv-list {
-  border-top: 1px solid var(--ink);
-}
-
-.cv-row {
-  display: grid;
-  grid-template-columns: 150px minmax(250px, .9fr) minmax(260px, 1.1fr);
-  gap: 2rem;
-  padding: 1.35rem 0 1.45rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.cv-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: .72rem;
-  color: var(--muted);
-  padding-top: .15rem;
-}
-
-.cv-role {
-  font-family: "Source Serif 4", Georgia, serif;
+.franklin-content > p {
+  max-width: 850px;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.franklin-content a {
+  text-underline-offset: 4px;
+}
+
+/* ------------------------------------------------------------
+   Former "cards": flatten into document / CV rows
+   ------------------------------------------------------------ */
+
+.franklin-content .info-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.franklin-content .info-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.franklin-content .info-card p {
+  margin: 0;
+  padding: 1.15rem 0 1.2rem;
+  border-bottom: 1px solid var(--rule);
+
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #34414b;
+}
+
+.franklin-content .info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.franklin-content .info-card strong {
+  display: inline-block;
+  min-width: 9.5rem;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
   font-weight: 500;
-  line-height: 1.5;
-}
-
-.cv-place {
-  font-size: .92rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.cv-place strong {
+  letter-spacing: -0.01em;
   color: var(--ink);
-  font-weight: 500;
 }
 
-/* ============================================================
-   RESEARCH INTERESTS
-   IMPORTANT: the original bubble block below is left untouched.
-   ============================================================ */
-
-#rmap-wrap {
-  margin-top: .5rem;
+.franklin-content .info-card a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  border: 0;
 }
 
-/* ============================================================
-   LINKS — reference-style rather than cards
-   ============================================================ */
+.franklin-content .info-card a:hover {
+  color: var(--accent);
+  background: transparent;
+  padding: 0;
+}
 
-.links-list {
+/* ------------------------------------------------------------
+   Noscript research image fallback only.
+   The animated research-bubble section itself is NOT restyled here.
+   ------------------------------------------------------------ */
+
+.franklin-content .image-container {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.franklin-content .image-container img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  border-radius: 0;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+/* ------------------------------------------------------------
+   Links: bibliography / reference-list feel, not app cards
+   ------------------------------------------------------------ */
+
+.franklin-content .link-grid {
+  display: block;
+  margin-top: 0;
   border-top: 1px solid var(--ink);
 }
 
-.links-list a {
+.franklin-content .link-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 60px 1fr auto;
-  gap: 1.25rem;
+  grid-template-columns: 2rem 1fr auto;
   align-items: center;
-  padding: 1.15rem 0;
+  gap: 0.8rem;
+
+  background: transparent;
+  border: 0;
   border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 1rem 0;
+
   text-decoration: none;
-  transition: padding-left .15s ease;
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.08rem;
+
+  box-shadow: none;
+  transition: padding-left 0.16s ease, color 0.16s ease;
 }
 
-.links-list a:hover {
-  padding-left: .45rem;
-}
-
-.link-index {
+.franklin-content .link-card::after {
+  content: "↗";
   font-family: "IBM Plex Mono", monospace;
-  font-size: .7rem;
-  color: var(--accent);
-}
-
-.link-name {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.12rem;
-}
-
-.link-arrow {
-  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
   color: var(--muted);
 }
 
-@media (max-width: 820px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding-top: 4rem;
-  }
-
-  .page-section {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 3.3rem 0;
-  }
-
-  .section-code {
-    padding-top: 0;
-  }
-
-  .cv-row {
-    grid-template-columns: 120px 1fr;
-  }
-
-  .cv-place {
-    grid-column: 2;
-  }
+.franklin-content .link-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--rule);
+  color: var(--accent);
+  padding-left: 0.4rem;
 }
 
-@media (max-width: 560px) {
-  .franklin-content {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+.franklin-content .link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  transition: none;
+}
+
+.franklin-content .link-card:hover .link-icon {
+  color: var(--accent);
+  transform: none;
+}
+
+.franklin-content .link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .franklin-content .hero-banner {
+    padding: 3rem 0 2.6rem;
+    margin-top: 2rem;
   }
 
-  .hero-name {
-    font-size: clamp(3.5rem, 18vw, 5rem);
+  .franklin-content h2 {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    margin-top: 3.7rem;
   }
 
-  .position-strip {
-    grid-template-columns: 1fr;
-    gap: .6rem;
-  }
-
-  .cv-row {
-    grid-template-columns: 1fr;
-    gap: .4rem;
-  }
-
-  .cv-place {
-    grid-column: auto;
+  .franklin-content .info-card strong {
+    display: block;
+    min-width: 0;
+    margin-bottom: 0.35rem;
   }
 }
 </style>
 
-<section class="home-hero">
-  <div>
-    <div class="hero-kicker">Applied mathematics · Toulouse</div>
-    <h1 class="hero-name">Anas Bouali</h1>
-    <div class="hero-subtitle">
-      Optimal control · Hybrid systems · Numerical optimisation
-    </div>
-  </div>
+<div class="hero-banner">
+  <h1 class="hero-name">Anas Bouali</h1>
+  <p class="hero-role">
+    Optimal control · Hybrid systems · Numerical optimisation<br>
+    Temporary Teaching and Research Fellow at 
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
+  </p>
+</div>
 
-  <div class="hero-meta">
-    <div class="hero-meta-label">Current position</div>
-    <p>
-      Temporary Teaching and Research Fellow at
-      <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
-    </p>
-  </div>
-</section>
+Research profile
 
-<section class="page-section">
-  <div class="section-code">01 / PROFILE</div>
-  <div class="section-body">
-    <h2 class="section-title">Research profile</h2>
-    <p>
-      I develop rigorous theoretical and computational tools for optimal control of hybrid and non-smooth dynamical systems.
-      My work connects mathematical analysis with reliable numerical methods, with a particular focus on budget-constrained
-      epidemic control and applications in mathematical biology. I am also interested in extending these approaches to robust
-      optimization under uncertainty and, in the longer term, to scientific machine learning.
-    </p>
-  </div>
-</section>
+I develop rigorous theoretical and computational tools for optimal control of hybrid and non-smooth dynamical systems. My work connects mathematical analysis with reliable numerical methods, with a particular focus on budget-constrained epidemic control and applications in mathematical biology. I am also interested in extending these approaches to robust optimization under uncertainty and, in the longer term, to scientific machine learning.
 
-<section class="page-section">
-  <div class="section-code">02 / POSITION</div>
-  <div class="section-body">
-    <h2 class="section-title">Current position</h2>
+Current position
 
-    <div class="position-strip">
-      <div class="position-date">2026—NOW</div>
-      <div class="position-copy">
-        <p>
-          Since September 2026, I have been a Temporary Teaching and Research Fellow (ATER) at
-          <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
-          My work combines university teaching with research in optimal control, hybrid and non-smooth dynamical systems,
-          and numerical optimisation.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="info-card">
+  <p>
+    Since September 2026, I have been a Temporary Teaching and Research Fellow (ATER) at
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
+    My work combines university teaching with research in optimal control, hybrid and non-smooth dynamical systems, and numerical optimisation.
+  </p>
+</div>
 
-<section class="page-section">
-  <div class="section-code">03 / EXPERIENCE</div>
-  <div class="section-body">
-    <h2 class="section-title">Academic and professional experience</h2>
+Academic and professional experience
 
-    <div class="cv-list">
-      <div class="cv-row">
-        <div class="cv-date">2026—PRESENT</div>
-        <div class="cv-role">Temporary Teaching and Research Fellow</div>
-        <div class="cv-place"><strong>Université de Toulouse</strong><br>France</div>
-      </div>
+<div class="info-card">
+  <p>
+    <strong>2026–present:</strong> Temporary Teaching and Research Fellow, Université de Toulouse (France).
+  </p>
+  <p>
+    <strong>2024–2026:</strong> Postdoctoral Researcher, UMR MISTEA, INRAE Occitanie–Montpellier (France).
+  </p>
+  <p>
+    <strong>2023–2024:</strong> Temporary Teaching and Research Fellow, Avignon Université (France).
+  </p>
+</div>
 
-      <div class="cv-row">
-        <div class="cv-date">2024—2026</div>
-        <div class="cv-role">Postdoctoral Researcher</div>
-        <div class="cv-place"><strong>UMR MISTEA, INRAE Occitanie–Montpellier</strong><br>France</div>
-      </div>
+Education
 
-      <div class="cv-row">
-        <div class="cv-date">2023—2024</div>
-        <div class="cv-role">Temporary Teaching and Research Fellow</div>
-        <div class="cv-place"><strong>Avignon Université</strong><br>France</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="page-section">
-  <div class="section-code">04 / EDUCATION</div>
-  <div class="section-body">
-    <h2 class="section-title">Education</h2>
-
-    <div class="cv-list">
-      <div class="cv-row">
-        <div class="cv-date">2020—2023</div>
-        <div class="cv-role">PhD in Applied Mathematics</div>
-        <div class="cv-place">
-          <strong>Avignon Université</strong><br>
-          Supervised by Térence Bayen and
-          <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>.<br><br>
-          Thesis on necessary optimality conditions and adapted numerical schemes for hybrid optimal control problems.<br><br>
-          <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Read the thesis ↗</a>
-        </div>
-      </div>
-
-      <div class="cv-row">
-        <div class="cv-date">MASTER</div>
-        <div class="cv-role">Master’s degree in Applied Mathematics</div>
-        <div class="cv-place"><strong>Université Clermont Auvergne</strong><br>Clermont-Ferrand, France</div>
-      </div>
-
-      <div class="cv-row">
-        <div class="cv-date">BACHELOR</div>
-        <div class="cv-role">Bachelor’s degree in Mathematics</div>
-        <div class="cv-place"><strong>Université Ibn Tofail</strong><br>Kénitra, Morocco</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="info-card">
+  <p>
+    <strong>2020–2023:</strong> PhD in Applied Mathematics, Avignon Université, supervised by Térence Bayen and
+    <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>.
+    My thesis focused on necessary optimality conditions and adapted numerical schemes for hybrid optimal control problems.
+    <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Read the thesis</a>.
+  </p>
+  <p>
+    <strong>Master’s degree:</strong> Master’s degree in Applied Mathematics, Université Clermont Auvergne, Clermont-Ferrand (France).
+  </p>
+  <p>
+    <strong>Bachelor’s degree:</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
+  </p>
+</div>
 
 Research interests
 
@@ -525,35 +483,42 @@ Research interests
 
 Links
 
-<section class="page-section">
-  <div class="section-code">06 / LINKS</div>
-  <div class="section-body">
-    <h2 class="section-title">Links</h2>
+<div class="link-grid">
+  <a href="mailto:anas.bouali@outlook.com" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-10 5L2 7"/>
+      </svg>
+    </span>
+    <span>Email</span>
+  </a>
 
-    <div class="links-list">
-      <a href="mailto:anas.bouali@outlook.com">
-        <span class="link-index">[01]</span>
-        <span class="link-name">Email</span>
-        <span class="link-arrow">↗</span>
-      </a>
+  <a href="https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr" target="_blank" rel="noopener" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10 12 5 2 10l10 5 10-5z"/>
+        <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>
+      </svg>
+    </span>
+    <span>Google Scholar</span>
+  </a>
 
-      <a href="https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr" target="_blank" rel="noopener">
-        <span class="link-index">[02]</span>
-        <span class="link-name">Google Scholar</span>
-        <span class="link-arrow">↗</span>
-      </a>
+  <a href="https://github.com/AnasXbouali" target="_blank" rel="noopener" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.087.636-1.337-2.22-.252-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
+      </svg>
+    </span>
+    <span>GitHub</span>
+  </a>
 
-      <a href="https://github.com/AnasXbouali" target="_blank" rel="noopener">
-        <span class="link-index">[03]</span>
-        <span class="link-name">GitHub</span>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/anas-bouali-276539215/" target="_blank" rel="noopener">
-        <span class="link-index">[04]</span>
-        <span class="link-name">LinkedIn</span>
-        <span class="link-arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
+  <a href="https://www.linkedin.com/in/anas-bouali-276539215/" target="_blank" rel="noopener" class="link-card">
+    <span class="link-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+    </span>
+    <span>LinkedIn</span>
+  </a>
+</div>
