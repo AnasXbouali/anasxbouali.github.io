@@ -2,6 +2,7 @@
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
 
+~~~
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
@@ -204,7 +205,9 @@
   .franklin-content .link-grid { grid-template-columns: 1fr; }
 }
 </style>
+~~~
 
+~~~
 <div class="hero-banner">
   <h1 class="hero-name">Anas Bouali</h1>
   <p class="hero-role">
@@ -213,13 +216,15 @@
     <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
   </p>
 </div>
+~~~
 
-Research profile
+## Research profile
 
 I develop rigorous theoretical and computational tools for optimal control of hybrid and non-smooth dynamical systems. My work connects mathematical analysis with reliable numerical methods, with a particular focus on budget-constrained epidemic control and applications in mathematical biology. I am also interested in extending these approaches to robust optimization under uncertainty and, in the longer term, to scientific machine learning.
 
-Current position
+## Current position
 
+~~~
 <div class="info-card">
   <p>
     Since September 2026, I have been a Temporary Teaching and Research Fellow (ATER) at
@@ -227,9 +232,11 @@ Current position
     My work combines university teaching with research in optimal control, hybrid and non-smooth dynamical systems, and numerical optimisation.
   </p>
 </div>
+~~~
 
-Academic and professional experience
+## Academic and professional experience
 
+~~~
 <div class="info-card">
   <p>
     <strong>2026–present:</strong> Temporary Teaching and Research Fellow, Université de Toulouse (France).
@@ -241,9 +248,11 @@ Academic and professional experience
     <strong>2023–2024:</strong> Temporary Teaching and Research Fellow, Avignon Université (France).
   </p>
 </div>
+~~~
 
-Education
+## Education
 
+~~~
 <div class="info-card">
   <p>
     <strong>2020–2023:</strong> PhD in Applied Mathematics, Avignon Université, supervised by Térence Bayen and
@@ -258,9 +267,11 @@ Education
     <strong>Bachelor’s degree:</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
   </p>
 </div>
+~~~
 
-Research interests
+## Research interests
 
+~~~
 <style>
 #rmap-wrap{background:#fff radial-gradient(#edf1f7 1.2px, transparent 1.2px);background-size:22px 22px;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
 #rmap-hint{font-size:.85rem;color:#526d82;text-align:center;font-style:italic;margin:.4rem 0 .6rem;}
@@ -357,9 +368,11 @@ Research interests
   });
 })();
 </script>
+~~~
 
-Links
+## Links
 
+~~~
 <div class="link-grid">
   <a href="mailto:anas.bouali@outlook.com" class="link-card">
     <span class="link-icon">
@@ -399,3 +412,4 @@ Links
     <span>LinkedIn</span>
   </a>
 </div>
+~~~
