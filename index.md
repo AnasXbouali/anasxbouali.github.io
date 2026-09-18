@@ -1,209 +1,206 @@
 @def title = "Anas Bouali"
 @def tags = ["home", "academic", "landing"]
 @def hascode = false
-@def isfr = true
 
 ~~~
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
-:root {
-  --ink: #111827;
-  --paper: #fdfcf9;
-  --accent-red: #e11d48;
-  --accent-teal: #0f766e;
-  --grid-line: #e5e7eb;
-}
-
-body {
-  background-color: var(--paper);
-  background-image: radial-gradient(circle, #d1d5db 0.8px, transparent 0.8px);
-  background-size: 24px 24px;
-}
+/* ============================================================
+   More original but still close to your original layout.
+   Removed coloured vertical left lines.
+   Kept the bubble map JavaScript below.
+   ============================================================ */
 
 .franklin-content {
-  font-family: 'Source Sans 3', sans-serif;
-  color: var(--ink);
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  color: #23281f;
   line-height: 1.7;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-/* Elegant animated underline for links */
-.franklin-content a {
-  color: var(--accent-teal);
-  text-decoration: none;
-  font-weight: 600;
-  background-image: linear-gradient(to right, var(--accent-teal) 50%, transparent 50%);
-  background-size: 200% 1.5px;
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  transition: background-position 0.4s ease;
-}
-
-.franklin-content a:hover {
-  background-position: -100% 100%;
-}
-
-/* 1) Kill default franklin borders */
-.franklin-content h1, .franklin-content h2, .franklin-content h3 {
+.franklin-content h1,
+.franklin-content h2,
+.franklin-content h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  color: #1f2a1d;
 }
 
-/* 2) Headings: The "Proof Section" Marker */
 .franklin-content h2 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--accent-red);
-  border-bottom: 2px solid var(--ink);
-  padding-bottom: 0.5rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.6rem;
+  margin-bottom: 1.4rem;
+  padding-left: 0;
+  border-left: 0;
 }
 
-.franklin-content h2::before {
-  content: "§";
-  font-family: 'Bodoni Moda', serif;
-  font-size: 1.5rem;
-  font-style: normal;
-  color: var(--ink);
-  line-height: 1;
-}
-
-/* 3) Hero Banner: The "Axiom" */
+/* Hero Banner */
 .franklin-content .hero-banner {
-  background: transparent;
-  border: none;
-  border-top: 3px double var(--ink);
-  border-bottom: 3px double var(--ink);
-  padding: 3rem 0;
-  margin-bottom: 4rem;
-  margin-top: 2rem;
+  background: #f1efe4;
+  border: 1px solid #d5d2bf;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
   text-align: left;
 }
 
 .franklin-content .hero-name {
-  font-family: 'Bodoni Moda', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--ink);
-  margin: 0;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  color: #192417;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .franklin-content .hero-role {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #4b5563;
-  margin-top: 1.5rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #424b3c;
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* 4) Info Cards: Neo-Brutalist "Theorem" Blocks */
+.franklin-content .hero-role a {
+  color: #2f5d50;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed #2f5d50;
+  transition: all 0.15s ease;
+}
+
+.franklin-content .hero-role a:hover {
+  border-bottom-style: solid;
+  background: #e5ecdf;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+/* Info Cards */
 .franklin-content .info-card {
   background: #ffffff;
-  border: 1px solid var(--ink);
-  border-radius: 0;
-  padding: 2rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-  box-shadow: 8px 8px 0 0 var(--ink);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #ddd9ca;
+  border-left: 0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .franklin-content .info-card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0 0 var(--accent-red);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(35, 40, 31, 0.10);
 }
 
 .franklin-content .info-card p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #374151;
+  font-size: 0.98rem;
+  color: #434b3e;
 }
 
-.franklin-content .info-card p:last-child { margin-bottom: 0; }
-
-.franklin-content .info-card strong {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--accent-red);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  margin-bottom: 0.2rem;
+.franklin-content .info-card p:last-child {
+  margin-bottom: 0;
 }
 
-/* 5) Links Grid: The "Bibliography Index" */
+.franklin-content .info-card a {
+  color: #2f5d50;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed #2f5d50;
+  transition: all 0.15s ease;
+}
+
+.franklin-content .info-card a:hover {
+  border-bottom-style: solid;
+  background: #eef2e8;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+/* Image container, used by noscript fallback */
+.franklin-content .image-container {
+  background: #ffffff;
+  border: 1px solid #ddd9ca;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.06);
+  text-align: center;
+}
+
+.franklin-content .image-container img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+/* Links Grid */
 .franklin-content .link-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border-top: 1px solid var(--ink);
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .franklin-content .link-card {
   display: flex;
-  flex-direction: row-reverse; /* Icon on right, text on left */
-  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--grid-line);
-  border-radius: 0;
-  padding: 1.2rem 0.5rem;
+  gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #ddd9ca;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
   text-decoration: none;
-  color: var(--ink);
-  font-family: 'Bodoni Moda', serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  transition: all 0.2s ease;
-  background-image: none !important; /* Override global link underline */
+  color: #23281f;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.04);
 }
 
 .franklin-content .link-card:hover {
-  padding-left: 1.5rem;
-  padding-right: 0.5rem;
-  background: transparent;
-  color: var(--accent-red);
-  transform: none;
-  box-shadow: none;
-  border-bottom-color: var(--accent-red);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(35, 40, 31, 0.10);
+  border-color: #2f5d50;
+  color: #2f5d50;
 }
 
 .franklin-content .link-icon {
-  width: 24px;
-  height: 24px;
-  color: var(--ink);
-  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: #b3552e;
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .franklin-content .link-card:hover .link-icon {
-  color: var(--accent-red);
-  transform: translateX(-5px);
+  color: #2f5d50;
+  transform: scale(1.08);
 }
 
-/* 6) Small screens */
+.franklin-content .link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 @media (max-width: 560px) {
-  .franklin-content .hero-banner { padding: 2rem 0; }
-  .franklin-content .info-card { padding: 1.5rem; box-shadow: 4px 4px 0 0 var(--ink); }
-  .franklin-content .info-card:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 var(--accent-red); }
+  .franklin-content .hero-banner { padding: 1.8rem 1.2rem; }
+  .franklin-content .info-card { padding: 1.2rem; }
+  .franklin-content .link-grid { grid-template-columns: 1fr; }
 }
 </style>
 ~~~
@@ -212,166 +209,332 @@ body {
 <div class="hero-banner">
   <h1 class="hero-name">Anas Bouali</h1>
   <p class="hero-role">
-    Contrôle optimal · Systèmes hybrides · Optimisation numérique<br>
-    Attaché temporaire d'enseignement et de recherche (ATER) à l’<a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
+    Optimal control · Hybrid systems · Numerical optimisation<br>
+    Temporary Teaching and Research Fellow at 
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>
   </p>
 </div>
 ~~~
 
-## Profil de recherche
+## Research profile
 
-Je développe des outils théoriques et computationnels rigoureux pour le contrôle optimal de systèmes dynamiques hybrides et non lisses. Mes travaux font le lien entre l'analyse mathématique et des méthodes numériques fiables, avec un intérêt particulier pour le contrôle des épidémies sous contrainte budgétaire et les applications en biologie mathématique. Je m'intéresse également à l'extension de ces approches à l'optimisation robuste sous incertitude et, à plus long terme, à l'apprentissage automatique scientifique.
+I develop rigorous theoretical and computational tools for optimal control of hybrid and non-smooth dynamical systems. My work connects mathematical analysis with reliable numerical methods, with a particular focus on budget-constrained epidemic control and applications in mathematical biology. I am also interested in extending these approaches to robust optimization under uncertainty and, in the longer term, to scientific machine learning.
 
-## Poste actuel
+## Current position
 
 ~~~
 <div class="info-card">
   <p>
-    Depuis septembre 2026, je suis Attaché temporaire d'enseignement et de recherche (ATER) à l’<a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
-    Mes activités associent l'enseignement universitaire et la recherche en contrôle optimal, systèmes dynamiques hybrides et non lisses, et optimisation numérique.
+    Since September 2026, I have been a Temporary Teaching and Research Fellow (ATER) at
+    <a href="https://www.univ-toulouse.fr/" target="_blank" rel="noopener">Université de Toulouse</a>.
+    My work combines university teaching with research in optimal control, hybrid and non-smooth dynamical systems, and numerical optimisation.
   </p>
 </div>
 ~~~
 
-## Parcours académique et professionnel
+## Academic and professional experience
 
 ~~~
 <div class="info-card">
   <p>
-    <strong>2026–aujourd’hui :</strong> Attaché temporaire d'enseignement et de recherche, Université de Toulouse (France).
+    <strong>2026–present:</strong> Temporary Teaching and Research Fellow, Université de Toulouse (France).
   </p>
   <p>
-    <strong>2024–2026 :</strong> Chercheur postdoctoral, UMR MISTEA, INRAE Occitanie–Montpellier (France).
+    <strong>2024–2026:</strong> Postdoctoral Researcher, UMR MISTEA, INRAE Occitanie–Montpellier (France).
   </p>
   <p>
-    <strong>2023–2024 :</strong> Attaché temporaire d'enseignement et de recherche, Avignon Université (France).
+    <strong>2023–2024:</strong> Temporary Teaching and Research Fellow, Avignon Université (France).
   </p>
 </div>
 ~~~
 
-## Formation
+## Education
 
 ~~~
 <div class="info-card">
   <p>
-    <strong>2020–2023 :</strong> Doctorat en mathématiques appliquées, Avignon Université, sous la direction de Térence Bayen et de
+    <strong>2020–2023:</strong> PhD in Applied Mathematics, Avignon Université, supervised by Térence Bayen and
     <a href="https://www.unilim.fr/pages_perso/loic.bourdin/" target="_blank" rel="noopener">Loïc Bourdin</a>.
-    Ma thèse a porté sur l'établissement de conditions nécessaires d'optimalité et le développement de schémas numériques adaptés aux problèmes de contrôle optimal hybrides.
-    <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Lire la thèse</a>.
+    My thesis focused on necessary optimality conditions and adapted numerical schemes for hybrid optimal control problems.
+    <a href="https://theses.hal.science/tel-04335766v1" target="_blank" rel="noopener">Read the thesis</a>.
   </p>
   <p>
-    <strong>Master :</strong> Master de mathématiques appliquées, Université Clermont Auvergne, Clermont-Ferrand (France).
+    <strong>Master’s degree:</strong> Master’s degree in Applied Mathematics, Université Clermont Auvergne, Clermont-Ferrand (France).
   </p>
   <p>
-    <strong>Licence :</strong> Licence de mathématiques, Université Ibn Tofail, Kénitra (Maroc).
+    <strong>Bachelor’s degree:</strong> Bachelor’s degree in Mathematics, Université Ibn Tofail, Kénitra (Morocco).
   </p>
 </div>
 ~~~
 
-## Intérêts de recherche
+## Research interests
 
 ~~~
 <style>
-#rmap-wrap{background:#fff !important; border:1px solid #111827 !important; border-radius:0 !important; padding:2rem !important; box-shadow:8px 8px 0 0 #111827 !important; margin-bottom: 2.5rem;}
-#rmap-hint{display:none;}
-.rmap{width:100%;height:auto;display:block;}
-.rmap .bt{font-family:"Bodoni Moda",serif !important; font-style:italic; font-weight:400; fill:#111827;}
-.rmap .kt{font-family:"Source Sans 3",sans-serif !important; font-weight:600;}
-.rmap text{pointer-events:none;}
-.rmap .halo{fill:none;stroke-width:1.5;stroke-dasharray:3 7;opacity:.3;}
-.rmap .big{stroke-width:3; transition:stroke-width .2s ease;}
-.rmap .topic{cursor:pointer;outline:none;}
-.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5;}
-.rmap .kids{pointer-events:none;}
-.rmap .topic:hover .kids,.rmap .topic:focus .kids{pointer-events:auto;}
-.rmap .kid circle{stroke-width:2;}
-.rmap .kid{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.8);transition:opacity .25s ease,transform .4s cubic-bezier(.2,.9,.3,1.35);}
-.rmap .link{fill:none;stroke-width:2;stroke-linecap:round;opacity:0;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset .5s ease .05s,opacity .2s ease;}
-.rmap .topic:hover .kid,.rmap .topic:focus .kid{opacity:1;transform:scale(1);}
-.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.8;stroke-dashoffset:0;}
-@media (hover:none){.rmap .kid{opacity:1;transform:scale(1);}.rmap .link{opacity:.8;stroke-dashoffset:0;}}
+#rmap-wrap{
+  background:#fff radial-gradient(#e8e5da 1.2px, transparent 1.2px);
+  background-size:22px 22px;
+  border:1px solid #ddd9ca;
+  border-radius:12px;
+  padding:1.2rem 1rem .6rem;
+  box-shadow:0 1px 2px rgba(35,40,31,.06);
+}
+
+#rmap-hint{
+  font-size:.85rem;
+  color:#6a7060;
+  text-align:center;
+  font-style:italic;
+  margin:.4rem 0 .6rem;
+}
+
+.rmap{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.rmap .bt{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;
+  fill:#1f2d3d;
+}
+
+.rmap .kt{
+  font-family:"Public Sans",Arial,sans-serif;
+  font-weight:700;
+}
+
+.rmap text{
+  pointer-events:none;
+}
+
+.rmap .halo{
+  fill:none;
+  stroke-width:1.5;
+  stroke-dasharray:3 7;
+  opacity:.45;
+}
+
+.rmap .big{
+  filter:drop-shadow(0 3px 6px rgba(35,40,31,.18));
+  transition:stroke-width .2s ease,filter .25s ease;
+}
+
+.rmap .topic{
+  cursor:pointer;
+  outline:none;
+}
+
+.rmap .topic:hover .big,
+.rmap .topic:focus .big{
+  stroke-width:5.5;
+  filter:drop-shadow(0 8px 18px rgba(35,40,31,.30));
+}
+
+.rmap .kids{
+  pointer-events:none;
+}
+
+.rmap .topic:hover .kids,
+.rmap .topic:focus .kids{
+  pointer-events:auto;
+}
+
+.rmap .kid circle{
+  stroke-width:2.5;
+  filter:drop-shadow(0 2px 5px rgba(35,40,31,.15));
+}
+
+.rmap .kid{
+  opacity:0;
+  transform-box:fill-box;
+  transform-origin:center;
+  transform:scale(.4);
+  transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);
+}
+
+.rmap .link{
+  fill:none;
+  stroke-width:2.5;
+  stroke-linecap:round;
+  opacity:0;
+  stroke-dasharray:var(--len);
+  stroke-dashoffset:var(--len);
+  transition:stroke-dashoffset .6s ease .05s,opacity .2s ease;
+}
+
+.rmap .topic:hover .kid,
+.rmap .topic:focus .kid{
+  opacity:1;
+  transform:scale(1);
+}
+
+.rmap .topic:hover .link,
+.rmap .topic:focus .link{
+  opacity:.9;
+  stroke-dashoffset:0;
+}
+
+@media (hover:none){
+  .rmap .kid{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  .rmap .link{
+    opacity:.9;
+    stroke-dashoffset:0;
+  }
+}
 </style>
 
 <div id="rmap-wrap">
   <div id="rmap"></div>
-  <noscript><div class="image-container"><img src="/assets/map.svg" alt="Carte des intérêts de recherche"></div></noscript>
+  <noscript>
+    <div class="image-container">
+      <img src="/assets/map.svg" alt="Research interests map">
+    </div>
+  </noscript>
 </div>
 
 <script>
 (function(){
   var NS='http://www.w3.org/2000/svg',W=1000,H=640,M=30;
   var TIER={1:{r:95,fs:24,lh:28,sw:4.5},2:{r:84,fs:22,lh:26,sw:4},3:{r:70,fs:19,lh:23,sw:3.5}};
-  
-  // Updated Academic Color Palette
   var DATA=[
-    {name:'Contrôle optimal',t:1,color:'#111827',light:'#4b5563',tint:'#f3f4f6',kfill:'#ffffff',x:300,y:200,
-     kids:[{n:'Systèmes hybrides',x:105,y:170},{n:'Régions de perte de contrôle',x:170,y:82},
-           {n:'Principe du maximum de Pontryagin',x:430,y:82},{n:'Synthèse optimale',x:560,y:160},
-           {n:'Contrôles par retour',x:470,y:270}]},
-    {name:'Optimisation numérique',t:2,color:'#9f1239',light:'#e11d48',tint:'#fff1f2',kfill:'#ffffff',x:740,y:170,
-     kids:[{n:'Méthodes de tir',x:620,y:270},{n:'Schémas de régularisation',x:880,y:90}]},
-    {name:'Modélisation',t:3,color:'#115e59',light:'#14b8a6',tint:'#f0fdfa',kfill:'#ffffff',x:540,y:390,
-     kids:[{n:'Allocation de ressources',x:700,y:360},{n:'Épidémiologie',x:565,y:530}]},
-    {name:"Estimation d'état",t:3,color:'#92400e',light:'#d97706',tint:'#fffbeb',kfill:'#ffffff',x:270,y:500,
-     kids:[{n:'Observateur KKL',x:95,y:430},{n:'Filtre de Kalman étendu',x:140,y:555}]},
-    {name:'Calcul scientifique',t:3,color:'#3730a3',light:'#6366f1',tint:'#eef2ff',kfill:'#ffffff',x:810,y:470,
-     kids:[{n:'Arrondi stochastique',x:920,y:350}]}
+    {name:'Optimal Control',t:1,color:'#2b3eb5',light:'#4c6ef5',tint:'#edf2ff',kfill:'#f5f8ff',x:300,y:200,
+     kids:[{n:'Hybrid Systems',x:105,y:170},{n:'Loss Control Regions',x:170,y:82},
+           {n:'Pontryagin Maximum Principle',x:430,y:82},{n:'Optimal Synthesis',x:560,y:160},
+           {n:'Feedback Controls',x:470,y:270}]},
+    {name:'Numerical Optimization',t:2,color:'#e03131',light:'#fa5252',tint:'#fff0f0',kfill:'#fff7f7',x:740,y:170,
+     kids:[{n:'Shooting Methods',x:620,y:270},{n:'Regularization Schemes',x:880,y:90}]},
+    {name:'Modelling',t:3,color:'#2f9e44',light:'#51cf66',tint:'#eefbee',kfill:'#f6fdf6',x:540,y:390,
+     kids:[{n:'Resources Allocation',x:700,y:360},{n:'Epidemiology',x:565,y:530}]},
+    {name:'State Estimation',t:3,color:'#f08c00',light:'#ffa94d',tint:'#fff5e6',kfill:'#fffaf2',x:270,y:500,
+     kids:[{n:'KKL Observer',x:95,y:430},{n:'Extended Kalman Filter',x:140,y:555}]},
+    {name:'Scientific Computing',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:810,y:470,
+     kids:[{n:'Stochastic Rounding',x:920,y:350}]}
   ];
-  var host=document.getElementById('rmap'); if(!host)return;
-  var svg=document.createElementNS(NS,'svg');
-  svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('class','rmap');
-  host.appendChild(svg);
-  var defs=document.createElementNS(NS,'defs'); svg.appendChild(defs);
 
-  function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
-  function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
-  function label(L,x,y,cls,lh,fs,fill){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';if(fill)t.style.fill=fill;var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
+  var host=document.getElementById('rmap');
+  if(!host)return;
+
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.setAttribute('class','rmap');
+  host.appendChild(svg);
+
+  var defs=document.createElementNS(NS,'defs');
+  svg.appendChild(defs);
+
+  function el(n,at,p){
+    var e=document.createElementNS(NS,n);
+    for(var k in at)e.setAttribute(k,at[k]);
+    (p||svg).appendChild(e);
+    return e;
+  }
+
+  function wrap(s,m){
+    var w=s.split(' '),L=[],c='';
+    for(var i=0;i<w.length;i++){
+      var t=(c?c+' ':'')+w[i];
+      if(t.length>m&&c){L.push(c);c=w[i];}
+      else c=t;
+    }
+    if(c)L.push(c);
+    return L;
+  }
+
+  function label(L,x,y,cls,lh,fs,fill){
+    var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});
+    t.style.fontSize=fs+'px';
+    if(fill)t.style.fill=fill;
+    var y0=y-(L.length-1)*lh/2;
+    for(var i=0;i<L.length;i++){
+      var ts=el('tspan',{x:x,y:y0+i*lh},t);
+      ts.textContent=L[i];
+    }
+    return t;
+  }
 
   DATA.forEach(function(tp){
     var T=TIER[tp.t], bl=wrap(tp.name,12);
-    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
+    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox();
+    tmp.remove();
     tp.Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
   });
 
   DATA.forEach(function(tp,idx){
     var T=TIER[tp.t];
+
     var grad=el('radialGradient',{id:'rg'+idx,cx:'35%',cy:'30%',r:'80%'},defs);
     el('stop',{offset:'0%','stop-color':'#ffffff'},grad);
     el('stop',{offset:'100%','stop-color':tp.tint},grad);
 
     var g=el('g',{'class':'topic',tabindex:'0'});
+
     var kids=tp.kids.map(function(kd,i){
       var kl=wrap(kd.n,13);
-      var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox(); kt.remove();
+      var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox();
+      kt.remove();
+
       var rk=Math.max(46,Math.max(kb.width/2,kb.height/2)+14);
       var x=kd.x,y=kd.y,dx=x-tp.x,dy=y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
       var min=tp.Rb+rk+18;
-      if(d<min){x=tp.x+dx/d*min;y=tp.y+dy/d*min;}
-      x=Math.max(M+rk,Math.min(W-M-rk,x)); y=Math.max(M+rk,Math.min(H-M-rk,y));
+
+      if(d<min){
+        x=tp.x+dx/d*min;
+        y=tp.y+dy/d*min;
+      }
+
+      x=Math.max(M+rk,Math.min(W-M-rk,x));
+      y=Math.max(M+rk,Math.min(H-M-rk,y));
+
       return {L:kl,i:i,r:rk,x:x,y:y};
     });
 
     var kg=el('g',{'class':'kids'},g);
+
     kids.forEach(function(kd){
       var mx=(tp.x+kd.x)/2,my=(tp.y+kd.y)/2,dx=kd.x-tp.x,dy=kd.y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
-      var p=el('path',{d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,'class':'link',stroke:tp.light},kg);
+
+      var p=el('path',{
+        d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,
+        'class':'link',
+        stroke:tp.light
+      },kg);
+
       p.style.setProperty('--len',p.getTotalLength());
       p.style.transitionDelay=(kd.i*60)+'ms';
-      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*60)+'ms';
+
+      var kgg=el('g',{'class':'kid'},kg);
+      kgg.style.transitionDelay=(kd.i*60)+'ms';
+
       el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light,fill:tp.kfill},kgg);
       kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',16,13,tp.color));
     });
 
     el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb+7,'class':'halo',stroke:tp.light},g);
-    var big=el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
+
+    var big=el('circle',{
+      cx:tp.x,
+      cy:tp.y,
+      r:tp.Rb,
+      'class':'big',
+      stroke:tp.color,
+      fill:'url(#rg'+idx+')'
+    },g);
+
     big.style.strokeWidth=T.sw+'px';
+
     g.appendChild(label(wrap(tp.name,12),tp.x,tp.y,'bt',T.lh,T.fs));
   });
 })();
 </script>
 ~~~
 
-## Liens
+## Links
 
 ~~~
 <div class="link-grid">
@@ -382,7 +545,7 @@ Je développe des outils théoriques et computationnels rigoureux pour le contr�
         <path d="m22 7-10 5L2 7"/>
       </svg>
     </span>
-    <span>Courriel</span>
+    <span>Email</span>
   </a>
 
   <a href="https://scholar.google.com/citations?user=CdSC_JsAAAAJ&hl=fr" target="_blank" rel="noopener" class="link-card">
