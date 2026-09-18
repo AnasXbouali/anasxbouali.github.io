@@ -3,224 +3,131 @@
 @def hascode = false
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Homepage redesign
-   Keep the existing HTML structure and the research-bubble block.
+   Homepage theme — self-contained, this page only.
+   Palette synced with basic.css (ink #102a43, teal #0b7285).
    ============================================================ */
-
-:root {
-  --paper: #fbfaf7;
-  --ink: #17212b;
-  --muted: #68717a;
-  --rule: #d8d5ce;
-  --accent: #9b3f32;
-}
-
-body {
-  background: var(--paper);
-}
 
 .franklin-content {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  line-height: 1.72;
-  counter-reset: home-section;
+  color: #102a43;
+  line-height: 1.7;
 }
 
-/* ------------------------------------------------------------
-   Headings: editorial numbering instead of colored side bars
-   ------------------------------------------------------------ */
-
+/* 1) Kill the grey separating lines from franklin.css */
 .franklin-content h1,
 .franklin-content h2,
 .franklin-content h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
-  color: var(--ink);
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: #102a43;
 }
 
 .franklin-content h2 {
-  counter-increment: home-section;
-  display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr);
-  align-items: baseline;
-  column-gap: 0.8rem;
-
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
-  font-size: 1.85rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-
-  margin: 4.8rem 0 1.7rem;
-  padding: 0 !important;
-  border-left: 0 !important;
+  letter-spacing: -0.01em;
+  margin-top: 2.6rem;
+  margin-bottom: 1.4rem;
+  padding-left: 0.8rem;
+  border-left: 5px solid #0b7285;
 }
 
-.franklin-content h2::before {
-  content: "0" counter(home-section);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-}
-
-/* ------------------------------------------------------------
-   Hero: no card, no gradient, no rounded container
-   ------------------------------------------------------------ */
-
+/* 2) Hero Banner */
 .franklin-content .hero-banner {
-  position: relative;
-  background: transparent;
-  border: 0;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
-  border-radius: 0;
-  box-shadow: none;
-
-  padding: 4.4rem 0 3.4rem;
-  margin: 3.2rem 0 0;
+  background: linear-gradient(135deg, #e6fcf5 0%, #e7f5ff 100%);
+  border: 1px solid #c5e8f0;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
   text-align: left;
-}
-
-.franklin-content .hero-banner::before {
-  content: "APPLIED MATHEMATICS · TOULOUSE";
-  display: block;
-  margin-bottom: 1.5rem;
-
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.11em;
-  color: var(--accent);
 }
 
 .franklin-content .hero-name {
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(3.7rem, 8vw, 6.7rem);
-  font-weight: 600;
-  color: var(--ink);
-
-  margin: 0 0 1.45rem 0;
-  letter-spacing: -0.055em;
-  line-height: 0.95;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #102a43;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .franklin-content .hero-role {
-  max-width: 760px;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(1.12rem, 2vw, 1.42rem);
-  color: #2f3942;
+  font-size: 1.05rem;
+  color: #23425f;
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .franklin-content .hero-role a {
-  color: inherit;
+  color: #0b7285;
   font-weight: 600;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  border: 0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0b7285;
+  transition: all 0.15s ease;
 }
 
 .franklin-content .hero-role a:hover {
-  color: var(--accent);
-  background: transparent;
-  padding: 0;
+  border-bottom-style: solid;
+  background: rgba(11, 114, 133, 0.08);
+  border-radius: 4px;
+  padding: 0 2px;
 }
 
-/* ------------------------------------------------------------
-   Normal text / links
-   ------------------------------------------------------------ */
-
-.franklin-content > p {
-  max-width: 850px;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 1.08rem;
-  line-height: 1.8;
-}
-
-.franklin-content a {
-  text-underline-offset: 4px;
-}
-
-/* ------------------------------------------------------------
-   Former "cards": flatten into document / CV rows
-   ------------------------------------------------------------ */
-
+/* 3) Info Cards (for Current Position & Academic Background) */
 .franklin-content .info-card {
-  background: transparent;
-  border: 0;
-  border-top: 1px solid var(--ink);
-  border-radius: 0;
-  padding: 0;
-  margin-bottom: 0;
-  box-shadow: none;
-  transition: none;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-left: 5px solid #1971c2;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .franklin-content .info-card:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
 }
 
 .franklin-content .info-card p {
-  margin: 0;
-  padding: 1.15rem 0 1.2rem;
-  border-bottom: 1px solid var(--rule);
-
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-size: 0.98rem;
-  line-height: 1.7;
-  color: #34414b;
+  color: #23425f;
 }
 
 .franklin-content .info-card p:last-child {
   margin-bottom: 0;
 }
 
-.franklin-content .info-card strong {
-  display: inline-block;
-  min-width: 9.5rem;
-
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
 .franklin-content .info-card a {
-  color: inherit;
+  color: #1971c2;
   font-weight: 600;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  border: 0;
+  text-decoration: none;
+  border-bottom: 1px dashed #1971c2;
+  transition: all 0.15s ease;
 }
 
 .franklin-content .info-card a:hover {
-  color: var(--accent);
-  background: transparent;
-  padding: 0;
+  border-bottom-style: solid;
+  background: #e7f5ff;
+  border-radius: 4px;
+  padding: 0 2px;
 }
 
-/* ------------------------------------------------------------
-   Noscript research image fallback only.
-   The animated research-bubble section itself is NOT restyled here.
-   ------------------------------------------------------------ */
-
+/* 4) Research Interests Image Container */
 .franklin-content .image-container {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
   text-align: center;
 }
 
@@ -231,72 +138,57 @@ body {
   padding: 0;
   margin: 0 auto;
   display: block;
-  border-radius: 0;
+  border-radius: 8px;
   box-sizing: border-box;
   object-fit: contain;
 }
 
-/* ------------------------------------------------------------
-   Links: bibliography / reference-list feel, not app cards
-   ------------------------------------------------------------ */
-
+/* 5) Links Grid */
 .franklin-content .link-grid {
-  display: block;
-  margin-top: 0;
-  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .franklin-content .link-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2rem 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 0.8rem;
-
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--rule);
-  border-radius: 0;
-  padding: 1rem 0;
-
+  gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
   text-decoration: none;
-  color: var(--ink);
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 500;
-  font-size: 1.08rem;
-
-  box-shadow: none;
-  transition: padding-left 0.16s ease, color 0.16s ease;
-}
-
-.franklin-content .link-card::after {
-  content: "↗";
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.76rem;
-  color: var(--muted);
+  color: #102a43;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.04);
 }
 
 .franklin-content .link-card:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: var(--rule);
-  color: var(--accent);
-  padding-left: 0.4rem;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 42, 67, 0.1);
+  border-color: #0b7285;
+  color: #0b7285;
 }
 
+/* new — sized, centered SVG icons */
 .franklin-content .link-icon {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 18px;
-  height: 18px;
-  color: var(--accent);
-  transition: none;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: #0b7285;
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .franklin-content .link-card:hover .link-icon {
-  color: var(--accent);
-  transform: none;
+  color: #0b7285;
+  transform: scale(1.08);
 }
 
 .franklin-content .link-icon svg {
@@ -305,26 +197,11 @@ body {
   display: block;
 }
 
-/* ------------------------------------------------------------
-   Responsive
-   ------------------------------------------------------------ */
-
-@media (max-width: 700px) {
-  .franklin-content .hero-banner {
-    padding: 3rem 0 2.6rem;
-    margin-top: 2rem;
-  }
-
-  .franklin-content h2 {
-    grid-template-columns: 2.2rem minmax(0, 1fr);
-    margin-top: 3.7rem;
-  }
-
-  .franklin-content .info-card strong {
-    display: block;
-    min-width: 0;
-    margin-bottom: 0.35rem;
-  }
+/* 6) Small screens */
+@media (max-width: 560px) {
+  .franklin-content .hero-banner { padding: 1.8rem 1.2rem; }
+  .franklin-content .info-card { padding: 1.2rem; }
+  .franklin-content .link-grid { grid-template-columns: 1fr; }
 }
 </style>
 
