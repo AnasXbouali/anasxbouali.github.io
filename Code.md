@@ -9,8 +9,8 @@ rss = "Overview of research software packages and implementations in Julia and P
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Software page theme — Bespoke Archival Academic Style
-   (Exactly matching the Talks page palette & geometry)
+   Research Software page — Bespoke Archival Academic Style
+   Matched to the Research Projects page palette and geometry
    ============================================================ */
 
 body {
@@ -22,7 +22,6 @@ body {
 .franklin-content {
   font-family: "Public Sans", Arial, Helvetica, sans-serif;
   color: #2B2826;
-  line-height: 1.7;
 }
 
 .franklin-content h1,
@@ -83,8 +82,8 @@ body {
   background: #ffffff;
   border: 1px solid #D6D1C9;
   border-radius: 4px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
   box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   max-width: 100%;
@@ -137,10 +136,11 @@ body {
 
 .franklin-content .software-title {
   font-family: "Newsreader", Georgia, serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #1A1817;
   margin: 0 0 0.6rem 0;
+  line-height: 1.35;
 }
 
 .franklin-content .software-desc {
@@ -287,7 +287,8 @@ body {
 
 /* Responsive */
 @media (max-width: 560px) {
-  .franklin-content .software-card { padding: 1.2rem; }
+  .franklin-content .software-card { padding: 1.1rem 1.2rem; }
+  .franklin-content .software-title { font-size: 1.15rem; }
   .franklin-content .software-links { flex-direction: column; }
   .franklin-content .btn-primary,
   .franklin-content .btn-secondary { width: 100%; justify-content: center; }
