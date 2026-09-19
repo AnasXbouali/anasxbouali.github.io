@@ -5,27 +5,21 @@
 
 ~~~
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
-
-/* ============================================================
-   Homepage theme — self-contained, this page only.
-   Palette synced with basic.css (ink #102a43, teal #0b7285).
-   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 .franklin-content {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: #102a43;
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  color: #23281f;
   line-height: 1.7;
 }
 
-/* 1) Kill the grey separating lines from franklin.css */
 .franklin-content h1,
 .franklin-content h2,
 .franklin-content h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
-  color: #102a43;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  color: #1f2a1d;
 }
 
 .franklin-content h2 {
@@ -34,14 +28,14 @@
   letter-spacing: -0.01em;
   margin-top: 2.6rem;
   margin-bottom: 1.4rem;
-  padding-left: 0.8rem;
-  border-left: 5px solid #0b7285;
+  padding-left: 0;
+  border-left: 0;
 }
 
-/* 2) Hero Banner */
+/* Hero Banner */
 .franklin-content .hero-banner {
-  background: linear-gradient(135deg, #e6fcf5 0%, #e7f5ff 100%);
-  border: 1px solid #c5e8f0;
+  background: #f1efe4;
+  border: 1px solid #d5d2bf;
   border-radius: 16px;
   padding: 2.5rem 2rem;
   margin-bottom: 2.5rem;
@@ -49,10 +43,10 @@
 }
 
 .franklin-content .hero-name {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  color: #102a43;
+  font-weight: 600;
+  color: #192417;
   margin: 0 0 0.4rem 0;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -60,48 +54,48 @@
 
 .franklin-content .hero-role {
   font-size: 1.05rem;
-  color: #23425f;
+  color: #424b3c;
   margin: 0;
   line-height: 1.6;
 }
 
 .franklin-content .hero-role a {
-  color: #0b7285;
+  color: #2f5d50;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px dashed #0b7285;
+  border-bottom: 1px dashed #2f5d50;
   transition: all 0.15s ease;
 }
 
 .franklin-content .hero-role a:hover {
   border-bottom-style: solid;
-  background: rgba(11, 114, 133, 0.08);
+  background: #e5ecdf;
   border-radius: 4px;
   padding: 0 2px;
 }
 
-/* 3) Info Cards (for Current Position & Academic Background) */
+/* Info Cards */
 .franklin-content .info-card {
   background: #ffffff;
-  border: 1px solid #d9e2ec;
-  border-left: 5px solid #1971c2;
+  border: 1px solid #ddd9ca;
+  border-left: 0;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.06);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .franklin-content .info-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
+  box-shadow: 0 12px 26px rgba(35, 40, 31, 0.10);
 }
 
 .franklin-content .info-card p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 0.98rem;
-  color: #23425f;
+  color: #434b3e;
 }
 
 .franklin-content .info-card p:last-child {
@@ -109,27 +103,27 @@
 }
 
 .franklin-content .info-card a {
-  color: #1971c2;
+  color: #2f5d50;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px dashed #1971c2;
+  border-bottom: 1px dashed #2f5d50;
   transition: all 0.15s ease;
 }
 
 .franklin-content .info-card a:hover {
   border-bottom-style: solid;
-  background: #e7f5ff;
+  background: #eef2e8;
   border-radius: 4px;
   padding: 0 2px;
 }
 
-/* 4) Research Interests Image Container */
+/* Image container */
 .franklin-content .image-container {
   background: #ffffff;
-  border: 1px solid #d9e2ec;
+  border: 1px solid #ddd9ca;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.06);
   text-align: center;
 }
 
@@ -145,7 +139,7 @@
   object-fit: contain;
 }
 
-/* 5) Links Grid */
+/* Links Grid */
 .franklin-content .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -158,25 +152,24 @@
   align-items: center;
   gap: 0.75rem;
   background: #ffffff;
-  border: 1px solid #d9e2ec;
+  border: 1px solid #ddd9ca;
   border-radius: 10px;
   padding: 1rem 1.2rem;
   text-decoration: none;
-  color: #102a43;
+  color: #23281f;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.18s ease;
-  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.04);
+  box-shadow: 0 1px 2px rgba(35, 40, 31, 0.04);
 }
 
 .franklin-content .link-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(16, 42, 67, 0.1);
-  border-color: #0b7285;
-  color: #0b7285;
+  box-shadow: 0 8px 20px rgba(35, 40, 31, 0.10);
+  border-color: #2f5d50;
+  color: #2f5d50;
 }
 
-/* new — sized, centered SVG icons */
 .franklin-content .link-icon {
   display: inline-flex;
   align-items: center;
@@ -184,12 +177,12 @@
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  color: #0b7285;
+  color: #b3552e;
   transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .franklin-content .link-card:hover .link-icon {
-  color: #0b7285;
+  color: #2f5d50;
   transform: scale(1.08);
 }
 
@@ -199,7 +192,6 @@
   display: block;
 }
 
-/* 6) Small screens */
 @media (max-width: 560px) {
   .franklin-content .hero-banner { padding: 1.8rem 1.2rem; }
   .franklin-content .info-card { padding: 1.2rem; }
@@ -272,29 +264,131 @@ Je développe des outils théoriques et computationnels rigoureux pour le contr�
 
 ~~~
 <style>
-#rmap-wrap{background:#fff radial-gradient(#edf1f7 1.2px, transparent 1.2px);background-size:22px 22px;border:1px solid #d9e2ec;border-radius:12px;padding:1.2rem 1rem .6rem;box-shadow:0 1px 2px rgba(16,42,67,.06);}
-#rmap-hint{font-size:.85rem;color:#526d82;text-align:center;font-style:italic;margin:.4rem 0 .6rem;}
-.rmap{width:100%;height:auto;display:block;}
-.rmap .bt{font-family:"Fraunces",Georgia,serif;font-weight:600;fill:#1f2d3d;}
-.rmap .kt{font-family:"Inter",Arial,sans-serif;font-weight:700;}
-.rmap text{pointer-events:none;}
-.rmap .halo{fill:none;stroke-width:1.5;stroke-dasharray:3 7;opacity:.45;}
-.rmap .big{filter:drop-shadow(0 3px 6px rgba(16,42,67,.18));transition:stroke-width .2s ease,filter .25s ease;}
-.rmap .topic{cursor:pointer;outline:none;}
-.rmap .topic:hover .big,.rmap .topic:focus .big{stroke-width:5.5;filter:drop-shadow(0 8px 18px rgba(16,42,67,.30));}
-.rmap .kids{pointer-events:none;}
-.rmap .topic:hover .kids,.rmap .topic:focus .kids{pointer-events:auto;}
-.rmap .kid circle{stroke-width:2.5;filter:drop-shadow(0 2px 5px rgba(16,42,67,.15));}
-.rmap .kid{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);}
-.rmap .link{fill:none;stroke-width:2.5;stroke-linecap:round;opacity:0;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset .6s ease .05s,opacity .2s ease;}
-.rmap .topic:hover .kid,.rmap .topic:focus .kid{opacity:1;transform:scale(1);}
-.rmap .topic:hover .link,.rmap .topic:focus .link{opacity:.9;stroke-dashoffset:0;}
-@media (hover:none){.rmap .kid{opacity:1;transform:scale(1);}.rmap .link{opacity:.9;stroke-dashoffset:0;}}
+#rmap-wrap{
+  background:#fff radial-gradient(#e8e5da 1.2px, transparent 1.2px);
+  background-size:22px 22px;
+  border:1px solid #ddd9ca;
+  border-radius:12px;
+  padding:1.2rem 1rem .6rem;
+  box-shadow:0 1px 2px rgba(35,40,31,.06);
+}
+
+#rmap-hint{
+  font-size:.85rem;
+  color:#6a7060;
+  text-align:center;
+  font-style:italic;
+  margin:.4rem 0 .6rem;
+}
+
+.rmap{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.rmap .bt{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;
+  fill:#1f2d3d;
+}
+
+.rmap .kt{
+  font-family:"Public Sans",Arial,sans-serif;
+  font-weight:700;
+}
+
+.rmap text{
+  pointer-events:none;
+}
+
+.rmap .halo{
+  fill:none;
+  stroke-width:1.5;
+  stroke-dasharray:3 7;
+  opacity:.45;
+}
+
+.rmap .big{
+  filter:drop-shadow(0 3px 6px rgba(35,40,31,.18));
+  transition:stroke-width .2s ease,filter .25s ease;
+}
+
+.rmap .topic{
+  cursor:pointer;
+  outline:none;
+}
+
+.rmap .topic:hover .big,
+.rmap .topic:focus .big{
+  stroke-width:5.5;
+  filter:drop-shadow(0 8px 18px rgba(35,40,31,.30));
+}
+
+.rmap .kids{
+  pointer-events:none;
+}
+
+.rmap .topic:hover .kids,
+.rmap .topic:focus .kids{
+  pointer-events:auto;
+}
+
+.rmap .kid circle{
+  stroke-width:2.5;
+  filter:drop-shadow(0 2px 5px rgba(35,40,31,.15));
+}
+
+.rmap .kid{
+  opacity:0;
+  transform-box:fill-box;
+  transform-origin:center;
+  transform:scale(.4);
+  transition:opacity .25s ease,transform .5s cubic-bezier(.2,.9,.3,1.35);
+}
+
+.rmap .link{
+  fill:none;
+  stroke-width:2.5;
+  stroke-linecap:round;
+  opacity:0;
+  stroke-dasharray:var(--len);
+  stroke-dashoffset:var(--len);
+  transition:stroke-dashoffset .6s ease .05s,opacity .2s ease;
+}
+
+.rmap .topic:hover .kid,
+.rmap .topic:focus .kid{
+  opacity:1;
+  transform:scale(1);
+}
+
+.rmap .topic:hover .link,
+.rmap .topic:focus .link{
+  opacity:.9;
+  stroke-dashoffset:0;
+}
+
+@media (hover:none){
+  .rmap .kid{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  .rmap .link{
+    opacity:.9;
+    stroke-dashoffset:0;
+  }
+}
 </style>
 
 <div id="rmap-wrap">
   <div id="rmap"></div>
-  <noscript><div class="image-container"><img src="/assets/map.svg" alt="Carte des intérêts de recherche"></div></noscript>
+  <noscript>
+    <div class="image-container">
+      <img src="/assets/map.svg" alt="Carte des intérêts de recherche">
+    </div>
+  </noscript>
 </div>
 
 <script>
@@ -315,54 +409,118 @@ Je développe des outils théoriques et computationnels rigoureux pour le contr�
     {name:'Calcul scientifique',t:3,color:'#0c8599',light:'#22b8cf',tint:'#e6f7fa',kfill:'#f2fbfd',x:810,y:470,
      kids:[{n:'Arrondi stochastique',x:920,y:350}]}
   ];
-  var host=document.getElementById('rmap'); if(!host)return;
-  var svg=document.createElementNS(NS,'svg');
-  svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('class','rmap');
-  host.appendChild(svg);
-  var defs=document.createElementNS(NS,'defs'); svg.appendChild(defs);
 
-  function el(n,at,p){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);(p||svg).appendChild(e);return e;}
-  function wrap(s,m){var w=s.split(' '),L=[],c='';for(var i=0;i<w.length;i++){var t=(c?c+' ':'')+w[i];if(t.length>m&&c){L.push(c);c=w[i];}else c=t;}if(c)L.push(c);return L;}
-  function label(L,x,y,cls,lh,fs,fill){var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});t.style.fontSize=fs+'px';if(fill)t.style.fill=fill;var y0=y-(L.length-1)*lh/2;for(var i=0;i<L.length;i++){var ts=el('tspan',{x:x,y:y0+i*lh},t);ts.textContent=L[i];}return t;}
+  var host=document.getElementById('rmap');
+  if(!host)return;
+
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.setAttribute('class','rmap');
+  host.appendChild(svg);
+
+  var defs=document.createElementNS(NS,'defs');
+  svg.appendChild(defs);
+
+  function el(n,at,p){
+    var e=document.createElementNS(NS,n);
+    for(var k in at)e.setAttribute(k,at[k]);
+    (p||svg).appendChild(e);
+    return e;
+  }
+
+  function wrap(s,m){
+    var w=s.split(' '),L=[],c='';
+    for(var i=0;i<w.length;i++){
+      var t=(c?c+' ':'')+w[i];
+      if(t.length>m&&c){L.push(c);c=w[i];}
+      else c=t;
+    }
+    if(c)L.push(c);
+    return L;
+  }
+
+  function label(L,x,y,cls,lh,fs,fill){
+    var t=el('text',{x:x,y:y,'text-anchor':'middle','class':cls});
+    t.style.fontSize=fs+'px';
+    if(fill)t.style.fill=fill;
+    var y0=y-(L.length-1)*lh/2;
+    for(var i=0;i<L.length;i++){
+      var ts=el('tspan',{x:x,y:y0+i*lh},t);
+      ts.textContent=L[i];
+    }
+    return t;
+  }
 
   DATA.forEach(function(tp){
     var T=TIER[tp.t], bl=wrap(tp.name,12);
-    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox(); tmp.remove();
+    var tmp=label(bl,tp.x,tp.y,'bt',T.lh,T.fs), bb=tmp.getBBox();
+    tmp.remove();
     tp.Rb=Math.max(bb.width/2+18, bb.height/2+18, T.r);
   });
 
   DATA.forEach(function(tp,idx){
     var T=TIER[tp.t];
+
     var grad=el('radialGradient',{id:'rg'+idx,cx:'35%',cy:'30%',r:'80%'},defs);
     el('stop',{offset:'0%','stop-color':'#ffffff'},grad);
     el('stop',{offset:'100%','stop-color':tp.tint},grad);
 
     var g=el('g',{'class':'topic',tabindex:'0'});
+
     var kids=tp.kids.map(function(kd,i){
       var kl=wrap(kd.n,13);
-      var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox(); kt.remove();
+      var kt=label(kl,tp.x,tp.y,'kt',16,13), kb=kt.getBBox();
+      kt.remove();
+
       var rk=Math.max(46,Math.max(kb.width/2,kb.height/2)+14);
       var x=kd.x,y=kd.y,dx=x-tp.x,dy=y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
       var min=tp.Rb+rk+18;
-      if(d<min){x=tp.x+dx/d*min;y=tp.y+dy/d*min;}
-      x=Math.max(M+rk,Math.min(W-M-rk,x)); y=Math.max(M+rk,Math.min(H-M-rk,y));
+
+      if(d<min){
+        x=tp.x+dx/d*min;
+        y=tp.y+dy/d*min;
+      }
+
+      x=Math.max(M+rk,Math.min(W-M-rk,x));
+      y=Math.max(M+rk,Math.min(H-M-rk,y));
+
       return {L:kl,i:i,r:rk,x:x,y:y};
     });
 
     var kg=el('g',{'class':'kids'},g);
+
     kids.forEach(function(kd){
       var mx=(tp.x+kd.x)/2,my=(tp.y+kd.y)/2,dx=kd.x-tp.x,dy=kd.y-tp.y,d=Math.sqrt(dx*dx+dy*dy)||1;
-      var p=el('path',{d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,'class':'link',stroke:tp.light},kg);
+
+      var p=el('path',{
+        d:'M'+tp.x+' '+tp.y+' Q'+(mx-dy/d*d*0.15)+' '+(my+dx/d*d*0.15)+' '+kd.x+' '+kd.y,
+        'class':'link',
+        stroke:tp.light
+      },kg);
+
       p.style.setProperty('--len',p.getTotalLength());
       p.style.transitionDelay=(kd.i*60)+'ms';
-      var kgg=el('g',{'class':'kid'},kg); kgg.style.transitionDelay=(kd.i*60)+'ms';
+
+      var kgg=el('g',{'class':'kid'},kg);
+      kgg.style.transitionDelay=(kd.i*60)+'ms';
+
       el('circle',{cx:kd.x,cy:kd.y,r:kd.r,stroke:tp.light,fill:tp.kfill},kgg);
       kgg.appendChild(label(kd.L,kd.x,kd.y,'kt',16,13,tp.color));
     });
 
     el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb+7,'class':'halo',stroke:tp.light},g);
-    var big=el('circle',{cx:tp.x,cy:tp.y,r:tp.Rb,'class':'big',stroke:tp.color,fill:'url(#rg'+idx+')'},g);
+
+    var big=el('circle',{
+      cx:tp.x,
+      cy:tp.y,
+      r:tp.Rb,
+      'class':'big',
+      stroke:tp.color,
+      fill:'url(#rg'+idx+')'
+    },g);
+
     big.style.strokeWidth=T.sw+'px';
+
     g.appendChild(label(wrap(tp.name,12),tp.x,tp.y,'bt',T.lh,T.fs));
   });
 })();
