@@ -7,184 +7,168 @@ isfr = true
 
 ~~~
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Thème "Archive de Chercheur" — Grille, Encre et Papier
+   Publications page theme — Bespoke Archival Academic Style
    ============================================================ */
 
 body {
-  background-color: #FDFBF7;
-  background-image: radial-gradient(circle, rgba(44, 62, 80, 0.12) 0.8px, transparent 0.8px);
+  background-color: #F9F8F6;
+  background-image: radial-gradient(circle, #D6D1C9 0.8px, transparent 0.8px);
   background-size: 24px 24px;
 }
 
 .franklin-content {
-  font-family: "Public Sans", sans-serif;
-  color: #2C3E50;
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  color: #2B2826;
 }
 
-.franklin-content h1, .franklin-content h2 {
+.franklin-content h1,
+.franklin-content h2 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
-  font-family: "Newsreader", Georgia, serif;
-  color: #17202A;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  color: #1A1817;
 }
 
 .franklin-content h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2.1rem, 4.5vw, 2.8rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-top: 0.5em;
-  margin-bottom: 0.2em;
+  letter-spacing: -0.015em;
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
 }
 
 .franklin-content h1::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 3px;
-  background: #6E2C00; /* Accent Terre de Sienne */
-  margin-top: 0.4rem;
+  width: 76px;
+  height: 2px;
+  margin-top: 0.55rem;
+  border-radius: 0;
+  background: #A85741; /* Accent Rouille */
 }
 
 .franklin-content h2 {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
   padding-left: 0;
   border-left: 0;
-  border-bottom: 1px solid #D5D8DC;
-  padding-bottom: 0.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #5D6D7E;
 }
 
 .franklin-content .publications-intro {
-  font-family: "Newsreader", serif;
-  font-size: 1.15rem;
-  font-style: italic;
-  line-height: 1.6;
-  color: #2C3E50;
-  background: rgba(255, 255, 255, 0.6); /* Semi-transparent pour laisser voir la grille */
-  border-top: 1px solid #AAB7B8;
-  border-bottom: 1px solid #AAB7B8;
-  border-radius: 0;
-  padding: 1.2rem 1rem;
-  margin: 1.5rem 0 3rem;
-  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
+  padding: 1.1rem 1.4rem;
+  margin: 0.4rem 0 2.4rem;
 }
 
-/* Palette Académique Personnalisée */
-.franklin-content .publication           { --pub: #1A5276; --pub-soft: #EBF5FB; } /* Revue: Bleu Académique */
-.franklin-content .publication.t-conf    { --pub: #6E2C00; --pub-soft: #FDF2E9; } /* Conférence: Terre de Sienne */
-.franklin-content .publication.t-preprint{ --pub: #7D6608; --pub-soft: #FEF9E7; } /* Prépub: Ocre / Chemise Manila */
-.franklin-content .publication.t-chapter { --pub: #4A235A; --pub-soft: #F4ECF7; } /* Chapitre: Prune de Reliure */
-.franklin-content .publication.t-thesis  { --pub: #17202A; --pub-soft: #EAEDED; } /* Thèse: Graphite / Encre */
+/* Bespoke Archival Palette (Rouille, Ardoise, Ocre, Prune, Mousse) */
+.franklin-content .publication           { --pub: #A85741; --pub-soft: #F4EBE8; } /* journal      */
+.franklin-content .publication.t-conf    { --pub: #4A6B7C; --pub-soft: #E8EEF2; } /* conference   */
+.franklin-content .publication.t-preprint{ --pub: #C28F36; --pub-soft: #F5EFE4; } /* preprint     */
+.franklin-content .publication.t-chapter { --pub: #6B4C5A; --pub-soft: #EFEAEC; } /* book chapter */
+.franklin-content .publication.t-thesis  { --pub: #3D5A4C; --pub-soft: #E6EBE8; } /* thesis       */
 
 .franklin-content .publication {
   background: #ffffff;
-  border: 1px solid #D5D8DC;
-  border-radius: 2px; /* Coins droits, style fiche cartonnée */
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 4px 4px 0px #E5E7E9; /* Ombre dure */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #D6D1C9;
+  border-left: 1px solid #D6D1C9;
+  border-radius: 4px;
+  padding: 1.2rem 1.5rem 1.3rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .franklin-content .publication:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--pub); /* L'ombre prend la couleur du domaine au survol */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
+  border-color: var(--pub); /* La bordure prend la couleur du type au survol */
 }
 
 .franklin-content .publication-meta {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
 }
 
 .franklin-content .publication-year {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #2C3E50;
-  background: transparent;
-  border: 1px dashed #AAB7B8; /* Bordure pointillée type ticket */
-  border-radius: 0;
-  padding: 0.15rem 0.5rem;
+  font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
+  padding: 0.14rem 0.5rem;
 }
 
 .franklin-content .publication-type {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--pub);
   background: var(--pub-soft);
-  border-radius: 0;
-  padding: 0.25rem 0.6rem;
-  border: 1px solid var(--pub);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
 }
 
 .franklin-content .publication h3 {
   font-family: "Newsreader", Georgia, serif;
-  font-size: 1.3rem;
+  font-size: 1.27rem;
   font-weight: 600;
-  line-height: 1.4;
-  color: #17202A;
-  margin: 0.2rem 0 0.6rem;
+  line-height: 1.42;
+  color: #1A1817;
+  margin: 0.15rem 0 0.5rem;
 }
 
 .franklin-content .publication-authors {
-  font-family: "Public Sans", sans-serif;
-  font-size: 0.95rem;
-  color: #5D6D7E;
-  margin: 0.2rem 0;
+  font-size: 0.93rem;
+  color: #5C5651;
+  margin: 0.15rem 0;
 }
 
 .franklin-content .publication-venue {
-  font-family: "Newsreader", Georgia, serif; /* Serif pour le nom des journaux */
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-style: italic;
-  color: #34495E;
-  margin: 0.2rem 0 1rem;
+  color: #756E67;
+  margin: 0.15rem 0 0.85rem;
 }
 
-/* Boutons style "Base de données / Tampon" */
 .franklin-content a.publication-link,
 .franklin-content a.publication-link:hover {
   display: inline-block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--pub);
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
-  background: transparent;
-  border: 1px solid var(--pub);
-  border-radius: 2px;
-  padding: 0.3rem 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
+  background: var(--pub);
+  border-radius: 4px;
+  padding: 0.42rem 0.95rem;
   box-shadow: none;
-  filter: none;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 
 .franklin-content a.publication-link:hover {
-  background: var(--pub);
-  color: #ffffff;
-  transform: none;
+  filter: brightness(1.1);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 560px) {
-  .franklin-content .publication { padding: 1.2rem; box-shadow: 2px 2px 0px #E5E7E9; }
-  .franklin-content .publication:hover { box-shadow: 4px 4px 0px var(--pub); }
+  .franklin-content .publication { padding: 1rem 1.1rem 1.1rem; }
 }
 </style>
 ~~~
@@ -258,4 +242,117 @@ body {
 <div class="publication">
   <div class="publication-meta">
     <span class="publication-year">2026</span>
-    <span class="publication-type
+    <span class="publication-type">Article de revue</span>
+  </div>
+  <h3>Minimum Time Problem for the Double Integrator with a Loss Control Region</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Loïc Bourdin</p>
+  <p class="publication-venue">Nonlinear Analysis: Hybrid Systems, 2026</p>
+  <a class="publication-link" href="https://www.sciencedirect.com/science/article/abs/pii/S1751570X26000075">DOI ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication">
+  <div class="publication-meta">
+    <span class="publication-year">2025</span>
+    <span class="publication-type">Article de revue</span>
+  </div>
+  <h3>Hybrid Maximum Principle for Regional Optimal Control Problems with Non-Smooth Interfaces</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Florent Nacry</p>
+  <p class="publication-venue">Journal of Convex Analysis, Vol. 32, 2025</p>
+  <a class="publication-link" href="https://www.heldermann.de/JCA/JCA32/JCA321/jca32010.htm">Lire l'article ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication">
+  <div class="publication-meta">
+    <span class="publication-year">2025</span>
+    <span class="publication-type">Article de revue</span>
+  </div>
+  <h3>On the Use of Needle-Like Perturbations in Spatially Heterogeneous Control Systems</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Loïc Bourdin</p>
+  <p class="publication-venue">Journal of Optimization Theory and Applications, Vol. 204, N° 46, 2025</p>
+  <a class="publication-link" href="https://link.springer.com/article/10.1007/s10957-025-02607-6">DOI ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication">
+  <div class="publication-meta">
+    <span class="publication-year">2024</span>
+    <span class="publication-type">Article de revue</span>
+  </div>
+  <h3>Loss Control Regions in Optimal Control Problems</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen, Loïc Bourdin et Olivier Cots</p>
+  <p class="publication-venue">Journal of Differential Equations, Vol. 405, p. 359–397, 2024</p>
+  <a class="publication-link" href="https://www.sciencedirect.com/science/article/pii/S0022039624003887">DOI ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication">
+  <div class="publication-meta">
+    <span class="publication-year">2024</span>
+    <span class="publication-type">Article de revue</span>
+  </div>
+  <h3>The Hybrid Maximum Principle for Optimal Control Problems with Spatially Heterogeneous Dynamics as a Consequence of a Pontryagin Maximum Principle for L<sup>1</sup> Local Solutions</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Loïc Bourdin</p>
+  <p class="publication-venue">SIAM Journal on Control and Optimization, Vol. 62, N° 4, p. 2412–2432, 2024</p>
+  <a class="publication-link" href="https://epubs.siam.org/doi/abs/10.1137/23M155311X">DOI ↗</a>
+</div>
+~~~
+
+## Chapitre d'ouvrage et article de conférence
+
+~~~
+<div class="publication t-chapter">
+  <div class="publication-meta">
+    <span class="publication-year">2024</span>
+    <span class="publication-type">Chapitre d'ouvrage</span>
+  </div>
+  <h3>On the Reduction of a Spatially-Hybrid Optimal Control Problem into a Temporally Hybrid Optimal Control Problem</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen, Loïc Bourdin et Olivier Cots</p>
+  <p class="publication-venue">AIMS on Applied Mathematics, IVAN KUPKA LEGACY, Vol. 12, 2024</p>
+  <a class="publication-link" href="https://www.aimsciences.org/book/AM/volume/58">Lire le chapitre ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication t-conf">
+  <div class="publication-meta">
+    <span class="publication-year">2022</span>
+    <span class="publication-type">Article de conférence</span>
+  </div>
+  <h3>Optimal Control Problems with Non-Control Regions: Necessary Optimality Conditions</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Loïc Bourdin</p>
+  <p class="publication-venue">IFAC-PapersOnLine, Vol. 55, N° 16, p. 68–73, 2022</p>
+  <a class="publication-link" href="https://www.sciencedirect.com/science/article/pii/S2405896322011739">DOI ↗</a>
+</div>
+~~~
+
+## Thèse et prépublication antérieure
+
+~~~
+<div class="publication t-thesis">
+  <div class="publication-meta">
+    <span class="publication-year">2023</span>
+    <span class="publication-type">Thèse de doctorat</span>
+  </div>
+  <h3>Hybrid optimal control: optimality conditions and applications</h3>
+  <p class="publication-venue">Thèse de doctorat, Avignon Université, 2023</p>
+  <a class="publication-link" href="https://theses.hal.science/tel-04335766v1">Lire sur HAL ↗</a>
+</div>
+~~~
+
+~~~
+<div class="publication t-preprint">
+  <div class="publication-meta">
+    <span class="publication-year">2022</span>
+    <span class="publication-type">Prépublication</span>
+  </div>
+  <h3>Hybrid Maximum Principle with Regionally Switching Parameter</h3>
+  <p class="publication-authors">Co-auteurs : Terence Bayen et Loïc Bourdin</p>
+  <a class="publication-link" href="https://univ-avignon.hal.science/hal-03638701/">Lire sur HAL ↗</a>
+</div>
+~~~
