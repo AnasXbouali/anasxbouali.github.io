@@ -6,31 +6,35 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
 
 ~~~
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Talks page theme — self-contained, this page only.
-   Palette synced with basic.css (ink #102a43, teal #0b7285).
+   Talks page theme — Bespoke Archival Academic Style
    ============================================================ */
 
-.franklin-content {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: #102a43;
+body {
+  background-color: #F9F8F6;
+  background-image: radial-gradient(circle, #D6D1C9 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
 }
 
-/* 1) Kill the grey separating lines from franklin.css */
+.franklin-content {
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  color: #2B2826;
+}
+
 .franklin-content h1,
 .franklin-content h2,
 .franklin-content h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
-  color: #102a43;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  color: #1A1817;
 }
 
 .franklin-content h1 {
   font-size: clamp(2.1rem, 4.5vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.015em;
   margin-top: 0.4em;
   margin-bottom: 0.6em;
@@ -40,75 +44,70 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
   content: "";
   display: block;
   width: 76px;
-  height: 5px;
+  height: 2px;
   margin-top: 0.55rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #0b7285, #1971c2);
+  border-radius: 0;
+  background: #A85741; /* Oxblood Accent */
 }
 
-/* 2) Section headings: vertical accent bar */
 .franklin-content h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin-top: 2.6rem;
-  margin-bottom: 1.4rem;
-  padding-left: 0.8rem;
-  border-left: 5px solid #0b7285;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  padding-left: 0;
+  border-left: 0;
 }
 
-.franklin-content h2.t-workshop { border-left-color: #1971c2; }
-.franklin-content h2.t-poster    { border-left-color: #b45309; }
-
-/* 3) Intro banner */
 .franklin-content .talks-intro {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #23425f;
-  background: linear-gradient(120deg, #e6fcf5 0%, #e7f5ff 100%);
-  border: 1px solid #c5e8f0;
-  border-radius: 14px;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
   padding: 1.1rem 1.4rem;
   margin: 0.4rem 0 2.4rem;
 }
 
-/* 4) Year cards */
+/* Archival Palette Variables per Section Type */
+.franklin-content .talk-section { --sec: #A85741; --sec-soft: #F4EBE8; } /* Seminars (Oxblood) */
+.franklin-content .talk-section.t-workshop { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Workshops (Slate) */
+.franklin-content .talk-section.t-poster { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Posters (Ochre) */
+
 .franklin-content .talk-section {
   background: #ffffff;
-  border: 1px solid #d9e2ec;
-  border-left: 5px solid #0b7285;
-  border-radius: 12px;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
   padding: 1.2rem 1.5rem;
   margin-bottom: 1.4rem;
-  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
-.franklin-content .talk-section.t-workshop { border-left-color: #1971c2; }
-.franklin-content .talk-section.t-poster    { border-left-color: #b45309; }
-
 .franklin-content .talk-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
+  border-color: var(--sec); /* Border adopts the section's accent color */
 }
 
 .franklin-content .year-heading {
   font-family: "JetBrains Mono", Menlo, Consolas, monospace;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #102a43;
+  color: #1A1817;
   margin: 0 0 1rem 0;
   padding-bottom: 0.6rem;
-  border-bottom: 1px dashed #d9e2ec;
+  border-bottom: 1px dashed #D6D1C9;
 }
 
-/* 5) Talk items */
 .franklin-content .talk-item {
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
   padding: 0.7rem 0;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #EFECE6;
 }
 
 .franklin-content .talk-item:last-child {
@@ -121,16 +120,14 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
   font-family: "JetBrains Mono", Menlo, Consolas, monospace;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #0b7285;
-  background: #e6fcf5;
-  border-radius: 6px;
+  color: var(--sec);
+  background: var(--sec-soft);
+  border: 1px solid var(--sec);
+  border-radius: 4px;
   padding: 0.25rem 0.6rem;
   min-width: 60px;
   text-align: center;
 }
-
-.talk-section.t-workshop .talk-month { color: #1971c2; background: #e7f5ff; }
-.talk-section.t-poster    .talk-month { color: #b45309; background: #fff4e6; }
 
 .franklin-content .talk-body {
   flex: 1;
@@ -138,10 +135,10 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
 }
 
 .franklin-content .talk-title {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #102a43;
+  color: #1A1817;
   margin: 0 0 0.2rem 0;
   line-height: 1.4;
 }
@@ -149,27 +146,27 @@ rss = "A list of talks, presentations, and posters by Anas Bouali."
 .franklin-content .talk-venue {
   font-size: 0.88rem;
   font-style: italic;
-  color: #526d82;
+  color: #756E67;
   margin: 0;
   line-height: 1.5;
 }
 
-/* 6) Poster badge */
 .franklin-content .poster-badge {
   display: inline-block;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #b45309;
-  background: #fff4e6;
-  border-radius: 999px;
-  padding: 0.2rem 0.6rem;
+  color: #C28F36;
+  background: #F5EFE4;
+  border: 1px solid #C28F36;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-/* 7) Small screens */
 @media (max-width: 560px) {
   .franklin-content .talk-section { padding: 1rem 1.1rem; }
   .franklin-content .talk-item { flex-direction: column; gap: 0.4rem; }
