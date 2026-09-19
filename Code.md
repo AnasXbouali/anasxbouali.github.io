@@ -8,26 +8,31 @@ rss = "Overview of research software packages and implementations in Julia and P
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
-/* ================= Base typography & Cool Archival Palette ================= */
+/* ============================================================
+   Software page theme — Bespoke Archival Academic Style
+   (Exactly matching the Talks page palette & geometry)
+   ============================================================ */
+
 body {
-  background-color: #F7F9FA;
-  background-image: radial-gradient(circle, #D1D9E0 0.8px, transparent 0.8px);
+  background-color: #F9F8F6;
+  background-image: radial-gradient(circle, #D6D1C9 0.8px, transparent 0.8px);
   background-size: 24px 24px;
 }
 
 .franklin-content {
   font-family: "Public Sans", Arial, Helvetica, sans-serif;
-  color: #1A242B;
+  color: #2B2826;
   line-height: 1.7;
 }
 
 .franklin-content h1,
 .franklin-content h2,
-.franklin-content h3 {
+.franklin-content h3,
+.franklin-content h4 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  color: #11181C;
+  color: #1A1817;
 }
 
 .franklin-content h1 {
@@ -45,7 +50,7 @@ body {
   height: 2px;
   margin-top: 0.55rem;
   border-radius: 0;
-  background: #1E4D5B; /* Deep Academic Teal/Slate */
+  background: #A85741; /* Oxblood Accent */
 }
 
 .franklin-content h2 {
@@ -58,43 +63,39 @@ body {
   border-left: 0;
 }
 
-/* ================= Intro banner ================= */
 .franklin-content .software-intro {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #3A4A54;
-  background: #E8EEF2; /* Cool slate grey */
-  border: 1px solid #D1D9E0;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
   border-radius: 4px;
   padding: 1.1rem 1.4rem;
   margin: 0.4rem 0 2.4rem;
 }
 
-/* ================= Cards ================= */
+/* Archival Palette Variables per Card Type */
+.franklin-content .software-card { --sec: #A85741; --sec-soft: #F4EBE8; } /* Standard/Julia (Oxblood) */
+.franklin-content .software-card.python { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Python (Slate) */
+.franklin-content .software-card.featured { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Featured (Ochre) */
+
 .franklin-content .software-card {
-  --accent: #1E4D5B; /* Deep Teal */
-  --accent-soft: #E8EEF2;
   background: #ffffff;
-  border: 1px solid #D1D9E0;
+  border: 1px solid #D6D1C9;
   border-radius: 4px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(26, 36, 43, 0.04);
+  box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   max-width: 100%;
   box-sizing: border-box;
   min-width: 0;
 }
 
-.franklin-content .software-card.featured {
-  --accent: #2B6B7C; /* Brighter Slate/Teal for featured */
-  --accent-soft: #E0EBEF;
-}
-
 .franklin-content .software-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(26, 36, 43, 0.08);
-  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
+  border-color: var(--sec); /* Border adopts the card's accent color */
 }
 
 .franklin-content .software-header {
@@ -105,57 +106,51 @@ body {
   flex-wrap: wrap;
 }
 
-.franklin-content .lang-badge {
+.franklin-content .lang-badge,
+.franklin-content .status-badge {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
 }
 
 .franklin-content .lang-badge.julia {
-  background: #EFEAEC;
-  color: #4A4565; /* Muted Indigo */
-  border: 1px solid #4A4565;
+  color: #A85741;
+  background: #F4EBE8;
+  border: 1px solid #A85741;
 }
 
 .franklin-content .lang-badge.python {
-  background: #E6EBE8;
-  color: #3D5A4C; /* Muted Moss */
-  border: 1px solid #3D5A4C;
+  color: #4A6B7C;
+  background: #E8EEF2;
+  border: 1px solid #4A6B7C;
 }
 
 .franklin-content .status-badge {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #2B6B7C;
-  background: #E0EBEF;
-  border: 1px solid #2B6B7C;
-  border-radius: 4px;
-  padding: 0.2rem 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: #C28F36;
+  background: #F5EFE4;
+  border: 1px solid #C28F36;
 }
 
 .franklin-content .software-title {
   font-family: "Newsreader", Georgia, serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #11181C;
+  color: #1A1817;
   margin: 0 0 0.6rem 0;
 }
 
 .franklin-content .software-desc {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #3A4A54;
+  color: #4A4541;
   margin-bottom: 1.2rem;
 }
 
-/* ================= Figures ================= */
+/* Figures */
 .franklin-content .software-card img {
   width: 100%;
   max-width: 100%;
@@ -173,7 +168,7 @@ body {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #D1D9E0;
+  border: 1px solid #D6D1C9;
   background: #ffffff;
   line-height: 0;
   box-sizing: border-box;
@@ -190,7 +185,7 @@ body {
   object-fit: contain;
 }
 
-/* ================= Example grids ================= */
+/* Example grids */
 .franklin-content .example-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
@@ -200,8 +195,8 @@ body {
 }
 
 .franklin-content .example-item {
-  background: #F7F9FA;
-  border: 1px dashed #D1D9E0; /* Ledger/Notebook style dashed border */
+  background: #F9F8F6;
+  border: 1px dashed #D6D1C9; /* Ledger/Notebook style dashed border */
   border-radius: 4px;
   padding: 0.8rem;
   text-align: center;
@@ -214,7 +209,7 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #5B6B75;
+  color: #4A4541;
   margin: 0.6rem 0 0 0;
 }
 
@@ -228,10 +223,10 @@ body {
   object-fit: contain;
   background: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D1D9E0;
+  border: 1px solid #D6D1C9;
 }
 
-/* ================= Buttons ================= */
+/* Buttons */
 .franklin-content .software-links {
   display: flex;
   gap: 0.8rem;
@@ -254,34 +249,35 @@ body {
 }
 
 .franklin-content .btn-primary {
-  background: var(--accent, #1E4D5B);
+  background: var(--sec, #A85741);
   color: #ffffff;
   box-shadow: none;
+  border: 1px solid var(--sec, #A85741);
 }
 
 .franklin-content .btn-primary:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.1);
   transform: translateY(-1px);
 }
 
 .franklin-content .btn-secondary {
   background: #ffffff;
-  color: #1A242B;
-  border: 1px solid #D1D9E0;
+  color: #2B2826;
+  border: 1px solid #D6D1C9;
 }
 
 .franklin-content .btn-secondary:hover {
-  background: #F7F9FA;
-  border-color: var(--accent, #1E4D5B);
-  color: var(--accent, #1E4D5B);
+  background: #F9F8F6;
+  border-color: var(--sec, #A85741);
+  color: var(--sec, #A85741);
 }
 
-/* ================= Global Links ================= */
+/* Global Links */
 .franklin-content a:not(.btn-primary):not(.btn-secondary) {
-  color: #1E4D5B;
+  color: #A85741;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px dashed #1E4D5B;
+  border-bottom: 1px dashed #A85741;
   transition: all 0.15s ease;
 }
 
@@ -289,7 +285,7 @@ body {
   border-bottom-style: solid;
 }
 
-/* ================= Responsive ================= */
+/* Responsive */
 @media (max-width: 560px) {
   .franklin-content .software-card { padding: 1.2rem; }
   .franklin-content .software-links { flex-direction: column; }
@@ -409,7 +405,7 @@ body {
 ## Python Implementations
 
 ~~~
-<div class="software-card">
+<div class="software-card python">
   <div class="software-header">
     <span class="lang-badge python">Python</span>
   </div>
@@ -431,7 +427,7 @@ body {
 ~~~
 
 ~~~
-<div class="software-card">
+<div class="software-card python">
   <div class="software-header">
     <span class="lang-badge python">Python</span>
   </div>
