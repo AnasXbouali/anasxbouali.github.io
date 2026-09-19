@@ -48,7 +48,7 @@ body {
   height: 2px;
   margin-top: 0.55rem;
   border-radius: 0;
-  background: #A85741; /* Accent Oxblood */
+  background: #A85741; /* Accent Rouille */
 }
 
 .franklin-content h2 {
@@ -72,10 +72,10 @@ body {
   margin: 0.4rem 0 2.4rem;
 }
 
-/* Variables de couleurs par type de section */
-.franklin-content .talk-section { --sec: #A85741; --sec-soft: #F4EBE8; } /* Séminaires (Oxblood) */
-.franklin-content .talk-section.t-workshop { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Ateliers (Slate) */
-.franklin-content .talk-section.t-poster { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Posters (Ochre) */
+/* Palette Archival par Type de Section */
+.franklin-content .talk-section { --sec: #A85741; --sec-soft: #F4EBE8; } /* Séminaires (Rouille) */
+.franklin-content .talk-section.t-workshop { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Ateliers (Ardoise) */
+.franklin-content .talk-section.t-poster { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Posters (Ocre) */
 
 .franklin-content .talk-section {
   background: #ffffff;
@@ -90,7 +90,7 @@ body {
 .franklin-content .talk-section:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
-  border-color: var(--sec);
+  border-color: var(--sec); /* La bordure prend la couleur de la section au survol */
 }
 
 .franklin-content .year-heading {
@@ -325,4 +325,126 @@ body {
       <p class="talk-title">Séminaire SPOC</p>
       <p class="talk-venue">IMB, Université de Bourgogne, Dijon (France)</p>
     </div>
- 
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Octobre</span>
+    <div class="talk-body">
+      <p class="talk-title">Journées annuelles du GdR MOA</p>
+      <p class="talk-venue">Université de Perpignan (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Septembre</span>
+    <div class="talk-body">
+      <p class="talk-title">Séminaire CRAN Nancy</p>
+      <p class="talk-venue">Université de Lorraine, Nancy (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Juin</span>
+    <div class="talk-body">
+      <p class="talk-title">Journée Contrôle optimal et applications</p>
+      <p class="talk-venue">FRUMAM, Marseille (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Janvier</span>
+    <div class="talk-body">
+      <p class="talk-title">Séminaire Modélisation, optimisation et dynamique</p>
+      <p class="talk-venue">XLIM, Université de Limoges (France)</p>
+    </div>
+  </div>
+</div>
+~~~
+
+~~~
+<div class="talk-section">
+  <h3 class="year-heading">2022</h3>
+  <div class="talk-item">
+    <span class="talk-month">Novembre</span>
+    <div class="talk-body">
+      <p class="talk-title">PGMO Days</p>
+      <p class="talk-venue">EDF Lab Paris-Saclay (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Mai</span>
+    <div class="talk-body">
+      <p class="talk-title">Conférence franco-germano-portugaise d'optimisation</p>
+      <p class="talk-venue">Université de Porto (Portugal)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Avril</span>
+    <div class="talk-body">
+      <p class="talk-title">Séminaire du Laboratoire de modélisation pluridisciplinaire et simulations</p>
+      <p class="talk-venue">Université de Perpignan (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Janvier</span>
+    <div class="talk-body">
+      <p class="talk-title">Séminaire Modélisation, optimisation et dynamique</p>
+      <p class="talk-venue">XLIM, Université de Limoges (France)</p>
+    </div>
+  </div>
+</div>
+~~~
+
+## Ateliers & écoles d'été
+
+~~~
+<div class="talk-section t-workshop">
+  <h3 class="year-heading">2022</h3>
+  <div class="talk-item">
+    <span class="talk-month">Septembre</span>
+    <div class="talk-body">
+      <p class="talk-title">Décomposition de domaine pour les problèmes de contrôle optimal</p>
+      <p class="talk-venue">CIRM, Luminy, Marseille (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Juillet</span>
+    <div class="talk-body">
+      <p class="talk-title">Outils numériques et exemples de contrôle optimal, « Sprint : Control Toolbox »</p>
+      <p class="talk-venue">Nice (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Juin</span>
+    <div class="talk-body">
+      <p class="talk-title">Atelier « Théorie du contrôle optimal »</p>
+      <p class="talk-venue">INSA Rouen Normandie (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Juin</span>
+    <div class="talk-body">
+      <p class="talk-title">Journée SMAI MODE</p>
+      <p class="talk-venue">Université de Limoges (France)</p>
+    </div>
+  </div>
+</div>
+~~~
+
+## Posters
+
+~~~
+<div class="talk-section t-poster">
+  <h3 class="year-heading">2022</h3>
+  <div class="talk-item">
+    <span class="talk-month">Septembre</span>
+    <div class="talk-body">
+      <p class="talk-title">Décomposition de domaine pour les problèmes de contrôle optimal <span class="poster-badge">Poster</span></p>
+      <p class="talk-venue">CIRM, Luminy, Marseille (France)</p>
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-month">Juin</span>
+    <div class="talk-body">
+      <p class="talk-title">Journée SMAI MODE <span class="poster-badge">Poster</span></p>
+      <p class="talk-venue">Université de Limoges (France)</p>
+    </div>
+  </div>
+</div>
+~~~
