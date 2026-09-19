@@ -6,90 +6,92 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 
 ~~~
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Publications page theme — self-contained, this page only.
-   Palette synced with basic.css (ink #102a43, teal #0b7285).
+   Publications page theme — Bespoke Archival Academic Style
    ============================================================ */
 
-.franklin-content {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: #102a43;
+body {
+  background-color: #F9F8F6;
+  background-image: radial-gradient(circle, #D6D1C9 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
 }
 
-/* 1) Kill the grey separating lines from franklin.css */
+.franklin-content {
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  color: #2B2826;
+}
+
 .franklin-content h1,
 .franklin-content h2 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
-  color: #102a43;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  color: #1A1817;
 }
 
 .franklin-content h1 {
   font-size: clamp(2.1rem, 4.5vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.015em;
   margin-top: 0.4em;
   margin-bottom: 0.6em;
 }
 
-/* short gradient accent under the page title (delete this block if you want nothing) */
 .franklin-content h1::after {
   content: "";
   display: block;
   width: 76px;
-  height: 5px;
+  height: 2px;
   margin-top: 0.55rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #0b7285, #1971c2);
+  border-radius: 0;
+  background: #A85741; /* Oxblood / Rouille Accent */
 }
 
-/* 2) Section headings: vertical accent bar, no horizontal line */
 .franklin-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-top: 2.4rem;
   margin-bottom: 1.2rem;
-  padding-left: 0.8rem;
-  border-left: 5px solid #0b7285;
+  padding-left: 0;
+  border-left: 0;
 }
 
-/* 3) Intro banner */
 .franklin-content .publications-intro {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #23425f;
-  background: linear-gradient(120deg, #e6fcf5 0%, #e7f5ff 100%);
-  border: 1px solid #c5e8f0;
-  border-radius: 14px;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
   padding: 1.1rem 1.4rem;
   margin: 0.4rem 0 2.4rem;
 }
 
-/* 4) Cards — one accent colour per publication type */
-.franklin-content .publication           { --pub: #0b7285; --pub-soft: #e6fcf5; } /* journal      */
-.franklin-content .publication.t-conf    { --pub: #5f3dc4; --pub-soft: #f3f0ff; } /* conference   */
-.franklin-content .publication.t-preprint{ --pub: #b45309; --pub-soft: #fff4e6; } /* preprint     */
-.franklin-content .publication.t-chapter { --pub: #1971c2; --pub-soft: #e7f5ff; } /* book chapter */
-.franklin-content .publication.t-thesis  { --pub: #a61e4d; --pub-soft: #fff0f6; } /* thesis       */
+/* Bespoke Archival Palette (Oxblood, Slate, Ochre, Plum, Moss) */
+.franklin-content .publication           { --pub: #A85741; --pub-soft: #F4EBE8; } /* journal      */
+.franklin-content .publication.t-conf    { --pub: #4A6B7C; --pub-soft: #E8EEF2; } /* conference   */
+.franklin-content .publication.t-preprint{ --pub: #C28F36; --pub-soft: #F5EFE4; } /* preprint     */
+.franklin-content .publication.t-chapter { --pub: #6B4C5A; --pub-soft: #EFEAEC; } /* book chapter */
+.franklin-content .publication.t-thesis  { --pub: #3D5A4C; --pub-soft: #E6EBE8; } /* thesis       */
 
 .franklin-content .publication {
   background: #ffffff;
-  border: 1px solid #d9e2ec;
-  border-left: 5px solid var(--pub);
-  border-radius: 12px;
+  border: 1px solid #D6D1C9;
+  border-left: 1px solid #D6D1C9;
+  border-radius: 4px;
   padding: 1.2rem 1.5rem 1.3rem;
   margin-bottom: 1.25rem;
-  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .franklin-content .publication:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
+  border-color: var(--pub); /* Border takes the accent color on hover */
 }
 
 .franklin-content .publication-meta {
@@ -104,10 +106,10 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
   font-family: "JetBrains Mono", Menlo, Consolas, monospace;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #526d82;
-  background: #f8fafc;
-  border: 1px solid #d9e2ec;
-  border-radius: 6px;
+  color: #4A4541;
+  background: #EFECE6;
+  border: 1px solid #D6D1C9;
+  border-radius: 4px;
   padding: 0.14rem 0.5rem;
 }
 
@@ -123,48 +125,47 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
 }
 
 .franklin-content .publication h3 {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 1.27rem;
   font-weight: 600;
   line-height: 1.42;
-  color: #102a43;
+  color: #1A1817;
   margin: 0.15rem 0 0.5rem;
 }
 
 .franklin-content .publication-authors {
   font-size: 0.93rem;
-  color: #526d82;
+  color: #5C5651;
   margin: 0.15rem 0;
 }
 
 .franklin-content .publication-venue {
   font-size: 0.93rem;
   font-style: italic;
-  color: #33556e;
+  color: #756E67;
   margin: 0.15rem 0 0.85rem;
 }
 
-/* 5) Link buttons */
 .franklin-content a.publication-link,
 .franklin-content a.publication-link:hover {
   display: inline-block;
+  font-family: "Public Sans", sans-serif;
   font-size: 0.83rem;
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;
   background: var(--pub);
-  border-radius: 999px;
+  border-radius: 4px;
   padding: 0.42rem 0.95rem;
-  box-shadow: 0 2px 8px rgba(16, 42, 67, 0.18);
-  transition: transform 0.15s ease, filter 0.15s ease;
+  box-shadow: none;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 
 .franklin-content a.publication-link:hover {
-  filter: brightness(1.12);
+  filter: brightness(1.1);
   transform: translateY(-1px);
 }
 
-/* 6) Small screens */
 @media (max-width: 560px) {
   .franklin-content .publication { padding: 1rem 1.1rem 1.1rem; }
 }
@@ -309,7 +310,7 @@ rss = "Scientific publications by Anas Bouali on optimal control, hybrid dynamic
     <span class="publication-year">2024</span>
     <span class="publication-type">Book chapter</span>
   </div>
-  <h3>On the Reduction of a Spatially Hybrid Optimal Control Problem into a Temporally Hybrid Optimal Control Problem</h3>
+  <h3>On the Reduction of a Spatially-Hybrid Optimal Control Problem into a Temporally Hybrid Optimal Control Problem</h3>
   <p class="publication-authors">Co-authors: Terence Bayen, Loïc Bourdin and Olivier Cots</p>
   <p class="publication-venue">AIMS on Applied Mathematics, IVAN KUPKA LEGACY, Vol. 12, 2024</p>
   <a class="publication-link" href="https://www.aimsciences.org/book/AM/volume/58">Read chapter ↗</a>
