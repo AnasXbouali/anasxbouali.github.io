@@ -8,16 +8,16 @@ rss = "Overview of research software packages and implementations in Julia and P
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
-/* ================= Base typography ================= */
+/* ================= Base typography & Cool Archival Palette ================= */
 body {
-  background-color: #F9F8F6;
-  background-image: radial-gradient(circle, #D6D1C9 0.8px, transparent 0.8px);
+  background-color: #F7F9FA;
+  background-image: radial-gradient(circle, #D1D9E0 0.8px, transparent 0.8px);
   background-size: 24px 24px;
 }
 
 .franklin-content {
   font-family: "Public Sans", Arial, Helvetica, sans-serif;
-  color: #2B2826;
+  color: #1A242B;
   line-height: 1.7;
 }
 
@@ -27,7 +27,7 @@ body {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  color: #1A1817;
+  color: #11181C;
 }
 
 .franklin-content h1 {
@@ -45,7 +45,7 @@ body {
   height: 2px;
   margin-top: 0.55rem;
   border-radius: 0;
-  background: #A85741; /* Oxblood Accent */
+  background: #1E4D5B; /* Deep Academic Teal/Slate */
 }
 
 .franklin-content h2 {
@@ -62,9 +62,9 @@ body {
 .franklin-content .software-intro {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #4A4541;
-  background: #EFECE6;
-  border: 1px solid #D6D1C9;
+  color: #3A4A54;
+  background: #E8EEF2; /* Cool slate grey */
+  border: 1px solid #D1D9E0;
   border-radius: 4px;
   padding: 1.1rem 1.4rem;
   margin: 0.4rem 0 2.4rem;
@@ -72,14 +72,14 @@ body {
 
 /* ================= Cards ================= */
 .franklin-content .software-card {
-  --accent: #A85741; /* Oxblood */
-  --accent-soft: #F4EBE8;
+  --accent: #1E4D5B; /* Deep Teal */
+  --accent-soft: #E8EEF2;
   background: #ffffff;
-  border: 1px solid #D6D1C9;
+  border: 1px solid #D1D9E0;
   border-radius: 4px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
+  box-shadow: 0 1px 3px rgba(26, 36, 43, 0.04);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   max-width: 100%;
   box-sizing: border-box;
@@ -87,13 +87,13 @@ body {
 }
 
 .franklin-content .software-card.featured {
-  --accent: #C28F36; /* Ochre */
-  --accent-soft: #F5EFE4;
+  --accent: #2B6B7C; /* Brighter Slate/Teal for featured */
+  --accent-soft: #E0EBEF;
 }
 
 .franklin-content .software-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
+  box-shadow: 0 8px 20px rgba(26, 36, 43, 0.08);
   border-color: var(--accent);
 }
 
@@ -117,13 +117,13 @@ body {
 
 .franklin-content .lang-badge.julia {
   background: #EFEAEC;
-  color: #6B4C5A; /* Plum */
-  border: 1px solid #6B4C5A;
+  color: #4A4565; /* Muted Indigo */
+  border: 1px solid #4A4565;
 }
 
 .franklin-content .lang-badge.python {
   background: #E6EBE8;
-  color: #3D5A4C; /* Moss */
+  color: #3D5A4C; /* Muted Moss */
   border: 1px solid #3D5A4C;
 }
 
@@ -131,9 +131,9 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #C28F36; /* Ochre */
-  background: #F5EFE4;
-  border: 1px solid #C28F36;
+  color: #2B6B7C;
+  background: #E0EBEF;
+  border: 1px solid #2B6B7C;
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
   text-transform: uppercase;
@@ -144,19 +144,18 @@ body {
   font-family: "Newsreader", Georgia, serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1A1817;
+  color: #11181C;
   margin: 0 0 0.6rem 0;
 }
 
 .franklin-content .software-desc {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #4A4541;
+  color: #3A4A54;
   margin-bottom: 1.2rem;
 }
 
-/* ================= Figures =================
-   Resetting Franklin's global image rules */
+/* ================= Figures ================= */
 .franklin-content .software-card img {
   width: 100%;
   max-width: 100%;
@@ -174,7 +173,7 @@ body {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #D6D1C9;
+  border: 1px solid #D1D9E0;
   background: #ffffff;
   line-height: 0;
   box-sizing: border-box;
@@ -201,8 +200,8 @@ body {
 }
 
 .franklin-content .example-item {
-  background: #F9F8F6;
-  border: 1px dashed #D6D1C9;
+  background: #F7F9FA;
+  border: 1px dashed #D1D9E0; /* Ledger/Notebook style dashed border */
   border-radius: 4px;
   padding: 0.8rem;
   text-align: center;
@@ -215,7 +214,7 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #756E67;
+  color: #5B6B75;
   margin: 0.6rem 0 0 0;
 }
 
@@ -229,7 +228,7 @@ body {
   object-fit: contain;
   background: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D6D1C9;
+  border: 1px solid #D1D9E0;
 }
 
 /* ================= Buttons ================= */
@@ -255,34 +254,34 @@ body {
 }
 
 .franklin-content .btn-primary {
-  background: var(--accent, #A85741);
+  background: var(--accent, #1E4D5B);
   color: #ffffff;
   box-shadow: none;
 }
 
 .franklin-content .btn-primary:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.15);
   transform: translateY(-1px);
 }
 
 .franklin-content .btn-secondary {
   background: #ffffff;
-  color: #2B2826;
-  border: 1px solid #D6D1C9;
+  color: #1A242B;
+  border: 1px solid #D1D9E0;
 }
 
 .franklin-content .btn-secondary:hover {
-  background: #F9F8F6;
-  border-color: var(--accent, #A85741);
-  color: var(--accent, #A85741);
+  background: #F7F9FA;
+  border-color: var(--accent, #1E4D5B);
+  color: var(--accent, #1E4D5B);
 }
 
 /* ================= Global Links ================= */
 .franklin-content a:not(.btn-primary):not(.btn-secondary) {
-  color: #A85741;
+  color: #1E4D5B;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px dashed #A85741;
+  border-bottom: 1px dashed #1E4D5B;
   transition: all 0.15s ease;
 }
 
