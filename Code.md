@@ -9,8 +9,7 @@ rss = "Overview of research software packages and implementations in Julia and P
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 /* ============================================================
-   Research Software page — Bespoke Archival Academic Style
-   Matched to the Research Projects page palette and geometry
+   Research Software page — Matched exactly to Publications page
    ============================================================ */
 
 body {
@@ -73,84 +72,65 @@ body {
   margin: 0.4rem 0 2.4rem;
 }
 
-/* Archival Palette Variables per Card Type */
-.franklin-content .software-card { --sec: #A85741; --sec-soft: #F4EBE8; } /* Standard/Julia (Oxblood) */
-.franklin-content .software-card.python { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Python (Slate) */
-.franklin-content .software-card.featured { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Featured (Ochre) */
+/* Archival Palette mapped to Publication logic */
+.franklin-content .software-card           { --sec: #A85741; --sec-soft: #F4EBE8; } /* Julia (Oxblood) */
+.franklin-content .software-card.python    { --sec: #4A6B7C; --sec-soft: #E8EEF2; } /* Python (Slate) */
+.franklin-content .software-card.featured  { --sec: #C28F36; --sec-soft: #F5EFE4; } /* Featured (Ochre) */
 
 .franklin-content .software-card {
   background: #ffffff;
   border: 1px solid #D6D1C9;
+  border-left: 1px solid #D6D1C9;
   border-radius: 4px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem 1.3rem;
+  margin-bottom: 1.25rem;
   box-shadow: 0 1px 3px rgba(43, 40, 38, 0.04);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  max-width: 100%;
-  box-sizing: border-box;
-  min-width: 0;
 }
 
 .franklin-content .software-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(43, 40, 38, 0.08);
-  border-color: var(--sec); /* Border adopts the card's accent color */
+  border-color: var(--sec);
 }
 
 .franklin-content .software-header {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-bottom: 0.8rem;
   flex-wrap: wrap;
+  margin-bottom: 0.55rem;
 }
 
 .franklin-content .lang-badge,
 .franklin-content .status-badge {
-  font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-radius: 4px;
-  padding: 0.2rem 0.6rem;
-}
-
-.franklin-content .lang-badge.julia {
-  color: #A85741;
-  background: #F4EBE8;
-  border: 1px solid #A85741;
-}
-
-.franklin-content .lang-badge.python {
-  color: #4A6B7C;
-  background: #E8EEF2;
-  border: 1px solid #4A6B7C;
-}
-
-.franklin-content .status-badge {
-  color: #C28F36;
-  background: #F5EFE4;
-  border: 1px solid #C28F36;
+  color: var(--sec);
+  background: var(--sec-soft);
+  border-radius: 999px; /* Pill shape like publication-type */
+  padding: 0.3rem 0.75rem;
 }
 
 .franklin-content .software-title {
   font-family: "Newsreader", Georgia, serif;
-  font-size: 1.3rem;
+  font-size: 1.27rem;
   font-weight: 600;
+  line-height: 1.42;
   color: #1A1817;
-  margin: 0 0 0.6rem 0;
-  line-height: 1.35;
+  margin: 0.15rem 0 0.5rem;
 }
 
 .franklin-content .software-desc {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: #4A4541;
-  margin-bottom: 1.2rem;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #5C5651;
+  margin: 0.15rem 0 0.85rem;
 }
 
-/* Figures */
+/* Figures & Grids */
 .franklin-content .software-card img {
   width: 100%;
   max-width: 100%;
@@ -171,45 +151,28 @@ body {
   border: 1px solid #D6D1C9;
   background: #ffffff;
   line-height: 0;
-  box-sizing: border-box;
 }
 
-.franklin-content .software-visual img,
-.franklin-content .software-visual video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0 auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* Example grids */
 .franklin-content .example-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1rem;
   margin: 1rem 0;
-  max-width: 100%;
 }
 
 .franklin-content .example-item {
   background: #F9F8F6;
-  border: 1px dashed #D6D1C9; /* Ledger/Notebook style dashed border */
+  border: 1px solid #D6D1C9;
   border-radius: 4px;
   padding: 0.8rem;
   text-align: center;
-  overflow: hidden;
-  min-width: 0;
-  box-sizing: border-box;
 }
 
 .franklin-content .example-item h4 {
   font-family: "Public Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #4A4541;
+  color: #526d82;
   margin: 0.6rem 0 0 0;
 }
 
@@ -217,8 +180,6 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  padding: 0;
-  margin: 0 auto;
   display: block;
   object-fit: contain;
   background: #ffffff;
@@ -226,72 +187,55 @@ body {
   border: 1px solid #D6D1C9;
 }
 
-/* Buttons */
+/* Buttons - Matched exactly to .publication-link */
 .franklin-content .software-links {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
-.franklin-content .btn-primary,
-.franklin-content .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+.franklin-content a.btn-primary,
+.franklin-content a.btn-secondary {
+  display: inline-block;
   font-family: "Public Sans", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
+  background: var(--sec, #A85741);
   border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: all 0.15s ease;
+  padding: 0.42rem 0.95rem;
+  box-shadow: none;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 
-.franklin-content .btn-primary {
-  background: var(--sec, #A85741);
-  color: #ffffff;
-  box-shadow: none;
+.franklin-content a.btn-secondary {
+  background: #ffffff;
+  color: var(--sec, #A85741);
   border: 1px solid var(--sec, #A85741);
 }
 
-.franklin-content .btn-primary:hover {
+.franklin-content a.btn-primary:hover,
+.franklin-content a.btn-secondary:hover {
   filter: brightness(1.1);
   transform: translateY(-1px);
 }
 
-.franklin-content .btn-secondary {
-  background: #ffffff;
-  color: #2B2826;
-  border: 1px solid #D6D1C9;
-}
-
-.franklin-content .btn-secondary:hover {
-  background: #F9F8F6;
-  border-color: var(--sec, #A85741);
-  color: var(--sec, #A85741);
-}
-
-/* Global Links */
-.franklin-content a:not(.btn-primary):not(.btn-secondary) {
+/* Safe Inline Links for bottom paragraph only */
+.franklin-content p a {
   color: #A85741;
   text-decoration: none;
   font-weight: 600;
   border-bottom: 1px dashed #A85741;
   transition: all 0.15s ease;
 }
-
-.franklin-content a:not(.btn-primary):not(.btn-secondary):hover {
+.franklin-content p a:hover {
   border-bottom-style: solid;
 }
 
-/* Responsive */
 @media (max-width: 560px) {
-  .franklin-content .software-card { padding: 1.1rem 1.2rem; }
-  .franklin-content .software-title { font-size: 1.15rem; }
-  .franklin-content .software-links { flex-direction: column; }
-  .franklin-content .btn-primary,
-  .franklin-content .btn-secondary { width: 100%; justify-content: center; }
+  .franklin-content .software-card { padding: 1rem 1.1rem 1.1rem; }
   .franklin-content .example-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -398,7 +342,7 @@ body {
     </div>
   </div>
   <div class="software-links">
-    <a href="https://github.com/AnasXbouali/Academic-example" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
+    <a href="https://github.com/AnasXbouali/Academic-example" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository ↗</a>
   </div>
 </div>
 ~~~
@@ -451,7 +395,7 @@ body {
     </div>
   </div>
   <div class="software-links">
-    <a href="https://github.com/AnasXbouali/SR-ODEs-epidemiology" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
+    <a href="https://github.com/AnasXbouali/SR-ODEs-epidemiology" class="btn-secondary" target="_blank" rel="noopener">GitHub Repository ↗</a>
   </div>
 </div>
 ~~~
